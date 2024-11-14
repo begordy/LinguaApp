@@ -8,4 +8,44 @@
     <string name="menu_settings">Settings</string>
     <string name="menu_favorites">Favorites</string>
     <string name="logo_desc">Logo</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="color_scheme">Color Scheme</string>
+    <string name="primary_color">Primary Color</string>
+    <string name="secondary_color">Secondary Color</string>
+    <string name="notifications">Notifications</string>
+    <string name="allow_notifications">Allow Notifications</string>
+    <string name="allow_toast_messages">Allow Toast Messages</string>
+    <string name="filter_syntax">Filter Syntax</string>
+    <string name="easy">Easy</string>
+    <string name="medium">Medium</string>
+    <string name="hard">Hard</string>
+    <string name="simple">Simple</string>
+    <string name="complex">Complex</string>
+    <string name="compound">Compound</string>
+
+    <string-array name="primary_options">
+        <item>Red</item>
+        <item>Purple</item>
+        <item>Blue</item>
+    </string-array>
+    <string-array name="secondary_options">
+        <item>Grey</item>
+        <item>White</item>
+        <item>Yellow</item>
+    </string-array>
 </resources>

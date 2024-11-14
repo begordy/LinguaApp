@@ -7,7 +7,19 @@
     android:layout_height="match_parent"
     android:background="#AB5782A2">
 
-
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="#56D5D4D4"
+        app:menu="@menu/menu_main"
+        app:labelVisibilityMode="labeled"
+        app:itemActiveIndicatorStyle="@null"
+        app:itemTextAppearanceActiveBoldEnabled="false"
+        />
     <com.google.android.material.button.MaterialButton
         android:id="@+id/simple_syntax"
         android:layout_width="wrap_content"

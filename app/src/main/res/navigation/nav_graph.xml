@@ -9,5 +9,18 @@
         android:id="@+id/homePage"
         android:name="com.cs407.lingua.HomePage"
         android:label="fragment_home_page"
-        tools:layout="@layout/fragment_home_page" />
+        tools:layout="@layout/fragment_home_page" >
+        <action
+            android:id="@+id/action_homePage_to_settings_fragment"
+            app:destination="@id/settings_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settings_fragment"
+        android:name="com.cs407.lingua.settings_fragment"
+        android:label="fragment_settings_fragment"
+        tools:layout="@layout/fragment_settings_fragment" >
+        <action
+            android:id="@+id/action_settings_fragment_to_homePage"
+            app:destination="@id/homePage" />
+    </fragment>
 </navigation>
