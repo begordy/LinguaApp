@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Lingua</string>
+    <string name="simple_button">Simple Syntax</string>
+    <string name="compound_button">Compound Syntax</string>
+    <string name="complex_button">Complex Syntax</string>
+    <string name="menu_search">Search</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_favorites">Favorites</string>
+    <string name="logo_desc">Logo</string>
 </resources>

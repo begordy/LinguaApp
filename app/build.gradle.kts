@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.cs407.lingua"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.cs407.lingua"
@@ -36,7 +36,8 @@ android {
 }
 
 dependencies {
-
+    implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
