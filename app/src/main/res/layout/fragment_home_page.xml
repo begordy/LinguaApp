@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#AB5782A2">
+    android:theme="@style/Base.Theme.Lingua"
+    android:background="?attr/colorSecondary">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -14,7 +15,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:background="#56D5D4D4"
+        android:background="?attr/colorSecondary"
         app:menu="@menu/menu_main"
         app:labelVisibilityMode="labeled"
         app:itemActiveIndicatorStyle="@null"
@@ -25,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/simple_button"
-        android:backgroundTint="#109590"
+        android:backgroundTint="?attr/colorPrimary"
         app:strokeWidth="@dimen/cardview_default_radius"
         android:strokeColor="@color/black"
         app:icon="@drawable/simple_linguistics"
@@ -36,13 +37,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="300dp"
+        android:textColor="?attr/colorSecondary"
         />
     <com.google.android.material.button.MaterialButton
         android:id="@+id/compound_syntax"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/compound_button"
-        android:backgroundTint="#DEAE59"
+        android:backgroundTint="?attr/colorPrimary"
         app:strokeWidth="@dimen/cardview_default_radius"
         android:strokeColor="@color/black"
         app:icon="@drawable/compound_linguistics"
@@ -53,6 +55,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/simple_syntax"
         android:layout_marginTop="5dp"
+        android:textColor="?attr/colorSecondary"
         />
 
     <com.google.android.material.button.MaterialButton
@@ -60,7 +63,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/complex_button"
-        android:backgroundTint="#EE583C"
+        android:backgroundTint="?attr/colorPrimary"
         app:strokeWidth="@dimen/cardview_default_radius"
         android:strokeColor="@color/black"
         app:icon="@drawable/complex_linguistics"
@@ -71,6 +74,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/compound_syntax"
         android:layout_marginTop="5dp"
+        android:textColor="?attr/colorSecondary"
         />
 
     <androidx.cardview.widget.CardView

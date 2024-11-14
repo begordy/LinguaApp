@@ -1,5 +1,7 @@
 package com.cs407.lingua
 
+import android.content.res.ColorStateList
+import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -7,12 +9,16 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
+import android.widget.Toast
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.core.app.ActivityCompat.recreate
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
 class settings_fragment : Fragment() {
@@ -57,7 +63,8 @@ class settings_fragment : Fragment() {
 
         // Clicking back arrow goes back to home
         toolbar.setNavigationOnClickListener {
-            findNavController().navigate(R.id.action_settings_fragment_to_homePage)
+            findNavController().navigateUp()
+            //findNavController().navigate(R.id.action_settings_fragment_to_homePage)
         }
 
         // Creating dropdown options for colors
@@ -76,6 +83,47 @@ class settings_fragment : Fragment() {
         ).also { adapter ->
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             secondary_spinner.adapter = adapter
+        }
+
+        primary_spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parentView: AdapterView<*>, view: View?, position: Int, id: Long) {
+                val selectedItem = parentView.getItemAtPosition(position) as String
+                //implement for each primary color :)
+                if(selectedItem.equals("Blue")){
+                    Toast.makeText(context, "Blue Selected", Toast.LENGTH_SHORT).show()
+
+                }
+                // Do something with the selected item
+            }
+
+            override fun onNothingSelected(parentView: AdapterView<*>) {
+                // Handle case where no item is selected
+            }
+        }
+
+        val bottomNavigationView: BottomNavigationView = view.findViewById(R.id.bottom_navigation)
+
+        // Set a listener to handle item selection
+        bottomNavigationView.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_settings -> {
+                    //do nothing
+                    true
+                }
+                R.id.nav_home -> {
+                    findNavController().navigate(R.id.action_settings_fragment_to_homePage)
+                    true
+                }
+                R.id.nav_favorites -> {
+                    findNavController().navigate(R.id.action_settings_fragment_to_favorites)
+                    true
+                }
+                R.id.nav_search -> {
+                    findNavController().navigate(R.id.action_settings_fragment_to_search)
+                    true
+                }
+                else -> false
+            }
         }
     }
 }

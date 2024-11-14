@@ -37,15 +37,16 @@
     <string name="simple">Simple</string>
     <string name="complex">Complex</string>
     <string name="compound">Compound</string>
+    <string name="favorites">Favorites</string>
 
     <string-array name="primary_options">
-        <item>Red</item>
         <item>Purple</item>
+        <item>Red</item>
         <item>Blue</item>
     </string-array>
     <string-array name="secondary_options">
-        <item>Grey</item>
         <item>White</item>
+        <item>Grey</item>
         <item>Yellow</item>
     </string-array>
 </resources>

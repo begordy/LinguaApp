@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -165,6 +165,7 @@
         tools:ignore="UseSwitchCompatOrMaterialXml" />
     <Switch
         android:id="@+id/compound_switch"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/compound"
@@ -173,4 +174,18 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorSecondary"
+        app:menu="@menu/menu_main"
+        app:labelVisibilityMode="labeled"
+        app:itemActiveIndicatorStyle="@null"
+        app:itemTextAppearanceActiveBoldEnabled="false" />
 </LinearLayout>

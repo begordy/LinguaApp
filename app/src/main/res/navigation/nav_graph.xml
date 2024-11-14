@@ -13,6 +13,12 @@
         <action
             android:id="@+id/action_homePage_to_settings_fragment"
             app:destination="@id/settings_fragment" />
+        <action
+            android:id="@+id/action_homePage_to_favorites"
+            app:destination="@id/favorites" />
+        <action
+            android:id="@+id/action_homePage_to_search"
+            app:destination="@id/search" />
     </fragment>
     <fragment
         android:id="@+id/settings_fragment"
@@ -21,6 +27,42 @@
         tools:layout="@layout/fragment_settings_fragment" >
         <action
             android:id="@+id/action_settings_fragment_to_homePage"
+            app:destination="@id/homePage" />
+        <action
+            android:id="@+id/action_settings_fragment_to_favorites"
+            app:destination="@id/favorites" />
+        <action
+            android:id="@+id/action_settings_fragment_to_search"
+            app:destination="@id/search" />
+    </fragment>
+    <fragment
+        android:id="@+id/favorites"
+        android:name="com.cs407.lingua.favorites"
+        android:label="fragment_favorites"
+        tools:layout="@layout/fragment_favorites" >
+        <action
+            android:id="@+id/action_favorites_to_homePage"
+            app:destination="@id/homePage" />
+        <action
+            android:id="@+id/action_favorites_to_settings_fragment"
+            app:destination="@id/settings_fragment" />
+        <action
+            android:id="@+id/action_favorites_to_search"
+            app:destination="@id/search" />
+    </fragment>
+    <fragment
+        android:id="@+id/search"
+        android:name="com.cs407.lingua.search"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_search_to_settings_fragment"
+            app:destination="@id/settings_fragment" />
+        <action
+            android:id="@+id/action_search_to_favorites"
+            app:destination="@id/favorites" />
+        <action
+            android:id="@+id/action_search_to_homePage"
             app:destination="@id/homePage" />
     </fragment>
 </navigation>

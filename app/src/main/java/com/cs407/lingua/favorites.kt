@@ -3,24 +3,26 @@ package com.cs407.lingua
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.MenuProvider
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class HomePage : Fragment() {
 
+class favorites : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setHasOptionsMenu(true)
 
     }
 
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_favorites, container, false)
+    }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val bottomNavigationView: BottomNavigationView = view.findViewById(R.id.bottom_navigation)
@@ -29,19 +31,19 @@ class HomePage : Fragment() {
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_settings -> {
-                    findNavController().navigate(R.id.action_homePage_to_settings_fragment)
+                    findNavController().navigate(R.id.action_favorites_to_settings_fragment)
                     true
                 }
                 R.id.nav_home -> {
-                    //do nothing
+                    findNavController().navigate(R.id.action_favorites_to_homePage)
                     true
                 }
                 R.id.nav_favorites -> {
-                    findNavController().navigate(R.id.action_homePage_to_favorites)
+                    //do nothing
                     true
                 }
                 R.id.nav_search -> {
-                    findNavController().navigate(R.id.action_homePage_to_search)
+                    findNavController().navigate(R.id.action_favorites_to_search)
                     true
                 }
                 else -> false
@@ -50,12 +52,4 @@ class HomePage : Fragment() {
 
 
     }
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home_page, container, false)
-    }
-
 }
