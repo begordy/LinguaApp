@@ -1,0 +1,4946 @@
+﻿[
+  {
+    "orthography": "a",
+    "glossing": "e ɪ"
+  },
+  {
+    "orthography": "a",
+    "glossing": "æ"
+  },
+  {
+    "orthography": "a",
+    "glossing": "ɑ"
+  },
+  {
+    "orthography": "a",
+    "glossing": "ə"
+  },
+  {
+    "orthography": "able",
+    "glossing": "e ɪ b ə l"
+  },
+  {
+    "orthography": "about",
+    "glossing": "ə b a ʊ t"
+  },
+  {
+    "orthography": "above",
+    "glossing": "ə b ʌ v"
+  },
+  {
+    "orthography": "act",
+    "glossing": "æ k t"
+  },
+  {
+    "orthography": "add",
+    "glossing": "æ d"
+  },
+  {
+    "orthography": "afraid",
+    "glossing": "ə f ɹ e ɪ d"
+  },
+  {
+    "orthography": "after",
+    "glossing": "æ f t ɚ"
+  },
+  {
+    "orthography": "again",
+    "glossing": "ə ɡ e ɪ n"
+  },
+  {
+    "orthography": "again",
+    "glossing": "ə ɡ ɛ n"
+  },
+  {
+    "orthography": "against",
+    "glossing": "ə ɡ ɛ n s t"
+  },
+  {
+    "orthography": "age",
+    "glossing": "e ɪ d͡ʒ"
+  },
+  {
+    "orthography": "ago",
+    "glossing": "ə ɡ o ʊ"
+  },
+  {
+    "orthography": "agree",
+    "glossing": "ə ɡ ɹ i"
+  },
+  {
+    "orthography": "air",
+    "glossing": "ɛ ɚ"
+  },
+  {
+    "orthography": "air",
+    "glossing": "ɛ ɹ"
+  },
+  {
+    "orthography": "all",
+    "glossing": "ɔ l"
+  },
+  {
+    "orthography": "allow",
+    "glossing": "ə l a ʊ"
+  },
+  {
+    "orthography": "also",
+    "glossing": "ɔ l s o ʊ"
+  },
+  {
+    "orthography": "always",
+    "glossing": "ɑ l w e ɪ z"
+  },
+  {
+    "orthography": "always",
+    "glossing": "ɑ l w ə z"
+  },
+  {
+    "orthography": "always",
+    "glossing": "ɑ l w ɪ z"
+  },
+  {
+    "orthography": "always",
+    "glossing": "ɔ l w e ɪ z"
+  },
+  {
+    "orthography": "always",
+    "glossing": "ɔ l w ə z"
+  },
+  {
+    "orthography": "always",
+    "glossing": "ɔ l w ɪ z"
+  },
+  {
+    "orthography": "among",
+    "glossing": "ə m ɒ ŋ"
+  },
+  {
+    "orthography": "among",
+    "glossing": "ə m ʌ ŋ"
+  },
+  {
+    "orthography": "an",
+    "glossing": "æ n"
+  },
+  {
+    "orthography": "an",
+    "glossing": "ə n"
+  },
+  {
+    "orthography": "anger",
+    "glossing": "e ɪ ŋ ɡ ɚ"
+  },
+  {
+    "orthography": "anger",
+    "glossing": "æ ŋ ɡ ɚ"
+  },
+  {
+    "orthography": "animal",
+    "glossing": "æ n ɪ m ə l"
+  },
+  {
+    "orthography": "answer",
+    "glossing": "æ n s ɚ"
+  },
+  {
+    "orthography": "any",
+    "glossing": "ɛ n i"
+  },
+  {
+    "orthography": "appear",
+    "glossing": "ə p ɪ ɹ"
+  },
+  {
+    "orthography": "apple",
+    "glossing": "æ p ə l"
+  },
+  {
+    "orthography": "are",
+    "glossing": "ɑ ɹ"
+  },
+  {
+    "orthography": "are",
+    "glossing": "ɚ"
+  },
+  {
+    "orthography": "are",
+    "glossing": "ɛ ə ɹ"
+  },
+  {
+    "orthography": "are",
+    "glossing": "ɛ ɹ"
+  },
+  {
+    "orthography": "area",
+    "glossing": "ɛ ə ɹ i ə"
+  },
+  {
+    "orthography": "area",
+    "glossing": "ɛ ɹ i ə"
+  },
+  {
+    "orthography": "arm",
+    "glossing": "ɑ ɹ m"
+  },
+  {
+    "orthography": "arrange",
+    "glossing": "ə ɹ e ɪ n d͡ʒ"
+  },
+  {
+    "orthography": "arrive",
+    "glossing": "ə ɹ a ɪ v"
+  },
+  {
+    "orthography": "art",
+    "glossing": "ɑ ɹ t"
+  },
+  {
+    "orthography": "as",
+    "glossing": "æ s"
+  },
+  {
+    "orthography": "as",
+    "glossing": "æ z"
+  },
+  {
+    "orthography": "ask",
+    "glossing": "æ s k"
+  },
+  {
+    "orthography": "atom",
+    "glossing": "æ t ə m"
+  },
+  {
+    "orthography": "baby",
+    "glossing": "b e ɪ b i"
+  },
+  {
+    "orthography": "back",
+    "glossing": "b æ k"
+  },
+  {
+    "orthography": "bad",
+    "glossing": "b æ d"
+  },
+  {
+    "orthography": "ball",
+    "glossing": "b ɔ l"
+  },
+  {
+    "orthography": "band",
+    "glossing": "b æ n d"
+  },
+  {
+    "orthography": "bank",
+    "glossing": "b æ ŋ k"
+  },
+  {
+    "orthography": "bar",
+    "glossing": "b ɑ ɹ"
+  },
+  {
+    "orthography": "base",
+    "glossing": "b e ɪ s"
+  },
+  {
+    "orthography": "basic",
+    "glossing": "b e ɪ s ɪ k"
+  },
+  {
+    "orthography": "bat",
+    "glossing": "b æ t"
+  },
+  {
+    "orthography": "be",
+    "glossing": "b e ɪ"
+  },
+  {
+    "orthography": "be",
+    "glossing": "b i"
+  },
+  {
+    "orthography": "be",
+    "glossing": "b ə"
+  },
+  {
+    "orthography": "be",
+    "glossing": "b ɛ"
+  },
+  {
+    "orthography": "be",
+    "glossing": "b ɪ"
+  },
+  {
+    "orthography": "bear",
+    "glossing": "b ɛ ɚ"
+  },
+  {
+    "orthography": "bear",
+    "glossing": "b ɪ ɚ"
+  },
+  {
+    "orthography": "beat",
+    "glossing": "b i t"
+  },
+  {
+    "orthography": "beauty",
+    "glossing": "b j u t i"
+  },
+  {
+    "orthography": "bed",
+    "glossing": "b ɛ d"
+  },
+  {
+    "orthography": "been",
+    "glossing": "b i n"
+  },
+  {
+    "orthography": "been",
+    "glossing": "b ɛ n"
+  },
+  {
+    "orthography": "been",
+    "glossing": "b ɪ n"
+  },
+  {
+    "orthography": "before",
+    "glossing": "b i f ɔ ɹ"
+  },
+  {
+    "orthography": "before",
+    "glossing": "b ə f ɔ ɹ"
+  },
+  {
+    "orthography": "before",
+    "glossing": "b ɪ f ɔ ɹ"
+  },
+  {
+    "orthography": "began",
+    "glossing": "b ɪ ɡ æ n"
+  },
+  {
+    "orthography": "begin",
+    "glossing": "b i ɡ ɪ n"
+  },
+  {
+    "orthography": "begin",
+    "glossing": "b ə ɡ ɪ n"
+  },
+  {
+    "orthography": "begin",
+    "glossing": "b ɪ ɡ ɪ n"
+  },
+  {
+    "orthography": "behind",
+    "glossing": "b i h a ɪ n d"
+  },
+  {
+    "orthography": "behind",
+    "glossing": "b ə h a ɪ n d"
+  },
+  {
+    "orthography": "behind",
+    "glossing": "b ɪ h a ɪ n d"
+  },
+  {
+    "orthography": "believe",
+    "glossing": "b ɪ l i v"
+  },
+  {
+    "orthography": "bell",
+    "glossing": "b ɛ l"
+  },
+  {
+    "orthography": "best",
+    "glossing": "b ɛ s t"
+  },
+  {
+    "orthography": "between",
+    "glossing": "b ə t w i n"
+  },
+  {
+    "orthography": "between",
+    "glossing": "b ɪ t w i n"
+  },
+  {
+    "orthography": "big",
+    "glossing": "b ɪ ɡ"
+  },
+  {
+    "orthography": "bird",
+    "glossing": "b ɜ ɹ d"
+  },
+  {
+    "orthography": "bit",
+    "glossing": "b ɪ t"
+  },
+  {
+    "orthography": "black",
+    "glossing": "b l æ k"
+  },
+  {
+    "orthography": "block",
+    "glossing": "b l ɑ k"
+  },
+  {
+    "orthography": "blood",
+    "glossing": "b l ʌ d"
+  },
+  {
+    "orthography": "blow",
+    "glossing": "b l o ʊ"
+  },
+  {
+    "orthography": "blue",
+    "glossing": "b l u"
+  },
+  {
+    "orthography": "board",
+    "glossing": "b ɔ ɹ d"
+  },
+  {
+    "orthography": "boat",
+    "glossing": "b o ʊ t"
+  },
+  {
+    "orthography": "body",
+    "glossing": "b ɑ d i"
+  },
+  {
+    "orthography": "bone",
+    "glossing": "b o ʊ n"
+  },
+  {
+    "orthography": "book",
+    "glossing": "b ʊ k"
+  },
+  {
+    "orthography": "born",
+    "glossing": "b o ɹ n"
+  },
+  {
+    "orthography": "both",
+    "glossing": "b ə ʊ θ"
+  },
+  {
+    "orthography": "bottom",
+    "glossing": "b ɑ t ə m"
+  },
+  {
+    "orthography": "bought",
+    "glossing": "b ɔ t"
+  },
+  {
+    "orthography": "box",
+    "glossing": "b ɑ k s"
+  },
+  {
+    "orthography": "boy",
+    "glossing": "b ɔ ɪ"
+  },
+  {
+    "orthography": "branch",
+    "glossing": "b ɹ æ n t͡ʃ"
+  },
+  {
+    "orthography": "bread",
+    "glossing": "b ɹ ɛ d"
+  },
+  {
+    "orthography": "break",
+    "glossing": "b ɹ e ɪ k"
+  },
+  {
+    "orthography": "bright",
+    "glossing": "b ɹ a ɪ t"
+  },
+  {
+    "orthography": "bring",
+    "glossing": "b ɹ ɪ ŋ"
+  },
+  {
+    "orthography": "broad",
+    "glossing": "b ɹ ɑ d"
+  },
+  {
+    "orthography": "broad",
+    "glossing": "b ɹ ɔ d"
+  },
+  {
+    "orthography": "broke",
+    "glossing": "b ɹ o ʊ k"
+  },
+  {
+    "orthography": "brother",
+    "glossing": "b ɹ ʌ ð ɚ"
+  },
+  {
+    "orthography": "brought",
+    "glossing": "b ɹ ɔ t"
+  },
+  {
+    "orthography": "brown",
+    "glossing": "b ɹ a ʊ n"
+  },
+  {
+    "orthography": "build",
+    "glossing": "b ɪ l d"
+  },
+  {
+    "orthography": "burn",
+    "glossing": "b ɝ n"
+  },
+  {
+    "orthography": "busy",
+    "glossing": "b ɪ z i"
+  },
+  {
+    "orthography": "but",
+    "glossing": "b ʌ t"
+  },
+  {
+    "orthography": "buy",
+    "glossing": "b a ɪ"
+  },
+  {
+    "orthography": "by",
+    "glossing": "b a ɪ"
+  },
+  {
+    "orthography": "call",
+    "glossing": "k ɔ l"
+  },
+  {
+    "orthography": "came",
+    "glossing": "k e ɪ m"
+  },
+  {
+    "orthography": "camp",
+    "glossing": "k æ m p"
+  },
+  {
+    "orthography": "can",
+    "glossing": "k æ n"
+  },
+  {
+    "orthography": "can",
+    "glossing": "k ə n"
+  },
+  {
+    "orthography": "can",
+    "glossing": "k ɛ n"
+  },
+  {
+    "orthography": "capital",
+    "glossing": "k æ p ɪ t ə l"
+  },
+  {
+    "orthography": "captain",
+    "glossing": "k æ p t ə n"
+  },
+  {
+    "orthography": "car",
+    "glossing": "k ɑ ɹ"
+  },
+  {
+    "orthography": "card",
+    "glossing": "k ɑ ɹ d"
+  },
+  {
+    "orthography": "care",
+    "glossing": "k ɛ ɚ"
+  },
+  {
+    "orthography": "case",
+    "glossing": "k e ɪ s"
+  },
+  {
+    "orthography": "cat",
+    "glossing": "k æ t"
+  },
+  {
+    "orthography": "catch",
+    "glossing": "k æ t͡ʃ"
+  },
+  {
+    "orthography": "catch",
+    "glossing": "k ɛ t͡ʃ"
+  },
+  {
+    "orthography": "caught",
+    "glossing": "k ɔ t"
+  },
+  {
+    "orthography": "cause",
+    "glossing": "k ɔ z"
+  },
+  {
+    "orthography": "cell",
+    "glossing": "s ɛ l"
+  },
+  {
+    "orthography": "cent",
+    "glossing": "s ɛ n t"
+  },
+  {
+    "orthography": "center",
+    "glossing": "s ɛ n t ɚ"
+  },
+  {
+    "orthography": "century",
+    "glossing": "s ɛ n t ʃ ə ɹ i"
+  },
+  {
+    "orthography": "certain",
+    "glossing": "s ɝ t n"
+  },
+  {
+    "orthography": "certain",
+    "glossing": "s ɝ t ə n"
+  },
+  {
+    "orthography": "certain",
+    "glossing": "s ɝ ʔ n"
+  },
+  {
+    "orthography": "certain",
+    "glossing": "s ɝ ʔ ə n"
+  },
+  {
+    "orthography": "chair",
+    "glossing": "t͡ʃ ɛ ɚ"
+  },
+  {
+    "orthography": "chance",
+    "glossing": "t͡ʃ æ n s"
+  },
+  {
+    "orthography": "chance",
+    "glossing": "t͡ʃ ɑ n s"
+  },
+  {
+    "orthography": "change",
+    "glossing": "t͡ʃ e ɪ n d͡ʒ"
+  },
+  {
+    "orthography": "charge",
+    "glossing": "t͡ʃ ɑ ɹ d͡ʒ"
+  },
+  {
+    "orthography": "chart",
+    "glossing": "t͡ʃ ɑ ɹ t"
+  },
+  {
+    "orthography": "check",
+    "glossing": "t͡ʃ ɛ k"
+  },
+  {
+    "orthography": "chick",
+    "glossing": "t͡ʃ ɪ k"
+  },
+  {
+    "orthography": "chief",
+    "glossing": "t͡ʃ i f"
+  },
+  {
+    "orthography": "child",
+    "glossing": "t͡ʃ a ɪ l d"
+  },
+  {
+    "orthography": "children",
+    "glossing": "t͡ʃ ɪ l d ɹ ə n"
+  },
+  {
+    "orthography": "choose",
+    "glossing": "t͡ʃ u z"
+  },
+  {
+    "orthography": "chord",
+    "glossing": "k ɔ ɹ d"
+  },
+  {
+    "orthography": "circle",
+    "glossing": "s ɜ ɹ k ə l"
+  },
+  {
+    "orthography": "city",
+    "glossing": "s ɪ t i"
+  },
+  {
+    "orthography": "city",
+    "glossing": "s ɪ t ɪ"
+  },
+  {
+    "orthography": "claim",
+    "glossing": "k l e ɪ m"
+  },
+  {
+    "orthography": "class",
+    "glossing": "k l e ə s"
+  },
+  {
+    "orthography": "class",
+    "glossing": "k l æ s"
+  },
+  {
+    "orthography": "clean",
+    "glossing": "k l i n"
+  },
+  {
+    "orthography": "clear",
+    "glossing": "k l ɪ ɹ"
+  },
+  {
+    "orthography": "climb",
+    "glossing": "k l a ɪ m"
+  },
+  {
+    "orthography": "clock",
+    "glossing": "k l ɑ k"
+  },
+  {
+    "orthography": "clock",
+    "glossing": "k l ɔ k"
+  },
+  {
+    "orthography": "close",
+    "glossing": "k l o ʊ s"
+  },
+  {
+    "orthography": "close",
+    "glossing": "k l o ʊ z"
+  },
+  {
+    "orthography": "clothe",
+    "glossing": "k l o ʊ ð"
+  },
+  {
+    "orthography": "cloud",
+    "glossing": "k l a ʊ d"
+  },
+  {
+    "orthography": "coast",
+    "glossing": "k o ʊ s t"
+  },
+  {
+    "orthography": "coat",
+    "glossing": "k o ʊ t"
+  },
+  {
+    "orthography": "cold",
+    "glossing": "k o ʊ l d"
+  },
+  {
+    "orthography": "collect",
+    "glossing": "k ɑ l ɛ k t"
+  },
+  {
+    "orthography": "collect",
+    "glossing": "k ɑ l ɪ k t"
+  },
+  {
+    "orthography": "collect",
+    "glossing": "k ə l ɛ k t"
+  },
+  {
+    "orthography": "colony",
+    "glossing": "k ɑ l ə n i"
+  },
+  {
+    "orthography": "colony",
+    "glossing": "k ɔ l ə n i"
+  },
+  {
+    "orthography": "color",
+    "glossing": "k ʌ l ɚ"
+  },
+  {
+    "orthography": "come",
+    "glossing": "k ʌ m"
+  },
+  {
+    "orthography": "common",
+    "glossing": "k ɑ m ə n"
+  },
+  {
+    "orthography": "common",
+    "glossing": "k ɑ m ɪ n"
+  },
+  {
+    "orthography": "company",
+    "glossing": "k ʌ m p ə n i"
+  },
+  {
+    "orthography": "compare",
+    "glossing": "k ə m p ɛ ɚ"
+  },
+  {
+    "orthography": "complete",
+    "glossing": "k ə m p l i t"
+  },
+  {
+    "orthography": "condition",
+    "glossing": "k ə n d ɪ ʃ ə n"
+  },
+  {
+    "orthography": "connect",
+    "glossing": "k ə n ɛ k t"
+  },
+  {
+    "orthography": "consider",
+    "glossing": "k ə n s ɪ d ɚ"
+  },
+  {
+    "orthography": "consonant",
+    "glossing": "k ɑ n s n ə n t"
+  },
+  {
+    "orthography": "consonant",
+    "glossing": "k ɑ n s ə n ə n t"
+  },
+  {
+    "orthography": "contain",
+    "glossing": "k ə n t e ɪ n"
+  },
+  {
+    "orthography": "continent",
+    "glossing": "k ɑ n t ə n ə n t"
+  },
+  {
+    "orthography": "continent",
+    "glossing": "k ɑ n t ɪ n ə n t"
+  },
+  {
+    "orthography": "continue",
+    "glossing": "k ə n t ɪ n j u"
+  },
+  {
+    "orthography": "control",
+    "glossing": "k ə n t ɹ o ʊ l"
+  },
+  {
+    "orthography": "cook",
+    "glossing": "k ʊ k"
+  },
+  {
+    "orthography": "cool",
+    "glossing": "k u l"
+  },
+  {
+    "orthography": "copy",
+    "glossing": "k ɑ p i"
+  },
+  {
+    "orthography": "corn",
+    "glossing": "k ɔ ɹ n"
+  },
+  {
+    "orthography": "corner",
+    "glossing": "k ɔ ɹ n ɚ"
+  },
+  {
+    "orthography": "correct",
+    "glossing": "k ə ɹ ɛ k t"
+  },
+  {
+    "orthography": "cost",
+    "glossing": "k ɔ s t"
+  },
+  {
+    "orthography": "cotton",
+    "glossing": "k ɑ t ə n"
+  },
+  {
+    "orthography": "count",
+    "glossing": "k a ʊ n t"
+  },
+  {
+    "orthography": "country",
+    "glossing": "k ʌ n t ɹ i"
+  },
+  {
+    "orthography": "course",
+    "glossing": "k o ɹ s"
+  },
+  {
+    "orthography": "course",
+    "glossing": "k ɔ ɹ s"
+  },
+  {
+    "orthography": "cover",
+    "glossing": "k ʌ v ɚ"
+  },
+  {
+    "orthography": "cow",
+    "glossing": "k a ʊ"
+  },
+  {
+    "orthography": "create",
+    "glossing": "k ɹ i e ɪ t"
+  },
+  {
+    "orthography": "crop",
+    "glossing": "k ɹ ɑ p"
+  },
+  {
+    "orthography": "cross",
+    "glossing": "k ɹ ɔ s"
+  },
+  {
+    "orthography": "crowd",
+    "glossing": "k ɹ a ʊ d"
+  },
+  {
+    "orthography": "cry",
+    "glossing": "k ɹ a ɪ"
+  },
+  {
+    "orthography": "current",
+    "glossing": "k ɝ ə n t"
+  },
+  {
+    "orthography": "current",
+    "glossing": "k ɝ ɪ n t"
+  },
+  {
+    "orthography": "current",
+    "glossing": "k ʌ ɹ ə n t"
+  },
+  {
+    "orthography": "cut",
+    "glossing": "k ʌ t"
+  },
+  {
+    "orthography": "dad",
+    "glossing": "d æ d"
+  },
+  {
+    "orthography": "dance",
+    "glossing": "d æ n t s"
+  },
+  {
+    "orthography": "dance",
+    "glossing": "d ɑ n s"
+  },
+  {
+    "orthography": "danger",
+    "glossing": "d e ɪ n d͡ʒ ɚ"
+  },
+  {
+    "orthography": "dark",
+    "glossing": "d ɑ ɹ k"
+  },
+  {
+    "orthography": "day",
+    "glossing": "d e ɪ"
+  },
+  {
+    "orthography": "dead",
+    "glossing": "d ɛ d"
+  },
+  {
+    "orthography": "deal",
+    "glossing": "d i l"
+  },
+  {
+    "orthography": "dear",
+    "glossing": "d ɪ ɹ"
+  },
+  {
+    "orthography": "death",
+    "glossing": "d ɛ θ"
+  },
+  {
+    "orthography": "decide",
+    "glossing": "d ɪ s a ɪ d"
+  },
+  {
+    "orthography": "decimal",
+    "glossing": "d ɛ s m ə l"
+  },
+  {
+    "orthography": "decimal",
+    "glossing": "d ɛ s ə m ə l"
+  },
+  {
+    "orthography": "decimal",
+    "glossing": "d ɛ s ɪ m ə l"
+  },
+  {
+    "orthography": "deep",
+    "glossing": "d i p"
+  },
+  {
+    "orthography": "degree",
+    "glossing": "d ɪ ɡ ɹ i"
+  },
+  {
+    "orthography": "depend",
+    "glossing": "d ɪ p ɛ n d"
+  },
+  {
+    "orthography": "describe",
+    "glossing": "d ə s k ɹ a ɪ b"
+  },
+  {
+    "orthography": "describe",
+    "glossing": "d ɪ s k ɹ a ɪ b"
+  },
+  {
+    "orthography": "desert",
+    "glossing": "d ə z ɝ t"
+  },
+  {
+    "orthography": "desert",
+    "glossing": "d ɛ z ɚ t"
+  },
+  {
+    "orthography": "desert",
+    "glossing": "d ɪ z ɝ t"
+  },
+  {
+    "orthography": "design",
+    "glossing": "d ɪ z a ɪ n"
+  },
+  {
+    "orthography": "determine",
+    "glossing": "d ɪ t ɝ m ɪ n"
+  },
+  {
+    "orthography": "develop",
+    "glossing": "d ɪ v ɛ l ə p"
+  },
+  {
+    "orthography": "dictionary",
+    "glossing": "d ɪ k ʃ ə n ɛ ɹ i"
+  },
+  {
+    "orthography": "did",
+    "glossing": "d ɪ d"
+  },
+  {
+    "orthography": "die",
+    "glossing": "d a ɪ"
+  },
+  {
+    "orthography": "differ",
+    "glossing": "d ɪ f ɚ"
+  },
+  {
+    "orthography": "difficult",
+    "glossing": "d ɪ f ɪ k ə l t"
+  },
+  {
+    "orthography": "direct",
+    "glossing": "d a ɪ ɹ ɛ k t"
+  },
+  {
+    "orthography": "direct",
+    "glossing": "d a ɪ ə ɹ ɛ k t"
+  },
+  {
+    "orthography": "direct",
+    "glossing": "d ə ɹ ɛ k t"
+  },
+  {
+    "orthography": "discuss",
+    "glossing": "d ɪ s k ʌ s"
+  },
+  {
+    "orthography": "distant",
+    "glossing": "d ɪ s t ə n t"
+  },
+  {
+    "orthography": "division",
+    "glossing": "d ɪ v ɪ ʒ ə n"
+  },
+  {
+    "orthography": "do",
+    "glossing": "d o ʊ"
+  },
+  {
+    "orthography": "do",
+    "glossing": "d u"
+  },
+  {
+    "orthography": "doctor",
+    "glossing": "d ɑ k t ɚ"
+  },
+  {
+    "orthography": "does",
+    "glossing": "d o ʊ z"
+  },
+  {
+    "orthography": "dog",
+    "glossing": "d ɔ ɡ"
+  },
+  {
+    "orthography": "dollar",
+    "glossing": "d ɑ l ɚ"
+  },
+  {
+    "orthography": "don't",
+    "glossing": "d o ʊ n t"
+  },
+  {
+    "orthography": "done",
+    "glossing": "d ə ʊ n"
+  },
+  {
+    "orthography": "done",
+    "glossing": "d ʌ n"
+  },
+  {
+    "orthography": "door",
+    "glossing": "d ɔ ɹ"
+  },
+  {
+    "orthography": "double",
+    "glossing": "d ʌ b ə l"
+  },
+  {
+    "orthography": "down",
+    "glossing": "d a ʊ n"
+  },
+  {
+    "orthography": "draw",
+    "glossing": "d ɹ ɔ"
+  },
+  {
+    "orthography": "dream",
+    "glossing": "d ɹ i m"
+  },
+  {
+    "orthography": "dress",
+    "glossing": "d ɹ ɛ s"
+  },
+  {
+    "orthography": "drink",
+    "glossing": "d ɹ ɪ ŋ k"
+  },
+  {
+    "orthography": "drive",
+    "glossing": "d ɹ a ɪ v"
+  },
+  {
+    "orthography": "drop",
+    "glossing": "d ɹ ɑ p"
+  },
+  {
+    "orthography": "dry",
+    "glossing": "d ɹ a ɪ"
+  },
+  {
+    "orthography": "duck",
+    "glossing": "d ʌ k"
+  },
+  {
+    "orthography": "during",
+    "glossing": "d j ɜ ɹ ɪ ŋ"
+  },
+  {
+    "orthography": "during",
+    "glossing": "d j ʊ ə ɹ ɪ ŋ"
+  },
+  {
+    "orthography": "each",
+    "glossing": "i t͡ʃ"
+  },
+  {
+    "orthography": "ear",
+    "glossing": "i ɹ"
+  },
+  {
+    "orthography": "ear",
+    "glossing": "ɪ ɚ"
+  },
+  {
+    "orthography": "early",
+    "glossing": "ɜ ɹ l i"
+  },
+  {
+    "orthography": "earth",
+    "glossing": "ɝ θ"
+  },
+  {
+    "orthography": "ease",
+    "glossing": "i z"
+  },
+  {
+    "orthography": "east",
+    "glossing": "i s t"
+  },
+  {
+    "orthography": "eat",
+    "glossing": "i t"
+  },
+  {
+    "orthography": "edge",
+    "glossing": "ɛ d͡ʒ"
+  },
+  {
+    "orthography": "effect",
+    "glossing": "ə f ɛ k t"
+  },
+  {
+    "orthography": "effect",
+    "glossing": "ɪ f ɛ k t"
+  },
+  {
+    "orthography": "egg",
+    "glossing": "ɛ ɡ"
+  },
+  {
+    "orthography": "eight",
+    "glossing": "e ɪ t"
+  },
+  {
+    "orthography": "either",
+    "glossing": "a ɪ ð ɚ"
+  },
+  {
+    "orthography": "either",
+    "glossing": "i ð ɚ"
+  },
+  {
+    "orthography": "electric",
+    "glossing": "i l ɛ k t ɹ ɪ k"
+  },
+  {
+    "orthography": "electric",
+    "glossing": "ə l ɛ k t ɹ ɪ k"
+  },
+  {
+    "orthography": "electric",
+    "glossing": "ɪ l ɛ k t ɹ ɪ k"
+  },
+  {
+    "orthography": "element",
+    "glossing": "ɛ l ə m ə n t"
+  },
+  {
+    "orthography": "else",
+    "glossing": "ɛ l s"
+  },
+  {
+    "orthography": "else",
+    "glossing": "ɛ l t s"
+  },
+  {
+    "orthography": "end",
+    "glossing": "ɛ n d"
+  },
+  {
+    "orthography": "enemy",
+    "glossing": "ɛ n ə m i"
+  },
+  {
+    "orthography": "energy",
+    "glossing": "ɛ n ɚ d͡ʒ i"
+  },
+  {
+    "orthography": "engine",
+    "glossing": "ɛ n d͡ʒ ɪ n"
+  },
+  {
+    "orthography": "enough",
+    "glossing": "ɪ n ʌ f"
+  },
+  {
+    "orthography": "enter",
+    "glossing": "ɛ n t ɚ"
+  },
+  {
+    "orthography": "equal",
+    "glossing": "i k w ə l"
+  },
+  {
+    "orthography": "especially",
+    "glossing": "ə s p ɛ ʃ ə l i"
+  },
+  {
+    "orthography": "especially",
+    "glossing": "ɛ s p ɛ ʃ ə l i"
+  },
+  {
+    "orthography": "especially",
+    "glossing": "ɪ s p ɛ ʃ ə l i"
+  },
+  {
+    "orthography": "even",
+    "glossing": "i v n"
+  },
+  {
+    "orthography": "even",
+    "glossing": "i v ə n"
+  },
+  {
+    "orthography": "evening",
+    "glossing": "i v n ɪ ŋ"
+  },
+  {
+    "orthography": "evening",
+    "glossing": "i v n ɪ ŋ"
+  },
+  {
+    "orthography": "evening",
+    "glossing": "i v ə n ɪ ŋ"
+  },
+  {
+    "orthography": "event",
+    "glossing": "ɪ v ɛ n t"
+  },
+  {
+    "orthography": "ever",
+    "glossing": "ɛ v ɚ"
+  },
+  {
+    "orthography": "every",
+    "glossing": "ɛ v ə ɹ i"
+  },
+  {
+    "orthography": "exact",
+    "glossing": "ɪ ɡ z æ k t"
+  },
+  {
+    "orthography": "example",
+    "glossing": "ə ɡ z æ m p ə l"
+  },
+  {
+    "orthography": "example",
+    "glossing": "ɪ ɡ z æ m p ə l"
+  },
+  {
+    "orthography": "except",
+    "glossing": "ɪ k s ɛ p t"
+  },
+  {
+    "orthography": "excite",
+    "glossing": "ɪ k s a ɪ t"
+  },
+  {
+    "orthography": "exercise",
+    "glossing": "ɛ k s ɚ s a ɪ z"
+  },
+  {
+    "orthography": "expect",
+    "glossing": "ɛ k s p ɛ k t"
+  },
+  {
+    "orthography": "expect",
+    "glossing": "ɪ k s p ɛ k t"
+  },
+  {
+    "orthography": "experience",
+    "glossing": "ɪ k s p ɪ ɹ i ə n s"
+  },
+  {
+    "orthography": "experiment",
+    "glossing": "ɪ k s p ɛ ɹ ə m ə n t"
+  },
+  {
+    "orthography": "experiment",
+    "glossing": "ɪ k s p ɪ ɹ ə m ə n t"
+  },
+  {
+    "orthography": "eye",
+    "glossing": "a ɪ"
+  },
+  {
+    "orthography": "face",
+    "glossing": "f e ɪ s"
+  },
+  {
+    "orthography": "fact",
+    "glossing": "f æ k t"
+  },
+  {
+    "orthography": "fair",
+    "glossing": "f ɛ ɚ"
+  },
+  {
+    "orthography": "fall",
+    "glossing": "f ɔ l"
+  },
+  {
+    "orthography": "family",
+    "glossing": "f æ m ə l i"
+  },
+  {
+    "orthography": "family",
+    "glossing": "f æ m ɪ l i"
+  },
+  {
+    "orthography": "famous",
+    "glossing": "f e ɪ m ə s"
+  },
+  {
+    "orthography": "far",
+    "glossing": "f ɑ ɹ"
+  },
+  {
+    "orthography": "farm",
+    "glossing": "f ɑ ɹ m"
+  },
+  {
+    "orthography": "fast",
+    "glossing": "f æ s t"
+  },
+  {
+    "orthography": "fat",
+    "glossing": "f æ t"
+  },
+  {
+    "orthography": "father",
+    "glossing": "f ɑ ð ɚ"
+  },
+  {
+    "orthography": "favor",
+    "glossing": "f e ɪ v ɚ"
+  },
+  {
+    "orthography": "fear",
+    "glossing": "f ɪ ɚ"
+  },
+  {
+    "orthography": "fear",
+    "glossing": "f ɪ ɹ"
+  },
+  {
+    "orthography": "feed",
+    "glossing": "f i d"
+  },
+  {
+    "orthography": "feel",
+    "glossing": "f i l"
+  },
+  {
+    "orthography": "feet",
+    "glossing": "f i t"
+  },
+  {
+    "orthography": "fell",
+    "glossing": "f ɛ l"
+  },
+  {
+    "orthography": "felt",
+    "glossing": "f ɛ l t"
+  },
+  {
+    "orthography": "few",
+    "glossing": "f j u"
+  },
+  {
+    "orthography": "field",
+    "glossing": "f i l d"
+  },
+  {
+    "orthography": "fig",
+    "glossing": "f ɪ ɡ"
+  },
+  {
+    "orthography": "fight",
+    "glossing": "f a ɪ t"
+  },
+  {
+    "orthography": "figure",
+    "glossing": "f ɪ ɡ j ɚ"
+  },
+  {
+    "orthography": "figure",
+    "glossing": "f ɪ ɡ ɚ"
+  },
+  {
+    "orthography": "fill",
+    "glossing": "f ɪ l"
+  },
+  {
+    "orthography": "final",
+    "glossing": "f a ɪ n ə l"
+  },
+  {
+    "orthography": "find",
+    "glossing": "f a ɪ n d"
+  },
+  {
+    "orthography": "fine",
+    "glossing": "f a ɪ n"
+  },
+  {
+    "orthography": "fine",
+    "glossing": "f i n e ɪ"
+  },
+  {
+    "orthography": "finger",
+    "glossing": "f ɪ ŋ ɡ ə ɹ"
+  },
+  {
+    "orthography": "finish",
+    "glossing": "f ɪ n ɪ ʃ"
+  },
+  {
+    "orthography": "fire",
+    "glossing": "f a ɪ ɚ"
+  },
+  {
+    "orthography": "fire",
+    "glossing": "f a ɪ ɹ"
+  },
+  {
+    "orthography": "first",
+    "glossing": "f ɝ s t"
+  },
+  {
+    "orthography": "fish",
+    "glossing": "f ɪ ʃ"
+  },
+  {
+    "orthography": "fit",
+    "glossing": "f ɪ t"
+  },
+  {
+    "orthography": "five",
+    "glossing": "f a ɪ v"
+  },
+  {
+    "orthography": "flat",
+    "glossing": "f l æ t"
+  },
+  {
+    "orthography": "floor",
+    "glossing": "f l ɔ ɹ"
+  },
+  {
+    "orthography": "flow",
+    "glossing": "f l o ʊ"
+  },
+  {
+    "orthography": "flower",
+    "glossing": "f l a ʊ ɚ"
+  },
+  {
+    "orthography": "flower",
+    "glossing": "f l o ʊ ɚ"
+  },
+  {
+    "orthography": "fly",
+    "glossing": "f l a ɪ"
+  },
+  {
+    "orthography": "follow",
+    "glossing": "f ɑ l o ʊ"
+  },
+  {
+    "orthography": "food",
+    "glossing": "f u d"
+  },
+  {
+    "orthography": "foot",
+    "glossing": "f ʊ t"
+  },
+  {
+    "orthography": "for",
+    "glossing": "f ɔ ɹ"
+  },
+  {
+    "orthography": "for",
+    "glossing": "f ə"
+  },
+  {
+    "orthography": "for",
+    "glossing": "f ɚ"
+  },
+  {
+    "orthography": "force",
+    "glossing": "f ɔ ɹ s"
+  },
+  {
+    "orthography": "forest",
+    "glossing": "f ɔ ɹ s t"
+  },
+  {
+    "orthography": "forest",
+    "glossing": "f ɔ ɹ ə s t"
+  },
+  {
+    "orthography": "form",
+    "glossing": "f ɔ ɹ m"
+  },
+  {
+    "orthography": "forward",
+    "glossing": "f o ʊ w ə ɹ d"
+  },
+  {
+    "orthography": "forward",
+    "glossing": "f ɔ ɹ w ə ɹ d"
+  },
+  {
+    "orthography": "forward",
+    "glossing": "f ɔ ɹ ə ɹ d"
+  },
+  {
+    "orthography": "found",
+    "glossing": "f a ʊ n d"
+  },
+  {
+    "orthography": "four",
+    "glossing": "f ɔ ɹ"
+  },
+  {
+    "orthography": "fraction",
+    "glossing": "f ɹ æ k ʃ ə n"
+  },
+  {
+    "orthography": "free",
+    "glossing": "f ɹ i"
+  },
+  {
+    "orthography": "fresh",
+    "glossing": "f ɹ ɛ ʃ"
+  },
+  {
+    "orthography": "friend",
+    "glossing": "f ɹ ɛ n d"
+  },
+  {
+    "orthography": "from",
+    "glossing": "f ɹ ʌ m"
+  },
+  {
+    "orthography": "front",
+    "glossing": "f ɹ ʌ n t"
+  },
+  {
+    "orthography": "fruit",
+    "glossing": "f ɹ u t"
+  },
+  {
+    "orthography": "full",
+    "glossing": "f ʊ l"
+  },
+  {
+    "orthography": "fun",
+    "glossing": "f ʌ n"
+  },
+  {
+    "orthography": "game",
+    "glossing": "ɡ e ɪ m"
+  },
+  {
+    "orthography": "garden",
+    "glossing": "ɡ ɑ ɹ d ə n"
+  },
+  {
+    "orthography": "gas",
+    "glossing": "ɡ æ s"
+  },
+  {
+    "orthography": "gather",
+    "glossing": "ɡ æ ð ɚ"
+  },
+  {
+    "orthography": "gave",
+    "glossing": "ɡ e ɪ v"
+  },
+  {
+    "orthography": "general",
+    "glossing": "d͡ʒ ɛ n ə ɹ ə l"
+  },
+  {
+    "orthography": "gentle",
+    "glossing": "d͡ʒ ɛ n t l"
+  },
+  {
+    "orthography": "gentle",
+    "glossing": "d͡ʒ ɛ n t ə l"
+  },
+  {
+    "orthography": "get",
+    "glossing": "ɡ ɛ t"
+  },
+  {
+    "orthography": "girl",
+    "glossing": "ɡ ɝ l"
+  },
+  {
+    "orthography": "girl",
+    "glossing": "ɡ ɝ ə l"
+  },
+  {
+    "orthography": "give",
+    "glossing": "ɡ ɪ v"
+  },
+  {
+    "orthography": "glad",
+    "glossing": "ɡ l æ d"
+  },
+  {
+    "orthography": "glass",
+    "glossing": "ɡ l æ s"
+  },
+  {
+    "orthography": "glass",
+    "glossing": "ɡ l ɑ s"
+  },
+  {
+    "orthography": "go",
+    "glossing": "ɡ o ʊ"
+  },
+  {
+    "orthography": "gold",
+    "glossing": "ɡ o ʊ l d"
+  },
+  {
+    "orthography": "gone",
+    "glossing": "ɡ ɔ n"
+  },
+  {
+    "orthography": "good",
+    "glossing": "ɡ ʊ d"
+  },
+  {
+    "orthography": "got",
+    "glossing": "ɡ ɑ t"
+  },
+  {
+    "orthography": "govern",
+    "glossing": "ɡ ʌ v ɚ n"
+  },
+  {
+    "orthography": "grand",
+    "glossing": "ɡ ɹ æ n d"
+  },
+  {
+    "orthography": "grass",
+    "glossing": "ɡ ɹ æ s"
+  },
+  {
+    "orthography": "grass",
+    "glossing": "ɡ ɹ ɑ s"
+  },
+  {
+    "orthography": "gray",
+    "glossing": "ɡ ɹ e ɪ"
+  },
+  {
+    "orthography": "great",
+    "glossing": "ɡ ɹ e ɪ t"
+  },
+  {
+    "orthography": "green",
+    "glossing": "ɡ ɹ i n"
+  },
+  {
+    "orthography": "grew",
+    "glossing": "ɡ ɹ u ʊ"
+  },
+  {
+    "orthography": "grew",
+    "glossing": "ɡ ɹ u"
+  },
+  {
+    "orthography": "ground",
+    "glossing": "ɡ ɹ a ʊ n d"
+  },
+  {
+    "orthography": "group",
+    "glossing": "ɡ ɹ u p"
+  },
+  {
+    "orthography": "grow",
+    "glossing": "ɡ ɹ o ʊ"
+  },
+  {
+    "orthography": "guess",
+    "glossing": "ɡ ɛ s"
+  },
+  {
+    "orthography": "guide",
+    "glossing": "ɡ a ɪ d"
+  },
+  {
+    "orthography": "gun",
+    "glossing": "ɡ ʌ n"
+  },
+  {
+    "orthography": "hair",
+    "glossing": "h ɛ ə ɹ"
+  },
+  {
+    "orthography": "half",
+    "glossing": "h æ f"
+  },
+  {
+    "orthography": "hand",
+    "glossing": "h æ n d"
+  },
+  {
+    "orthography": "happen",
+    "glossing": "h æ p ə n"
+  },
+  {
+    "orthography": "happy",
+    "glossing": "h æ p i"
+  },
+  {
+    "orthography": "hard",
+    "glossing": "h ɑ ɹ d"
+  },
+  {
+    "orthography": "hat",
+    "glossing": "h æ t"
+  },
+  {
+    "orthography": "have",
+    "glossing": "h æ f"
+  },
+  {
+    "orthography": "have",
+    "glossing": "h æ v"
+  },
+  {
+    "orthography": "he",
+    "glossing": "h e ɪ"
+  },
+  {
+    "orthography": "he",
+    "glossing": "h i"
+  },
+  {
+    "orthography": "he",
+    "glossing": "i"
+  },
+  {
+    "orthography": "head",
+    "glossing": "h ɛ d"
+  },
+  {
+    "orthography": "hear",
+    "glossing": "h ɪ ɚ"
+  },
+  {
+    "orthography": "heard",
+    "glossing": "h ɚ d"
+  },
+  {
+    "orthography": "heart",
+    "glossing": "h ɑ ɹ t"
+  },
+  {
+    "orthography": "heat",
+    "glossing": "h i t"
+  },
+  {
+    "orthography": "heat",
+    "glossing": "h i t"
+  },
+  {
+    "orthography": "heavy",
+    "glossing": "h i v i"
+  },
+  {
+    "orthography": "heavy",
+    "glossing": "h ɛ v i"
+  },
+  {
+    "orthography": "held",
+    "glossing": "h ɛ l d"
+  },
+  {
+    "orthography": "help",
+    "glossing": "h ɛ l p"
+  },
+  {
+    "orthography": "her",
+    "glossing": "h ɝ"
+  },
+  {
+    "orthography": "her",
+    "glossing": "ɚ"
+  },
+  {
+    "orthography": "here",
+    "glossing": "h ɪ ɹ"
+  },
+  {
+    "orthography": "high",
+    "glossing": "h a ɪ"
+  },
+  {
+    "orthography": "hill",
+    "glossing": "h ɪ l"
+  },
+  {
+    "orthography": "him",
+    "glossing": "h ɪ m"
+  },
+  {
+    "orthography": "him",
+    "glossing": "ə m"
+  },
+  {
+    "orthography": "his",
+    "glossing": "h ɪ z"
+  },
+  {
+    "orthography": "history",
+    "glossing": "h ɪ s t ə ɹ i"
+  },
+  {
+    "orthography": "history",
+    "glossing": "h ɪ s t ɹ ɪ"
+  },
+  {
+    "orthography": "hit",
+    "glossing": "h ɪ t"
+  },
+  {
+    "orthography": "hold",
+    "glossing": "h o ʊ l d"
+  },
+  {
+    "orthography": "hole",
+    "glossing": "h o ʊ l"
+  },
+  {
+    "orthography": "home",
+    "glossing": "h o ʊ m"
+  },
+  {
+    "orthography": "hope",
+    "glossing": "h o ʊ p"
+  },
+  {
+    "orthography": "horse",
+    "glossing": "h o ɹ s"
+  },
+  {
+    "orthography": "hot",
+    "glossing": "h ɑ t"
+  },
+  {
+    "orthography": "hot",
+    "glossing": "h ɑ t"
+  },
+  {
+    "orthography": "hour",
+    "glossing": "a ʊ ɚ"
+  },
+  {
+    "orthography": "house",
+    "glossing": "h a ʊ s"
+  },
+  {
+    "orthography": "house",
+    "glossing": "h a ʊ z"
+  },
+  {
+    "orthography": "how",
+    "glossing": "h a ʊ"
+  },
+  {
+    "orthography": "huge",
+    "glossing": "h j u d͡ʒ"
+  },
+  {
+    "orthography": "human",
+    "glossing": "h j u m ə n"
+  },
+  {
+    "orthography": "hundred",
+    "glossing": "h ʌ n d ɹ ə d"
+  },
+  {
+    "orthography": "hundred",
+    "glossing": "h ʌ n d ɹ ɪ d"
+  },
+  {
+    "orthography": "hunt",
+    "glossing": "h ʌ n t"
+  },
+  {
+    "orthography": "hurry",
+    "glossing": "h ɝ i"
+  },
+  {
+    "orthography": "hurry",
+    "glossing": "h ʌ ɹ i"
+  },
+  {
+    "orthography": "ice",
+    "glossing": "a ɪ s"
+  },
+  {
+    "orthography": "idea",
+    "glossing": "a ɪ d i ə"
+  },
+  {
+    "orthography": "idea",
+    "glossing": "a d ɪ ɹ"
+  },
+  {
+    "orthography": "if",
+    "glossing": "ɪ f"
+  },
+  {
+    "orthography": "imagine",
+    "glossing": "ɪ m æ d͡ʒ ɪ n"
+  },
+  {
+    "orthography": "in",
+    "glossing": "ə n"
+  },
+  {
+    "orthography": "in",
+    "glossing": "ɪ n"
+  },
+  {
+    "orthography": "inch",
+    "glossing": "ɪ n t͡ʃ"
+  },
+  {
+    "orthography": "include",
+    "glossing": "ɪ n k l u d"
+  },
+  {
+    "orthography": "indicate",
+    "glossing": "ɪ n d ɪ k e ɪ t"
+  },
+  {
+    "orthography": "industry",
+    "glossing": "ɪ n d ə s t ɹ i"
+  },
+  {
+    "orthography": "insect",
+    "glossing": "ɪ n s ɛ k t"
+  },
+  {
+    "orthography": "instant",
+    "glossing": "ɪ n s t ə n t"
+  },
+  {
+    "orthography": "instrument",
+    "glossing": "ɪ n s t ɹ ə m ə n t"
+  },
+  {
+    "orthography": "instrument",
+    "glossing": "ɪ n s t ɹ ʊ m ə n t"
+  },
+  {
+    "orthography": "interest",
+    "glossing": "ɪ n t ə ɹ s t"
+  },
+  {
+    "orthography": "interest",
+    "glossing": "ɪ n t ə ɹ ə s t"
+  },
+  {
+    "orthography": "interest",
+    "glossing": "ɪ n t ə ɹ ɛ s t"
+  },
+  {
+    "orthography": "interest",
+    "glossing": "ɪ n t ɹ ə s t"
+  },
+  {
+    "orthography": "interest",
+    "glossing": "ɪ n t ɹ ɛ s t"
+  },
+  {
+    "orthography": "invent",
+    "glossing": "ɪ n v ɛ n t"
+  },
+  {
+    "orthography": "iron",
+    "glossing": "a ɪ ə ɹ n"
+  },
+  {
+    "orthography": "is",
+    "glossing": "ɪ z"
+  },
+  {
+    "orthography": "island",
+    "glossing": "a ɪ l ə n d"
+  },
+  {
+    "orthography": "it",
+    "glossing": "ə t"
+  },
+  {
+    "orthography": "it",
+    "glossing": "ɪ t"
+  },
+  {
+    "orthography": "job",
+    "glossing": "d͡ʒ ɑ b"
+  },
+  {
+    "orthography": "join",
+    "glossing": "d͡ʒ ɔ ɪ n"
+  },
+  {
+    "orthography": "joy",
+    "glossing": "d͡ʒ ɔ ɪ"
+  },
+  {
+    "orthography": "jump",
+    "glossing": "d͡ʒ ʌ m p"
+  },
+  {
+    "orthography": "just",
+    "glossing": "d͡ʒ ʌ s t"
+  },
+  {
+    "orthography": "keep",
+    "glossing": "k i p"
+  },
+  {
+    "orthography": "kept",
+    "glossing": "k ɛ p t"
+  },
+  {
+    "orthography": "key",
+    "glossing": "k i"
+  },
+  {
+    "orthography": "kill",
+    "glossing": "k ɪ l"
+  },
+  {
+    "orthography": "kind",
+    "glossing": "k a ɪ n d"
+  },
+  {
+    "orthography": "king",
+    "glossing": "k i ŋ"
+  },
+  {
+    "orthography": "knew",
+    "glossing": "n j u"
+  },
+  {
+    "orthography": "know",
+    "glossing": "n o ʊ"
+  },
+  {
+    "orthography": "lady",
+    "glossing": "l e ɪ d i"
+  },
+  {
+    "orthography": "lake",
+    "glossing": "l e ɪ k"
+  },
+  {
+    "orthography": "land",
+    "glossing": "l æ n d"
+  },
+  {
+    "orthography": "language",
+    "glossing": "l æ ŋ ɡ w ɪ d͡ʒ"
+  },
+  {
+    "orthography": "large",
+    "glossing": "l ɑ ɹ d͡ʒ"
+  },
+  {
+    "orthography": "last",
+    "glossing": "l æ s t"
+  },
+  {
+    "orthography": "late",
+    "glossing": "l e ɪ t"
+  },
+  {
+    "orthography": "laugh",
+    "glossing": "l æ f"
+  },
+  {
+    "orthography": "law",
+    "glossing": "l ɔ"
+  },
+  {
+    "orthography": "lay",
+    "glossing": "l e ɪ"
+  },
+  {
+    "orthography": "lead",
+    "glossing": "l i d"
+  },
+  {
+    "orthography": "lead",
+    "glossing": "l ɛ d"
+  },
+  {
+    "orthography": "learn",
+    "glossing": "l ɝ n"
+  },
+  {
+    "orthography": "least",
+    "glossing": "l i s t"
+  },
+  {
+    "orthography": "leave",
+    "glossing": "l i v"
+  },
+  {
+    "orthography": "led",
+    "glossing": "l ɛ d"
+  },
+  {
+    "orthography": "left",
+    "glossing": "l ɛ f t"
+  },
+  {
+    "orthography": "leg",
+    "glossing": "l ɛ ɡ"
+  },
+  {
+    "orthography": "length",
+    "glossing": "l e ɪ n t θ"
+  },
+  {
+    "orthography": "length",
+    "glossing": "l ɛ n t θ"
+  },
+  {
+    "orthography": "length",
+    "glossing": "l ɛ ŋ k θ"
+  },
+  {
+    "orthography": "less",
+    "glossing": "l ɛ s"
+  },
+  {
+    "orthography": "let",
+    "glossing": "l ɛ t"
+  },
+  {
+    "orthography": "letter",
+    "glossing": "l ɛ t ɚ"
+  },
+  {
+    "orthography": "level",
+    "glossing": "l ɛ v ə l"
+  },
+  {
+    "orthography": "lie",
+    "glossing": "l a ɪ"
+  },
+  {
+    "orthography": "life",
+    "glossing": "l a ɪ f"
+  },
+  {
+    "orthography": "lift",
+    "glossing": "l ɪ f t"
+  },
+  {
+    "orthography": "light",
+    "glossing": "l a ɪ t"
+  },
+  {
+    "orthography": "like",
+    "glossing": "l a ɪ k"
+  },
+  {
+    "orthography": "line",
+    "glossing": "l a ɪ n"
+  },
+  {
+    "orthography": "liquid",
+    "glossing": "l ɪ k w ɪ d"
+  },
+  {
+    "orthography": "list",
+    "glossing": "l ɪ s t"
+  },
+  {
+    "orthography": "listen",
+    "glossing": "l ɪ s ə n"
+  },
+  {
+    "orthography": "little",
+    "glossing": "l ɪ t ə l"
+  },
+  {
+    "orthography": "live",
+    "glossing": "l a ɪ v"
+  },
+  {
+    "orthography": "live",
+    "glossing": "l ɪ v"
+  },
+  {
+    "orthography": "locate",
+    "glossing": "l o ʊ k e ɪ t"
+  },
+  {
+    "orthography": "log",
+    "glossing": "l ɔ ɡ"
+  },
+  {
+    "orthography": "lone",
+    "glossing": "l o ʊ n"
+  },
+  {
+    "orthography": "long",
+    "glossing": "l ɔ ŋ"
+  },
+  {
+    "orthography": "look",
+    "glossing": "l ʊ k"
+  },
+  {
+    "orthography": "lost",
+    "glossing": "l ɔ s t"
+  },
+  {
+    "orthography": "lot",
+    "glossing": "l ɑ t"
+  },
+  {
+    "orthography": "loud",
+    "glossing": "l a ʊ d"
+  },
+  {
+    "orthography": "love",
+    "glossing": "l ʌ v"
+  },
+  {
+    "orthography": "low",
+    "glossing": "l a ʊ"
+  },
+  {
+    "orthography": "low",
+    "glossing": "l o ʊ"
+  },
+  {
+    "orthography": "machine",
+    "glossing": "m ə ʃ i n"
+  },
+  {
+    "orthography": "made",
+    "glossing": "m e ɪ d"
+  },
+  {
+    "orthography": "magnet",
+    "glossing": "m æ ɡ n ɪ t"
+  },
+  {
+    "orthography": "main",
+    "glossing": "m e ɪ n"
+  },
+  {
+    "orthography": "major",
+    "glossing": "m e ɪ d͡ʒ ə ɹ"
+  },
+  {
+    "orthography": "make",
+    "glossing": "m e ɪ k"
+  },
+  {
+    "orthography": "man",
+    "glossing": "m æ n"
+  },
+  {
+    "orthography": "many",
+    "glossing": "m ɛ n i"
+  },
+  {
+    "orthography": "many",
+    "glossing": "m ɪ n i"
+  },
+  {
+    "orthography": "map",
+    "glossing": "m æ p"
+  },
+  {
+    "orthography": "mark",
+    "glossing": "m ɑ ɹ k"
+  },
+  {
+    "orthography": "market",
+    "glossing": "m ɑ ɹ k ɪ t"
+  },
+  {
+    "orthography": "mass",
+    "glossing": "m æ s"
+  },
+  {
+    "orthography": "master",
+    "glossing": "m æ s t ɚ"
+  },
+  {
+    "orthography": "match",
+    "glossing": "m æ t͡ʃ"
+  },
+  {
+    "orthography": "material",
+    "glossing": "m ə t ɪ ɹ i ə l"
+  },
+  {
+    "orthography": "matter",
+    "glossing": "m æ t ɚ"
+  },
+  {
+    "orthography": "may",
+    "glossing": "m e ɪ"
+  },
+  {
+    "orthography": "me",
+    "glossing": "m i"
+  },
+  {
+    "orthography": "mean",
+    "glossing": "m i n"
+  },
+  {
+    "orthography": "meant",
+    "glossing": "m ɛ n t"
+  },
+  {
+    "orthography": "measure",
+    "glossing": "m ɛ ʒ ɚ"
+  },
+  {
+    "orthography": "meat",
+    "glossing": "m i t"
+  },
+  {
+    "orthography": "meat",
+    "glossing": "m i t"
+  },
+  {
+    "orthography": "meet",
+    "glossing": "m i t"
+  },
+  {
+    "orthography": "melody",
+    "glossing": "m ɛ l ə d i"
+  },
+  {
+    "orthography": "men",
+    "glossing": "m ɛ n"
+  },
+  {
+    "orthography": "metal",
+    "glossing": "m ɛ t ə l"
+  },
+  {
+    "orthography": "method",
+    "glossing": "m ɛ θ ə d"
+  },
+  {
+    "orthography": "middle",
+    "glossing": "m ɪ d ə l"
+  },
+  {
+    "orthography": "might",
+    "glossing": "m a ɪ t"
+  },
+  {
+    "orthography": "mile",
+    "glossing": "m a ɪ l"
+  },
+  {
+    "orthography": "milk",
+    "glossing": "m ɪ l k"
+  },
+  {
+    "orthography": "million",
+    "glossing": "m ɪ l j ə n"
+  },
+  {
+    "orthography": "mind",
+    "glossing": "m a ɪ n d"
+  },
+  {
+    "orthography": "mine",
+    "glossing": "m a ɪ n"
+  },
+  {
+    "orthography": "minute",
+    "glossing": "m a ɪ n j u t"
+  },
+  {
+    "orthography": "minute",
+    "glossing": "m ə n j u t"
+  },
+  {
+    "orthography": "minute",
+    "glossing": "m ɪ n ɪ t"
+  },
+  {
+    "orthography": "miss",
+    "glossing": "m ɪ s"
+  },
+  {
+    "orthography": "mix",
+    "glossing": "m ɪ k s"
+  },
+  {
+    "orthography": "modern",
+    "glossing": "m ɑ d ɚ n"
+  },
+  {
+    "orthography": "molecule",
+    "glossing": "m ɑ l ə k j u l"
+  },
+  {
+    "orthography": "moment",
+    "glossing": "m o ʊ m ə n t"
+  },
+  {
+    "orthography": "money",
+    "glossing": "m ʌ n i"
+  },
+  {
+    "orthography": "month",
+    "glossing": "m ʌ n θ"
+  },
+  {
+    "orthography": "moon",
+    "glossing": "m u n"
+  },
+  {
+    "orthography": "more",
+    "glossing": "m ɔ ɹ"
+  },
+  {
+    "orthography": "more",
+    "glossing": "m ɔ ɹ e ɪ"
+  },
+  {
+    "orthography": "morning",
+    "glossing": "m ɔ ɹ n ɪ ŋ"
+  },
+  {
+    "orthography": "most",
+    "glossing": "m o ʊ s t"
+  },
+  {
+    "orthography": "mother",
+    "glossing": "m ɒ θ ə ɹ"
+  },
+  {
+    "orthography": "mother",
+    "glossing": "m ʌ ð ɚ"
+  },
+  {
+    "orthography": "motion",
+    "glossing": "m o ʊ ʃ ə n"
+  },
+  {
+    "orthography": "mount",
+    "glossing": "m a ʊ n t"
+  },
+  {
+    "orthography": "mountain",
+    "glossing": "m a ʊ n t ə n"
+  },
+  {
+    "orthography": "mouth",
+    "glossing": "m a ʊ ð"
+  },
+  {
+    "orthography": "mouth",
+    "glossing": "m a ʊ θ"
+  },
+  {
+    "orthography": "move",
+    "glossing": "m u v"
+  },
+  {
+    "orthography": "much",
+    "glossing": "m ʌ t͡ʃ"
+  },
+  {
+    "orthography": "multiply",
+    "glossing": "m ʌ l t ɪ p l a ɪ"
+  },
+  {
+    "orthography": "multiply",
+    "glossing": "m ʌ l t ɪ p l i"
+  },
+  {
+    "orthography": "music",
+    "glossing": "m j u z ɪ k"
+  },
+  {
+    "orthography": "name",
+    "glossing": "n e ɪ m"
+  },
+  {
+    "orthography": "nation",
+    "glossing": "n e ɪ ʃ ə n"
+  },
+  {
+    "orthography": "natural",
+    "glossing": "n æ t͡ʃ ə ɹ ə l"
+  },
+  {
+    "orthography": "nature",
+    "glossing": "n e ɪ t ʃ ə"
+  },
+  {
+    "orthography": "nature",
+    "glossing": "n e ɪ t ʃ ə ɹ"
+  },
+  {
+    "orthography": "nature",
+    "glossing": "n e ɪ t͡ʃ ə ɹ"
+  },
+  {
+    "orthography": "nature",
+    "glossing": "n æ ɪ t ʃ ə"
+  },
+  {
+    "orthography": "near",
+    "glossing": "n ɪ ɚ"
+  },
+  {
+    "orthography": "necessary",
+    "glossing": "n ɛ s ə s ɛ ɹ i"
+  },
+  {
+    "orthography": "necessary",
+    "glossing": "n ɛ s ə ɹ i"
+  },
+  {
+    "orthography": "neck",
+    "glossing": "n ɛ k"
+  },
+  {
+    "orthography": "need",
+    "glossing": "n i d"
+  },
+  {
+    "orthography": "never",
+    "glossing": "n ɛ v ɚ"
+  },
+  {
+    "orthography": "new",
+    "glossing": "n u"
+  },
+  {
+    "orthography": "next",
+    "glossing": "n ɛ k s t"
+  },
+  {
+    "orthography": "night",
+    "glossing": "n a ɪ t"
+  },
+  {
+    "orthography": "nine",
+    "glossing": "n a ɪ n"
+  },
+  {
+    "orthography": "noise",
+    "glossing": "n ɔ ɪ z"
+  },
+  {
+    "orthography": "noon",
+    "glossing": "n u n"
+  },
+  {
+    "orthography": "nor",
+    "glossing": "n ɔ ɹ"
+  },
+  {
+    "orthography": "north",
+    "glossing": "n o ɹ θ"
+  },
+  {
+    "orthography": "north",
+    "glossing": "n ɔ ə θ"
+  },
+  {
+    "orthography": "note",
+    "glossing": "n o ʊ t"
+  },
+  {
+    "orthography": "notice",
+    "glossing": "n o ʊ t ɪ s"
+  },
+  {
+    "orthography": "noun",
+    "glossing": "n a ʊ n"
+  },
+  {
+    "orthography": "now",
+    "glossing": "n a ʊ"
+  },
+  {
+    "orthography": "number",
+    "glossing": "n ʌ m b ɚ"
+  },
+  {
+    "orthography": "number",
+    "glossing": "n ʌ m ɚ"
+  },
+  {
+    "orthography": "numeral",
+    "glossing": "n u m ə ɹ ə l"
+  },
+  {
+    "orthography": "numeral",
+    "glossing": "n u m ɹ ə l"
+  },
+  {
+    "orthography": "object",
+    "glossing": "ɑ b d͡ʒ ɛ k t"
+  },
+  {
+    "orthography": "object",
+    "glossing": "ə b d͡ʒ ɛ k t"
+  },
+  {
+    "orthography": "observe",
+    "glossing": "ə b z ɝ v"
+  },
+  {
+    "orthography": "occur",
+    "glossing": "ə k ɝ"
+  },
+  {
+    "orthography": "ocean",
+    "glossing": "o ʊ ʃ ə n"
+  },
+  {
+    "orthography": "of",
+    "glossing": "ə"
+  },
+  {
+    "orthography": "of",
+    "glossing": "ə v"
+  },
+  {
+    "orthography": "of",
+    "glossing": "ʌ v"
+  },
+  {
+    "orthography": "off",
+    "glossing": "ɔ f"
+  },
+  {
+    "orthography": "offer",
+    "glossing": "ɔ f ɚ"
+  },
+  {
+    "orthography": "office",
+    "glossing": "ɔ f ɪ s"
+  },
+  {
+    "orthography": "often",
+    "glossing": "ɑ f t ə n"
+  },
+  {
+    "orthography": "often",
+    "glossing": "ɔ f t ə n"
+  },
+  {
+    "orthography": "oh",
+    "glossing": "o ʊ"
+  },
+  {
+    "orthography": "oil",
+    "glossing": "ɔ ɪ ə l"
+  },
+  {
+    "orthography": "old",
+    "glossing": "o ʊ l d"
+  },
+  {
+    "orthography": "once",
+    "glossing": "w ʌ n t s"
+  },
+  {
+    "orthography": "one",
+    "glossing": "w ʌ n"
+  },
+  {
+    "orthography": "only",
+    "glossing": "o ʊ n l i"
+  },
+  {
+    "orthography": "open",
+    "glossing": "o ʊ p ə n"
+  },
+  {
+    "orthography": "operate",
+    "glossing": "ɑ p ə ɹ e ɪ t"
+  },
+  {
+    "orthography": "opposite",
+    "glossing": "ɑ p ə s ɪ t"
+  },
+  {
+    "orthography": "opposite",
+    "glossing": "ɑ p ə z ɪ t"
+  },
+  {
+    "orthography": "or",
+    "glossing": "o ɹ"
+  },
+  {
+    "orthography": "or",
+    "glossing": "ɔ ɹ"
+  },
+  {
+    "orthography": "or",
+    "glossing": "ə ɹ"
+  },
+  {
+    "orthography": "order",
+    "glossing": "ɔ ɹ d ɚ"
+  },
+  {
+    "orthography": "organ",
+    "glossing": "ɔ ɹ ɡ ə n"
+  },
+  {
+    "orthography": "original",
+    "glossing": "ə ɹ ɪ d͡ʒ n ə l"
+  },
+  {
+    "orthography": "original",
+    "glossing": "ə ɹ ɪ d͡ʒ ə n ə l"
+  },
+  {
+    "orthography": "original",
+    "glossing": "ə ɹ ɪ d͡ʒ ɪ n ə l"
+  },
+  {
+    "orthography": "other",
+    "glossing": "ʌ ð ɚ"
+  },
+  {
+    "orthography": "our",
+    "glossing": "a ʊ ə ɹ"
+  },
+  {
+    "orthography": "our",
+    "glossing": "a ʊ ɚ"
+  },
+  {
+    "orthography": "our",
+    "glossing": "a r"
+  },
+  {
+    "orthography": "our",
+    "glossing": "a ɹ"
+  },
+  {
+    "orthography": "our",
+    "glossing": "æ ʊ ə"
+  },
+  {
+    "orthography": "our",
+    "glossing": "ɑ ɹ"
+  },
+  {
+    "orthography": "our",
+    "glossing": "ɑ ɹ"
+  },
+  {
+    "orthography": "out",
+    "glossing": "a ʊ t"
+  },
+  {
+    "orthography": "over",
+    "glossing": "o ʊ v ɚ"
+  },
+  {
+    "orthography": "own",
+    "glossing": "o ʊ n"
+  },
+  {
+    "orthography": "oxygen",
+    "glossing": "ɒ k s ɪ d͡ʒ ə n"
+  },
+  {
+    "orthography": "page",
+    "glossing": "p e ɪ d͡ʒ"
+  },
+  {
+    "orthography": "paint",
+    "glossing": "p e ɪ n t"
+  },
+  {
+    "orthography": "pair",
+    "glossing": "p ɛ ə ɹ"
+  },
+  {
+    "orthography": "paper",
+    "glossing": "p e ɪ p ɚ"
+  },
+  {
+    "orthography": "paragraph",
+    "glossing": "p æ ɹ ə ɡ ɹ æ f"
+  },
+  {
+    "orthography": "paragraph",
+    "glossing": "p ɛ ɹ ə ɡ ɹ æ f"
+  },
+  {
+    "orthography": "parent",
+    "glossing": "p æ ɹ ə n t"
+  },
+  {
+    "orthography": "parent",
+    "glossing": "p ɛ ɚ ə n t"
+  },
+  {
+    "orthography": "part",
+    "glossing": "p ɑ ɹ t"
+  },
+  {
+    "orthography": "particular",
+    "glossing": "p ə t ɪ k j ə l ɚ"
+  },
+  {
+    "orthography": "party",
+    "glossing": "p ɑ ɹ t i"
+  },
+  {
+    "orthography": "pass",
+    "glossing": "p æ s"
+  },
+  {
+    "orthography": "pass",
+    "glossing": "p ɑ s"
+  },
+  {
+    "orthography": "past",
+    "glossing": "p æ s t"
+  },
+  {
+    "orthography": "path",
+    "glossing": "p æ θ"
+  },
+  {
+    "orthography": "path",
+    "glossing": "p ɑ θ"
+  },
+  {
+    "orthography": "pattern",
+    "glossing": "p æ t ɚ n"
+  },
+  {
+    "orthography": "pay",
+    "glossing": "p e ɪ"
+  },
+  {
+    "orthography": "people",
+    "glossing": "p i p l"
+  },
+  {
+    "orthography": "people",
+    "glossing": "p i p ə l"
+  },
+  {
+    "orthography": "perhaps",
+    "glossing": "p ɚ h æ p s"
+  },
+  {
+    "orthography": "perhaps",
+    "glossing": "p ɹ æ p s"
+  },
+  {
+    "orthography": "period",
+    "glossing": "p ɪ ɚ i ə d"
+  },
+  {
+    "orthography": "period",
+    "glossing": "p ɪ ɹ i ə d"
+  },
+  {
+    "orthography": "person",
+    "glossing": "p ɜ ɹ s ə n"
+  },
+  {
+    "orthography": "phrase",
+    "glossing": "f ɹ e ɪ z"
+  },
+  {
+    "orthography": "pick",
+    "glossing": "p ɪ k"
+  },
+  {
+    "orthography": "picture",
+    "glossing": "p ɪ k t ʃ ə ɹ"
+  },
+  {
+    "orthography": "piece",
+    "glossing": "p i s"
+  },
+  {
+    "orthography": "pitch",
+    "glossing": "p ɪ t͡ʃ"
+  },
+  {
+    "orthography": "place",
+    "glossing": "p l e ɪ s"
+  },
+  {
+    "orthography": "plain",
+    "glossing": "p l e ɪ n"
+  },
+  {
+    "orthography": "plan",
+    "glossing": "p l æ n"
+  },
+  {
+    "orthography": "plane",
+    "glossing": "p l e ɪ n"
+  },
+  {
+    "orthography": "planet",
+    "glossing": "p l æ n ɪ t"
+  },
+  {
+    "orthography": "plant",
+    "glossing": "p l æ n t"
+  },
+  {
+    "orthography": "play",
+    "glossing": "p l e ɪ"
+  },
+  {
+    "orthography": "please",
+    "glossing": "p l i z"
+  },
+  {
+    "orthography": "plural",
+    "glossing": "p l ɝ ə l"
+  },
+  {
+    "orthography": "plural",
+    "glossing": "p l ʊ ɚ ə l"
+  },
+  {
+    "orthography": "poem",
+    "glossing": "p o ʊ m"
+  },
+  {
+    "orthography": "poem",
+    "glossing": "p o ʊ ə m"
+  },
+  {
+    "orthography": "point",
+    "glossing": "p ɔ ɪ n t"
+  },
+  {
+    "orthography": "populate",
+    "glossing": "p ɑ p j ə l e ɪ t"
+  },
+  {
+    "orthography": "port",
+    "glossing": "p ɔ ɹ t"
+  },
+  {
+    "orthography": "pose",
+    "glossing": "p o ʊ z"
+  },
+  {
+    "orthography": "position",
+    "glossing": "p ə z ɪ ʃ ə n"
+  },
+  {
+    "orthography": "possible",
+    "glossing": "p ɑ s ə b l"
+  },
+  {
+    "orthography": "possible",
+    "glossing": "p ɑ s ə b ə l"
+  },
+  {
+    "orthography": "post",
+    "glossing": "p o ʊ s t"
+  },
+  {
+    "orthography": "pound",
+    "glossing": "p a ʊ n d"
+  },
+  {
+    "orthography": "power",
+    "glossing": "p a ʊ ɚ"
+  },
+  {
+    "orthography": "power",
+    "glossing": "p a ʊ ɹ"
+  },
+  {
+    "orthography": "practice",
+    "glossing": "p ɹ æ k t ɪ s"
+  },
+  {
+    "orthography": "prepare",
+    "glossing": "p ɹ ə p ɛ ə ɹ"
+  },
+  {
+    "orthography": "prepare",
+    "glossing": "p ɹ ɪ p ɛ ə ɹ"
+  },
+  {
+    "orthography": "present",
+    "glossing": "p ɹ i z ɛ n t"
+  },
+  {
+    "orthography": "present",
+    "glossing": "p ɹ ɛ z ə n t"
+  },
+  {
+    "orthography": "present",
+    "glossing": "p ɹ ɪ z ɛ n t"
+  },
+  {
+    "orthography": "press",
+    "glossing": "p ɹ ɛ s"
+  },
+  {
+    "orthography": "pretty",
+    "glossing": "p ɔ ɪ t i"
+  },
+  {
+    "orthography": "pretty",
+    "glossing": "p ɝ t i"
+  },
+  {
+    "orthography": "pretty",
+    "glossing": "p ɹ ɪ t i"
+  },
+  {
+    "orthography": "pretty",
+    "glossing": "p ɹ ʊ t i"
+  },
+  {
+    "orthography": "print",
+    "glossing": "p ɹ ɪ n t"
+  },
+  {
+    "orthography": "probable",
+    "glossing": "p ɹ ɑ b ə b l"
+  },
+  {
+    "orthography": "probable",
+    "glossing": "p ɹ ɑ b ə b ə l"
+  },
+  {
+    "orthography": "problem",
+    "glossing": "p ɹ ɑ b l ə m"
+  },
+  {
+    "orthography": "process",
+    "glossing": "p ɹ ɑ s ɛ s"
+  },
+  {
+    "orthography": "process",
+    "glossing": "p ɹ ə s ɛ s"
+  },
+  {
+    "orthography": "produce",
+    "glossing": "p ɹ o ʊ d u s"
+  },
+  {
+    "orthography": "produce",
+    "glossing": "p ɹ ɑ d u s"
+  },
+  {
+    "orthography": "produce",
+    "glossing": "p ɹ ə d u s"
+  },
+  {
+    "orthography": "product",
+    "glossing": "p ɹ ɑ d ə k t"
+  },
+  {
+    "orthography": "product",
+    "glossing": "p ɹ ɑ d ʌ k t"
+  },
+  {
+    "orthography": "proper",
+    "glossing": "p ɹ ɑ p ɚ"
+  },
+  {
+    "orthography": "property",
+    "glossing": "p ɹ ɑ p ɚ t i"
+  },
+  {
+    "orthography": "protect",
+    "glossing": "p ɹ ə t ɛ k t"
+  },
+  {
+    "orthography": "prove",
+    "glossing": "p ɹ u v"
+  },
+  {
+    "orthography": "provide",
+    "glossing": "p ɹ ə v a ɪ d"
+  },
+  {
+    "orthography": "pull",
+    "glossing": "p ʊ l"
+  },
+  {
+    "orthography": "push",
+    "glossing": "p ʊ ʃ"
+  },
+  {
+    "orthography": "push",
+    "glossing": "p ʌ ʃ"
+  },
+  {
+    "orthography": "put",
+    "glossing": "p ʊ t"
+  },
+  {
+    "orthography": "put",
+    "glossing": "p ʌ t"
+  },
+  {
+    "orthography": "quart",
+    "glossing": "k w ɔ ɹ t"
+  },
+  {
+    "orthography": "quart",
+    "glossing": "k ɔ ɹ t"
+  },
+  {
+    "orthography": "question",
+    "glossing": "k w ɛ s t j ə n"
+  },
+  {
+    "orthography": "question",
+    "glossing": "k w ɛ s t͡ʃ ə n"
+  },
+  {
+    "orthography": "question",
+    "glossing": "k w ɛ ʃ t͡ʃ ə n"
+  },
+  {
+    "orthography": "quick",
+    "glossing": "k w ɪ k"
+  },
+  {
+    "orthography": "quiet",
+    "glossing": "k w a ɪ ɪ t"
+  },
+  {
+    "orthography": "quite",
+    "glossing": "k w a ɪ t"
+  },
+  {
+    "orthography": "quotient",
+    "glossing": "k w o ʊ ʃ ə n t"
+  },
+  {
+    "orthography": "race",
+    "glossing": "ɹ e ɪ s"
+  },
+  {
+    "orthography": "radio",
+    "glossing": "ɹ e ɪ d i o ʊ"
+  },
+  {
+    "orthography": "rail",
+    "glossing": "ɹ e ɪ l"
+  },
+  {
+    "orthography": "rain",
+    "glossing": "ɹ e ɪ n"
+  },
+  {
+    "orthography": "raise",
+    "glossing": "ɹ e ɪ z"
+  },
+  {
+    "orthography": "ran",
+    "glossing": "ɹ æ n"
+  },
+  {
+    "orthography": "range",
+    "glossing": "ɹ e ɪ n d͡ʒ"
+  },
+  {
+    "orthography": "rather",
+    "glossing": "ɹ æ ð ɚ"
+  },
+  {
+    "orthography": "reach",
+    "glossing": "ɹ i t͡ʃ"
+  },
+  {
+    "orthography": "read",
+    "glossing": "ɹ i d"
+  },
+  {
+    "orthography": "read",
+    "glossing": "ɹ ɛ d"
+  },
+  {
+    "orthography": "ready",
+    "glossing": "ɹ ɛ d i"
+  },
+  {
+    "orthography": "real",
+    "glossing": "ɹ e ɪ ɑ l"
+  },
+  {
+    "orthography": "real",
+    "glossing": "ɹ i l"
+  },
+  {
+    "orthography": "real",
+    "glossing": "ɹ i ə l"
+  },
+  {
+    "orthography": "reason",
+    "glossing": "ɹ i z ə n"
+  },
+  {
+    "orthography": "receive",
+    "glossing": "ɹ ɪ s i v"
+  },
+  {
+    "orthography": "record",
+    "glossing": "ɹ ɛ k ɔ ɹ d"
+  },
+  {
+    "orthography": "record",
+    "glossing": "ɹ ɛ k ɚ d"
+  },
+  {
+    "orthography": "record",
+    "glossing": "ɹ ɪ k ɔ ɹ d"
+  },
+  {
+    "orthography": "red",
+    "glossing": "ɹ ɛ d"
+  },
+  {
+    "orthography": "region",
+    "glossing": "ɹ i d͡ʒ ə n"
+  },
+  {
+    "orthography": "remember",
+    "glossing": "m ɛ m b ɚ"
+  },
+  {
+    "orthography": "remember",
+    "glossing": "ɹ ə m ɛ m b ɚ"
+  },
+  {
+    "orthography": "remember",
+    "glossing": "ɹ ɛ m b ɚ"
+  },
+  {
+    "orthography": "remember",
+    "glossing": "ɹ ɪ m b ɚ"
+  },
+  {
+    "orthography": "remember",
+    "glossing": "ɹ ɪ m ɛ m b ɚ"
+  },
+  {
+    "orthography": "reply",
+    "glossing": "ɹ ɪ p l a ɪ"
+  },
+  {
+    "orthography": "represent",
+    "glossing": "ɹ i p ɹ ɪ z ɛ n t"
+  },
+  {
+    "orthography": "represent",
+    "glossing": "ɹ ɛ p ɹ ɪ z ɛ n t"
+  },
+  {
+    "orthography": "require",
+    "glossing": "ɹ ɪ k w a ɪ ɹ"
+  },
+  {
+    "orthography": "rest",
+    "glossing": "ɹ ɛ s t"
+  },
+  {
+    "orthography": "result",
+    "glossing": "ɹ ɪ z ʌ l t"
+  },
+  {
+    "orthography": "rich",
+    "glossing": "ɹ ɪ t͡ʃ"
+  },
+  {
+    "orthography": "ride",
+    "glossing": "ɹ a ɪ d"
+  },
+  {
+    "orthography": "right",
+    "glossing": "ɹ a ɪ t"
+  },
+  {
+    "orthography": "ring",
+    "glossing": "ɹ i ŋ"
+  },
+  {
+    "orthography": "rise",
+    "glossing": "ɹ a ɪ s"
+  },
+  {
+    "orthography": "rise",
+    "glossing": "ɹ a ɪ z"
+  },
+  {
+    "orthography": "river",
+    "glossing": "ɹ a ɪ v ɚ"
+  },
+  {
+    "orthography": "river",
+    "glossing": "ɹ ɪ v ɚ"
+  },
+  {
+    "orthography": "road",
+    "glossing": "ɹ o ʊ d"
+  },
+  {
+    "orthography": "rock",
+    "glossing": "ɹ ɑ k"
+  },
+  {
+    "orthography": "roll",
+    "glossing": "ɹ o l"
+  },
+  {
+    "orthography": "roll",
+    "glossing": "ɹ o ʊ l"
+  },
+  {
+    "orthography": "room",
+    "glossing": "ɹ u m"
+  },
+  {
+    "orthography": "root",
+    "glossing": "ɹ u t"
+  },
+  {
+    "orthography": "rope",
+    "glossing": "ɹ o ʊ p"
+  },
+  {
+    "orthography": "rose",
+    "glossing": "ɹ o ʊ z"
+  },
+  {
+    "orthography": "round",
+    "glossing": "ɹ a ʊ n d"
+  },
+  {
+    "orthography": "row",
+    "glossing": "ɹ a ʊ"
+  },
+  {
+    "orthography": "row",
+    "glossing": "ɹ o ʊ"
+  },
+  {
+    "orthography": "rub",
+    "glossing": "ɹ ʌ b"
+  },
+  {
+    "orthography": "rule",
+    "glossing": "ɹ u l"
+  },
+  {
+    "orthography": "run",
+    "glossing": "ɹ ʌ n"
+  },
+  {
+    "orthography": "safe",
+    "glossing": "s e ɪ f"
+  },
+  {
+    "orthography": "sail",
+    "glossing": "s e ɪ l"
+  },
+  {
+    "orthography": "salt",
+    "glossing": "s ɑ l t"
+  },
+  {
+    "orthography": "salt",
+    "glossing": "s ɔ l t"
+  },
+  {
+    "orthography": "same",
+    "glossing": "s e ɪ m"
+  },
+  {
+    "orthography": "sand",
+    "glossing": "s ɛ ə n d"
+  },
+  {
+    "orthography": "sat",
+    "glossing": "s æ t"
+  },
+  {
+    "orthography": "save",
+    "glossing": "s e ɪ v"
+  },
+  {
+    "orthography": "saw",
+    "glossing": "s ɔ"
+  },
+  {
+    "orthography": "say",
+    "glossing": "s e ɪ"
+  },
+  {
+    "orthography": "scale",
+    "glossing": "s k e ɪ l"
+  },
+  {
+    "orthography": "school",
+    "glossing": "s k u l"
+  },
+  {
+    "orthography": "science",
+    "glossing": "s a ɪ ə n s"
+  },
+  {
+    "orthography": "score",
+    "glossing": "s k ɔ ɹ"
+  },
+  {
+    "orthography": "sea",
+    "glossing": "s i"
+  },
+  {
+    "orthography": "search",
+    "glossing": "s ɝ t͡ʃ"
+  },
+  {
+    "orthography": "season",
+    "glossing": "s i z ə n"
+  },
+  {
+    "orthography": "seat",
+    "glossing": "s i t"
+  },
+  {
+    "orthography": "second",
+    "glossing": "s ə k ɑ n d"
+  },
+  {
+    "orthography": "second",
+    "glossing": "s ɛ k ə n d"
+  },
+  {
+    "orthography": "second",
+    "glossing": "s ɛ k ə n t"
+  },
+  {
+    "orthography": "section",
+    "glossing": "s ɛ k ʃ ə n"
+  },
+  {
+    "orthography": "see",
+    "glossing": "s i"
+  },
+  {
+    "orthography": "seed",
+    "glossing": "s i d"
+  },
+  {
+    "orthography": "seem",
+    "glossing": "s i m"
+  },
+  {
+    "orthography": "segment",
+    "glossing": "s ɛ ɡ m ə n t"
+  },
+  {
+    "orthography": "segment",
+    "glossing": "s ɛ ɡ m ɛ n t"
+  },
+  {
+    "orthography": "select",
+    "glossing": "s ɪ l ɛ k t"
+  },
+  {
+    "orthography": "self",
+    "glossing": "s ɛ l f"
+  },
+  {
+    "orthography": "sell",
+    "glossing": "s ɛ l"
+  },
+  {
+    "orthography": "send",
+    "glossing": "s ɛ n d"
+  },
+  {
+    "orthography": "sense",
+    "glossing": "s ɛ n t s"
+  },
+  {
+    "orthography": "sent",
+    "glossing": "s ɛ n t"
+  },
+  {
+    "orthography": "sentence",
+    "glossing": "s ɛ n t ə n s"
+  },
+  {
+    "orthography": "separate",
+    "glossing": "s ɛ p ə ɹ e ɪ t"
+  },
+  {
+    "orthography": "separate",
+    "glossing": "s ɛ p ɚ e ɪ t"
+  },
+  {
+    "orthography": "separate",
+    "glossing": "s ɛ p ɹ ə t"
+  },
+  {
+    "orthography": "serve",
+    "glossing": "s ɝ v"
+  },
+  {
+    "orthography": "set",
+    "glossing": "s ɛ t"
+  },
+  {
+    "orthography": "settle",
+    "glossing": "s ɛ t ə l"
+  },
+  {
+    "orthography": "seven",
+    "glossing": "s ɛ v ə n"
+  },
+  {
+    "orthography": "several",
+    "glossing": "s ɛ v ə ɹ ə l"
+  },
+  {
+    "orthography": "shape",
+    "glossing": "ʃ e ɪ p"
+  },
+  {
+    "orthography": "share",
+    "glossing": "ʃ ɛ ɚ"
+  },
+  {
+    "orthography": "sharp",
+    "glossing": "ʃ ɑ ɹ p"
+  },
+  {
+    "orthography": "she",
+    "glossing": "ʃ i"
+  },
+  {
+    "orthography": "sheet",
+    "glossing": "ʃ i t"
+  },
+  {
+    "orthography": "shell",
+    "glossing": "ʃ ɛ l"
+  },
+  {
+    "orthography": "shine",
+    "glossing": "ʃ a ɪ n"
+  },
+  {
+    "orthography": "shine",
+    "glossing": "ʃ a ɪ n"
+  },
+  {
+    "orthography": "ship",
+    "glossing": "ʃ ɪ p"
+  },
+  {
+    "orthography": "shoe",
+    "glossing": "ʃ u"
+  },
+  {
+    "orthography": "shop",
+    "glossing": "ʃ ɑ p"
+  },
+  {
+    "orthography": "shore",
+    "glossing": "ʃ ɔ ɹ"
+  },
+  {
+    "orthography": "short",
+    "glossing": "ʃ o ɹ t"
+  },
+  {
+    "orthography": "shoulder",
+    "glossing": "ʃ o ʊ ɫ d ɚ"
+  },
+  {
+    "orthography": "shout",
+    "glossing": "ʃ a ʊ t"
+  },
+  {
+    "orthography": "show",
+    "glossing": "ʃ o ʊ"
+  },
+  {
+    "orthography": "side",
+    "glossing": "s a ɪ d"
+  },
+  {
+    "orthography": "sight",
+    "glossing": "s a ɪ t"
+  },
+  {
+    "orthography": "sign",
+    "glossing": "s a ɪ n"
+  },
+  {
+    "orthography": "silent",
+    "glossing": "s a ɪ l ə n t"
+  },
+  {
+    "orthography": "silver",
+    "glossing": "s ɪ l v ɚ"
+  },
+  {
+    "orthography": "similar",
+    "glossing": "s ɪ m ə l ɚ"
+  },
+  {
+    "orthography": "simple",
+    "glossing": "s ɪ m p ə l"
+  },
+  {
+    "orthography": "since",
+    "glossing": "s ɪ n s"
+  },
+  {
+    "orthography": "sing",
+    "glossing": "s ɪ ŋ"
+  },
+  {
+    "orthography": "single",
+    "glossing": "s ɪ ŋ ɡ ə l"
+  },
+  {
+    "orthography": "sister",
+    "glossing": "s ɪ s t ɚ"
+  },
+  {
+    "orthography": "sit",
+    "glossing": "s ɪ t"
+  },
+  {
+    "orthography": "six",
+    "glossing": "s ɪ k s"
+  },
+  {
+    "orthography": "size",
+    "glossing": "s a ɪ z"
+  },
+  {
+    "orthography": "skill",
+    "glossing": "s k ɪ l"
+  },
+  {
+    "orthography": "skin",
+    "glossing": "s k ɪ n"
+  },
+  {
+    "orthography": "sky",
+    "glossing": "s k a ɪ"
+  },
+  {
+    "orthography": "slave",
+    "glossing": "s l e ɪ v"
+  },
+  {
+    "orthography": "sleep",
+    "glossing": "s l i p"
+  },
+  {
+    "orthography": "slip",
+    "glossing": "s l ɪ p"
+  },
+  {
+    "orthography": "slow",
+    "glossing": "s l o ʊ"
+  },
+  {
+    "orthography": "small",
+    "glossing": "s m ɔ l"
+  },
+  {
+    "orthography": "smell",
+    "glossing": "s m ɛ l"
+  },
+  {
+    "orthography": "smile",
+    "glossing": "s m a ɪ l"
+  },
+  {
+    "orthography": "smile",
+    "glossing": "s m a ɪ ə l"
+  },
+  {
+    "orthography": "snow",
+    "glossing": "s n o ʊ"
+  },
+  {
+    "orthography": "so",
+    "glossing": "s o ʊ"
+  },
+  {
+    "orthography": "soft",
+    "glossing": "s ɔ f t"
+  },
+  {
+    "orthography": "soil",
+    "glossing": "s ɔ ɪ l"
+  },
+  {
+    "orthography": "soil",
+    "glossing": "s ɔ ɪ ə l"
+  },
+  {
+    "orthography": "soldier",
+    "glossing": "s o ʊ l d͡ʒ ɚ"
+  },
+  {
+    "orthography": "solution",
+    "glossing": "s ə l j u ʃ ə n"
+  },
+  {
+    "orthography": "solve",
+    "glossing": "s ɑ l v"
+  },
+  {
+    "orthography": "solve",
+    "glossing": "s ɔ l v"
+  },
+  {
+    "orthography": "some",
+    "glossing": "s ʌ m"
+  },
+  {
+    "orthography": "son",
+    "glossing": "s ɒ n"
+  },
+  {
+    "orthography": "son",
+    "glossing": "s ʌ n"
+  },
+  {
+    "orthography": "song",
+    "glossing": "s ɑ ŋ"
+  },
+  {
+    "orthography": "song",
+    "glossing": "s ɔ ŋ"
+  },
+  {
+    "orthography": "soon",
+    "glossing": "s u n"
+  },
+  {
+    "orthography": "sound",
+    "glossing": "s a ʊ n d"
+  },
+  {
+    "orthography": "south",
+    "glossing": "s a ʊ θ"
+  },
+  {
+    "orthography": "south",
+    "glossing": "s u θ"
+  },
+  {
+    "orthography": "space",
+    "glossing": "s p e ɪ s"
+  },
+  {
+    "orthography": "speak",
+    "glossing": "s p i k"
+  },
+  {
+    "orthography": "special",
+    "glossing": "s p ɛ ʃ ə l"
+  },
+  {
+    "orthography": "speech",
+    "glossing": "s p i t͡ʃ"
+  },
+  {
+    "orthography": "speed",
+    "glossing": "s p i d"
+  },
+  {
+    "orthography": "spell",
+    "glossing": "s p ɛ l"
+  },
+  {
+    "orthography": "spend",
+    "glossing": "s p ɛ n d"
+  },
+  {
+    "orthography": "spoke",
+    "glossing": "s p ə ʊ k"
+  },
+  {
+    "orthography": "spot",
+    "glossing": "s p ɑ t"
+  },
+  {
+    "orthography": "spread",
+    "glossing": "s p ɹ i d"
+  },
+  {
+    "orthography": "spread",
+    "glossing": "s p ɹ ɛ d"
+  },
+  {
+    "orthography": "spring",
+    "glossing": "s p ɹ ɪ ŋ"
+  },
+  {
+    "orthography": "square",
+    "glossing": "s k w ɛ ə ɹ"
+  },
+  {
+    "orthography": "square",
+    "glossing": "s k w ɛ ɹ"
+  },
+  {
+    "orthography": "stand",
+    "glossing": "s t æ n d"
+  },
+  {
+    "orthography": "star",
+    "glossing": "s t ɑ ɹ"
+  },
+  {
+    "orthography": "start",
+    "glossing": "s t ɑ ɹ t"
+  },
+  {
+    "orthography": "state",
+    "glossing": "s t e ɪ t"
+  },
+  {
+    "orthography": "station",
+    "glossing": "s t e ɪ ʃ ə n"
+  },
+  {
+    "orthography": "stay",
+    "glossing": "s t e ɪ"
+  },
+  {
+    "orthography": "stead",
+    "glossing": "s t ɛ d"
+  },
+  {
+    "orthography": "steam",
+    "glossing": "s t i m"
+  },
+  {
+    "orthography": "steel",
+    "glossing": "s t i l"
+  },
+  {
+    "orthography": "step",
+    "glossing": "s t ɛ p"
+  },
+  {
+    "orthography": "stick",
+    "glossing": "s t ɪ k"
+  },
+  {
+    "orthography": "still",
+    "glossing": "s t ɪ l"
+  },
+  {
+    "orthography": "stone",
+    "glossing": "s t o ʊ n"
+  },
+  {
+    "orthography": "stood",
+    "glossing": "s t ʊ d"
+  },
+  {
+    "orthography": "stop",
+    "glossing": "s t ɑ p"
+  },
+  {
+    "orthography": "store",
+    "glossing": "s t ɔ ɹ"
+  },
+  {
+    "orthography": "story",
+    "glossing": "s t ɔ ɹ i"
+  },
+  {
+    "orthography": "straight",
+    "glossing": "s t ɹ e ɪ t"
+  },
+  {
+    "orthography": "strange",
+    "glossing": "s t ɹ e ɪ n d͡ʒ"
+  },
+  {
+    "orthography": "stream",
+    "glossing": "s t ɹ i m"
+  },
+  {
+    "orthography": "street",
+    "glossing": "s t ɹ i t"
+  },
+  {
+    "orthography": "stretch",
+    "glossing": "s t ɹ ɛ t͡ʃ"
+  },
+  {
+    "orthography": "string",
+    "glossing": "s t ɹ ɪ ŋ"
+  },
+  {
+    "orthography": "strong",
+    "glossing": "s t ɹ ɔ ŋ"
+  },
+  {
+    "orthography": "student",
+    "glossing": "s t u d ə n t"
+  },
+  {
+    "orthography": "study",
+    "glossing": "s t ʌ d i"
+  },
+  {
+    "orthography": "subject",
+    "glossing": "s ə b d͡ʒ ɛ k t"
+  },
+  {
+    "orthography": "subject",
+    "glossing": "s ʌ b d͡ʒ ɛ k t"
+  },
+  {
+    "orthography": "substance",
+    "glossing": "s ʌ b s t ə n s"
+  },
+  {
+    "orthography": "subtract",
+    "glossing": "s ə b t ɹ æ k t"
+  },
+  {
+    "orthography": "success",
+    "glossing": "s ə k s ɛ s"
+  },
+  {
+    "orthography": "such",
+    "glossing": "s ʌ t͡ʃ"
+  },
+  {
+    "orthography": "sudden",
+    "glossing": "s ʌ d ə n"
+  },
+  {
+    "orthography": "sugar",
+    "glossing": "ʃ ʊ ɡ ɚ"
+  },
+  {
+    "orthography": "suggest",
+    "glossing": "s ə ɡ d͡ʒ ɛ s t"
+  },
+  {
+    "orthography": "suit",
+    "glossing": "s u t"
+  },
+  {
+    "orthography": "summer",
+    "glossing": "s ʌ m ɚ"
+  },
+  {
+    "orthography": "sun",
+    "glossing": "s ʌ n"
+  },
+  {
+    "orthography": "supply",
+    "glossing": "s ə p l a ɪ"
+  },
+  {
+    "orthography": "supply",
+    "glossing": "s ʌ p l i"
+  },
+  {
+    "orthography": "support",
+    "glossing": "s ə p ɔ ɹ t"
+  },
+  {
+    "orthography": "sure",
+    "glossing": "ʃ ɔ ɹ"
+  },
+  {
+    "orthography": "sure",
+    "glossing": "ʃ ɚ"
+  },
+  {
+    "orthography": "sure",
+    "glossing": "ʃ ʊ ɹ"
+  },
+  {
+    "orthography": "surface",
+    "glossing": "s ɝ f ə s"
+  },
+  {
+    "orthography": "surprise",
+    "glossing": "s ə p ɹ a ɪ z"
+  },
+  {
+    "orthography": "surprise",
+    "glossing": "s ɚ p ɹ a ɪ z"
+  },
+  {
+    "orthography": "swim",
+    "glossing": "s w ɪ m"
+  },
+  {
+    "orthography": "syllable",
+    "glossing": "s ɪ l ə b ə l"
+  },
+  {
+    "orthography": "symbol",
+    "glossing": "s ɪ m b ə l"
+  },
+  {
+    "orthography": "system",
+    "glossing": "s ɪ s t ə m"
+  },
+  {
+    "orthography": "table",
+    "glossing": "t e ɪ b l"
+  },
+  {
+    "orthography": "table",
+    "glossing": "t e ɪ b ə l"
+  },
+  {
+    "orthography": "tail",
+    "glossing": "t e ɪ l"
+  },
+  {
+    "orthography": "take",
+    "glossing": "t e ɪ k"
+  },
+  {
+    "orthography": "talk",
+    "glossing": "t ɔ k"
+  },
+  {
+    "orthography": "tall",
+    "glossing": "t ɔ l"
+  },
+  {
+    "orthography": "teach",
+    "glossing": "t i t͡ʃ"
+  },
+  {
+    "orthography": "team",
+    "glossing": "t i m"
+  },
+  {
+    "orthography": "teeth",
+    "glossing": "t i θ"
+  },
+  {
+    "orthography": "tell",
+    "glossing": "t ɛ l"
+  },
+  {
+    "orthography": "temperature",
+    "glossing": "t ɛ m p ə ɹ t͡ʃ ɚ"
+  },
+  {
+    "orthography": "temperature",
+    "glossing": "t ɛ m p ə ɹ ə t͡ʃ ɚ"
+  },
+  {
+    "orthography": "temperature",
+    "glossing": "t ɛ m p ɹ ə t͡ʃ ɚ"
+  },
+  {
+    "orthography": "ten",
+    "glossing": "t ɛ n"
+  },
+  {
+    "orthography": "term",
+    "glossing": "t ɝ m"
+  },
+  {
+    "orthography": "test",
+    "glossing": "t ɛ s t"
+  },
+  {
+    "orthography": "thank",
+    "glossing": "ð æ ŋ k"
+  },
+  {
+    "orthography": "thank",
+    "glossing": "θ æ ŋ k"
+  },
+  {
+    "orthography": "that",
+    "glossing": "ð æ t"
+  },
+  {
+    "orthography": "the",
+    "glossing": "ð i"
+  },
+  {
+    "orthography": "the",
+    "glossing": "ð i"
+  },
+  {
+    "orthography": "the",
+    "glossing": "ð ɪ"
+  },
+  {
+    "orthography": "their",
+    "glossing": "ð ɚ"
+  },
+  {
+    "orthography": "their",
+    "glossing": "ð ɛ ɚ"
+  },
+  {
+    "orthography": "them",
+    "glossing": "ð ʌ m"
+  },
+  {
+    "orthography": "then",
+    "glossing": "ð ɛ n"
+  },
+  {
+    "orthography": "these",
+    "glossing": "ð i z"
+  },
+  {
+    "orthography": "they",
+    "glossing": "ð e ɪ"
+  },
+  {
+    "orthography": "thick",
+    "glossing": "θ ɪ k"
+  },
+  {
+    "orthography": "thin",
+    "glossing": "θ ɪ n"
+  },
+  {
+    "orthography": "thing",
+    "glossing": "θ ɪ ŋ"
+  },
+  {
+    "orthography": "think",
+    "glossing": "θ ɪ ŋ k"
+  },
+  {
+    "orthography": "third",
+    "glossing": "θ ɝ d"
+  },
+  {
+    "orthography": "this",
+    "glossing": "ð ə s"
+  },
+  {
+    "orthography": "this",
+    "glossing": "ð ɪ s"
+  },
+  {
+    "orthography": "those",
+    "glossing": "ð o ʊ z"
+  },
+  {
+    "orthography": "though",
+    "glossing": "ð o ʊ"
+  },
+  {
+    "orthography": "thought",
+    "glossing": "θ ɑ t"
+  },
+  {
+    "orthography": "thought",
+    "glossing": "θ ɔ t"
+  },
+  {
+    "orthography": "thousand",
+    "glossing": "θ a ʊ z ə n d"
+  },
+  {
+    "orthography": "three",
+    "glossing": "θ ɹ i"
+  },
+  {
+    "orthography": "through",
+    "glossing": "θ ɹ u"
+  },
+  {
+    "orthography": "through",
+    "glossing": "θ ɹ u"
+  },
+  {
+    "orthography": "through",
+    "glossing": "θ ɹ ʌ f"
+  },
+  {
+    "orthography": "throw",
+    "glossing": "θ ɹ o ʊ"
+  },
+  {
+    "orthography": "thus",
+    "glossing": "ð ʌ s"
+  },
+  {
+    "orthography": "tie",
+    "glossing": "t a ɪ"
+  },
+  {
+    "orthography": "time",
+    "glossing": "t a ɪ m"
+  },
+  {
+    "orthography": "tiny",
+    "glossing": "t a ɪ n i"
+  },
+  {
+    "orthography": "tire",
+    "glossing": "t a ɪ ɚ"
+  },
+  {
+    "orthography": "tire",
+    "glossing": "t ɑ ɚ"
+  },
+  {
+    "orthography": "tire",
+    "glossing": "t ʌ ɪ ɚ"
+  },
+  {
+    "orthography": "to",
+    "glossing": "t u"
+  },
+  {
+    "orthography": "together",
+    "glossing": "t ə ɡ ɛ ð ɚ"
+  },
+  {
+    "orthography": "together",
+    "glossing": "t ʊ ɡ ɛ ð ɚ"
+  },
+  {
+    "orthography": "told",
+    "glossing": "t o ʊ l d"
+  },
+  {
+    "orthography": "tone",
+    "glossing": "t o ʊ n"
+  },
+  {
+    "orthography": "too",
+    "glossing": "t u"
+  },
+  {
+    "orthography": "took",
+    "glossing": "t ʊ k"
+  },
+  {
+    "orthography": "tool",
+    "glossing": "t u l"
+  },
+  {
+    "orthography": "top",
+    "glossing": "t ɑ p"
+  },
+  {
+    "orthography": "total",
+    "glossing": "t o ʊ t ə l"
+  },
+  {
+    "orthography": "touch",
+    "glossing": "t ʌ t͡ʃ"
+  },
+  {
+    "orthography": "toward",
+    "glossing": "t w ɔ ɹ d"
+  },
+  {
+    "orthography": "toward",
+    "glossing": "t ɔ ɹ d"
+  },
+  {
+    "orthography": "toward",
+    "glossing": "t ə w ɔ ɹ d"
+  },
+  {
+    "orthography": "town",
+    "glossing": "t a ʊ n"
+  },
+  {
+    "orthography": "track",
+    "glossing": "t ɹ æ k"
+  },
+  {
+    "orthography": "trade",
+    "glossing": "t ɹ e ɪ d"
+  },
+  {
+    "orthography": "train",
+    "glossing": "t ɹ e ɪ n"
+  },
+  {
+    "orthography": "travel",
+    "glossing": "t ɹ æ v ə l"
+  },
+  {
+    "orthography": "tree",
+    "glossing": "t ɹ i"
+  },
+  {
+    "orthography": "triangle",
+    "glossing": "t ɹ a ɪ æ ŋ ɡ ə l"
+  },
+  {
+    "orthography": "trip",
+    "glossing": "t ɹ ɪ p"
+  },
+  {
+    "orthography": "trouble",
+    "glossing": "t ɹ ʌ b ə l"
+  },
+  {
+    "orthography": "true",
+    "glossing": "t ɹ u"
+  },
+  {
+    "orthography": "try",
+    "glossing": "t ɹ a ɪ"
+  },
+  {
+    "orthography": "tube",
+    "glossing": "t j u b"
+  },
+  {
+    "orthography": "turn",
+    "glossing": "t ɜ ɹ n"
+  },
+  {
+    "orthography": "twenty",
+    "glossing": "t w ɛ n i"
+  },
+  {
+    "orthography": "twenty",
+    "glossing": "t w ɛ n t i"
+  },
+  {
+    "orthography": "two",
+    "glossing": "t u"
+  },
+  {
+    "orthography": "type",
+    "glossing": "t a ɪ p"
+  },
+  {
+    "orthography": "under",
+    "glossing": "ʌ n d ɚ"
+  },
+  {
+    "orthography": "unit",
+    "glossing": "j u n ɪ t"
+  },
+  {
+    "orthography": "until",
+    "glossing": "ə n t ɪ l"
+  },
+  {
+    "orthography": "until",
+    "glossing": "ʌ n t ɪ l"
+  },
+  {
+    "orthography": "up",
+    "glossing": "ʌ p"
+  },
+  {
+    "orthography": "us",
+    "glossing": "ə s"
+  },
+  {
+    "orthography": "us",
+    "glossing": "ə z"
+  },
+  {
+    "orthography": "use",
+    "glossing": "j u s"
+  },
+  {
+    "orthography": "use",
+    "glossing": "j u z"
+  },
+  {
+    "orthography": "usual",
+    "glossing": "j u ʒ"
+  },
+  {
+    "orthography": "usual",
+    "glossing": "j u ʒ u ə l"
+  },
+  {
+    "orthography": "usual",
+    "glossing": "j u ʒ ə l"
+  },
+  {
+    "orthography": "valley",
+    "glossing": "v æ l i"
+  },
+  {
+    "orthography": "value",
+    "glossing": "v æ l j u"
+  },
+  {
+    "orthography": "vary",
+    "glossing": "v æ ɹ i"
+  },
+  {
+    "orthography": "vary",
+    "glossing": "v ɛ ə ɹ i"
+  },
+  {
+    "orthography": "vary",
+    "glossing": "v ɛ ɹ i"
+  },
+  {
+    "orthography": "verb",
+    "glossing": "v ɝ b"
+  },
+  {
+    "orthography": "very",
+    "glossing": "v ɛ ɹ i"
+  },
+  {
+    "orthography": "view",
+    "glossing": "v j u"
+  },
+  {
+    "orthography": "village",
+    "glossing": "v ɪ l ɪ d͡ʒ"
+  },
+  {
+    "orthography": "visit",
+    "glossing": "v ɪ z ɪ t"
+  },
+  {
+    "orthography": "voice",
+    "glossing": "v ɔ ɪ s"
+  },
+  {
+    "orthography": "vowel",
+    "glossing": "v a ʊ ə l"
+  },
+  {
+    "orthography": "wait",
+    "glossing": "w e ɪ t"
+  },
+  {
+    "orthography": "walk",
+    "glossing": "w ɔ k"
+  },
+  {
+    "orthography": "wall",
+    "glossing": "w ɔ l"
+  },
+  {
+    "orthography": "want",
+    "glossing": "w ɑ n t"
+  },
+  {
+    "orthography": "want",
+    "glossing": "w ɒ n t"
+  },
+  {
+    "orthography": "want",
+    "glossing": "w ɔ n t"
+  },
+  {
+    "orthography": "want",
+    "glossing": "w ʌ n t"
+  },
+  {
+    "orthography": "war",
+    "glossing": "w ɔ ɹ"
+  },
+  {
+    "orthography": "warm",
+    "glossing": "w ɔ ɹ m"
+  },
+  {
+    "orthography": "was",
+    "glossing": "w ɑ z"
+  },
+  {
+    "orthography": "was",
+    "glossing": "w ə z"
+  },
+  {
+    "orthography": "was",
+    "glossing": "w ʌ z"
+  },
+  {
+    "orthography": "wash",
+    "glossing": "w ɑ ʃ"
+  },
+  {
+    "orthography": "wash",
+    "glossing": "w ɔ ɹ ʃ"
+  },
+  {
+    "orthography": "wash",
+    "glossing": "w ɔ ʃ"
+  },
+  {
+    "orthography": "watch",
+    "glossing": "w ɑ t͡ʃ"
+  },
+  {
+    "orthography": "watch",
+    "glossing": "w ɔ t͡ʃ"
+  },
+  {
+    "orthography": "water",
+    "glossing": "w ɔ t ə ɹ"
+  },
+  {
+    "orthography": "wave",
+    "glossing": "w e ɪ v"
+  },
+  {
+    "orthography": "way",
+    "glossing": "w e ɪ"
+  },
+  {
+    "orthography": "we",
+    "glossing": "w i"
+  },
+  {
+    "orthography": "we",
+    "glossing": "w ə"
+  },
+  {
+    "orthography": "wear",
+    "glossing": "w ɛ ə ɹ"
+  },
+  {
+    "orthography": "weather",
+    "glossing": "w ɛ ð ɚ"
+  },
+  {
+    "orthography": "week",
+    "glossing": "w i k"
+  },
+  {
+    "orthography": "week",
+    "glossing": "w i k"
+  },
+  {
+    "orthography": "weight",
+    "glossing": "w e ɪ t"
+  },
+  {
+    "orthography": "well",
+    "glossing": "w ɛ l"
+  },
+  {
+    "orthography": "went",
+    "glossing": "w ɛ n t"
+  },
+  {
+    "orthography": "were",
+    "glossing": "w ɚ"
+  },
+  {
+    "orthography": "were",
+    "glossing": "w ɝ"
+  },
+  {
+    "orthography": "west",
+    "glossing": "w ɛ s t"
+  },
+  {
+    "orthography": "what",
+    "glossing": "w ɑ t"
+  },
+  {
+    "orthography": "what",
+    "glossing": "w ʌ t"
+  },
+  {
+    "orthography": "wheel",
+    "glossing": "w i l"
+  },
+  {
+    "orthography": "wheel",
+    "glossing": "ʍ i l"
+  },
+  {
+    "orthography": "when",
+    "glossing": "w ɛ n"
+  },
+  {
+    "orthography": "when",
+    "glossing": "w ɪ n"
+  },
+  {
+    "orthography": "when",
+    "glossing": "ʍ ɛ n"
+  },
+  {
+    "orthography": "when",
+    "glossing": "ʍ ɪ n"
+  },
+  {
+    "orthography": "where",
+    "glossing": "w ɛ ɚ"
+  },
+  {
+    "orthography": "where",
+    "glossing": "ʍ ɛ ɚ"
+  },
+  {
+    "orthography": "whether",
+    "glossing": "w ɛ ð ə ɹ"
+  },
+  {
+    "orthography": "whether",
+    "glossing": "ʍ ɛ ð ə ɹ"
+  },
+  {
+    "orthography": "which",
+    "glossing": "w ɪ t͡ʃ"
+  },
+  {
+    "orthography": "while",
+    "glossing": "w a ɪ l"
+  },
+  {
+    "orthography": "while",
+    "glossing": "ʍ a ɪ l"
+  },
+  {
+    "orthography": "white",
+    "glossing": "w a ɪ t"
+  },
+  {
+    "orthography": "who",
+    "glossing": "h u"
+  },
+  {
+    "orthography": "whole",
+    "glossing": "h o ʊ l"
+  },
+  {
+    "orthography": "whose",
+    "glossing": "h u z"
+  },
+  {
+    "orthography": "why",
+    "glossing": "w a ɪ"
+  },
+  {
+    "orthography": "why",
+    "glossing": "ʍ a ɪ"
+  },
+  {
+    "orthography": "wide",
+    "glossing": "w a ɪ d"
+  },
+  {
+    "orthography": "wife",
+    "glossing": "w a ɪ f"
+  },
+  {
+    "orthography": "wild",
+    "glossing": "w a ɪ l d"
+  },
+  {
+    "orthography": "will",
+    "glossing": "w ɪ l"
+  },
+  {
+    "orthography": "win",
+    "glossing": "w ɪ n"
+  },
+  {
+    "orthography": "wind",
+    "glossing": "w a ɪ n d"
+  },
+  {
+    "orthography": "wind",
+    "glossing": "w ɪ n d"
+  },
+  {
+    "orthography": "window",
+    "glossing": "w ɪ n d o ʊ"
+  },
+  {
+    "orthography": "wing",
+    "glossing": "w i ŋ"
+  },
+  {
+    "orthography": "winter",
+    "glossing": "w ɪ n t ɚ"
+  },
+  {
+    "orthography": "wire",
+    "glossing": "w a ɪ ɚ"
+  },
+  {
+    "orthography": "wish",
+    "glossing": "w ɪ ʃ"
+  },
+  {
+    "orthography": "with",
+    "glossing": "w ɪ ð"
+  },
+  {
+    "orthography": "with",
+    "glossing": "w ɪ θ"
+  },
+  {
+    "orthography": "woman",
+    "glossing": "w o ʊ m ə n"
+  },
+  {
+    "orthography": "woman",
+    "glossing": "w ʊ m ə n"
+  },
+  {
+    "orthography": "women",
+    "glossing": "w ɪ m ə n"
+  },
+  {
+    "orthography": "women",
+    "glossing": "w ɪ m ɪ n"
+  },
+  {
+    "orthography": "women",
+    "glossing": "w ʊ m ə n"
+  },
+  {
+    "orthography": "won't",
+    "glossing": "w o ʊ n t"
+  },
+  {
+    "orthography": "wonder",
+    "glossing": "w ʌ n d ɚ"
+  },
+  {
+    "orthography": "wood",
+    "glossing": "w ʊ d"
+  },
+  {
+    "orthography": "word",
+    "glossing": "w ɝ d"
+  },
+  {
+    "orthography": "work",
+    "glossing": "w ɜ ɪ k"
+  },
+  {
+    "orthography": "work",
+    "glossing": "w ɜ k"
+  },
+  {
+    "orthography": "work",
+    "glossing": "w ɜ ɹ k"
+  },
+  {
+    "orthography": "work",
+    "glossing": "w ɝ k"
+  },
+  {
+    "orthography": "world",
+    "glossing": "w ɜ ɹ l d"
+  },
+  {
+    "orthography": "would",
+    "glossing": "w ə d"
+  },
+  {
+    "orthography": "would",
+    "glossing": "w ʊ d"
+  },
+  {
+    "orthography": "would",
+    "glossing": "ə d"
+  },
+  {
+    "orthography": "write",
+    "glossing": "ɹ a ɪ t"
+  },
+  {
+    "orthography": "wrong",
+    "glossing": "ɹ ɑ ŋ"
+  },
+  {
+    "orthography": "wrong",
+    "glossing": "ɹ ɔ ŋ"
+  },
+  {
+    "orthography": "wrote",
+    "glossing": "ɹ o ʊ t"
+  },
+  {
+    "orthography": "yard",
+    "glossing": "j ɑ ɹ d"
+  },
+  {
+    "orthography": "year",
+    "glossing": "j ɪ ɹ"
+  },
+  {
+    "orthography": "yellow",
+    "glossing": "j ɛ l o ʊ"
+  },
+  {
+    "orthography": "yet",
+    "glossing": "j ɛ t"
+  },
+  {
+    "orthography": "you",
+    "glossing": "j u"
+  },
+  {
+    "orthography": "you",
+    "glossing": "j ə"
+  },
+  {
+    "orthography": "young",
+    "glossing": "j ʌ ŋ"
+  },
+  {
+    "orthography": "your",
+    "glossing": "j ɔ ɹ"
+  },
+  {
+    "orthography": "your",
+    "glossing": "j ɚ"
+  },
+  {
+    "orthography": "your",
+    "glossing": "j ɜ ɹ"
+  },
+  {
+    "orthography": "your",
+    "glossing": "j ʊ ɹ"
+  }
+]
