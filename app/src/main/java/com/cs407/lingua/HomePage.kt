@@ -8,6 +8,7 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.core.view.MenuProvider
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -48,7 +49,21 @@ class HomePage : Fragment() {
             }
         }
 
+        //Set listener for selecting each activity category
+        val simpleSyntaxButton = view.findViewById<Button>(R.id.simple_syntax)
+        simpleSyntaxButton.setOnClickListener {
+            //navigate to the problem selection page with simple syntax data
+        }
 
+        val compoundSyntaxButton = view.findViewById<Button>(R.id.compound_syntax)
+        compoundSyntaxButton.setOnClickListener {
+            //navigate to the problem selection page with compound syntax data
+        }
+
+        val complexSyntaxButton = view.findViewById<Button>(R.id.complex_syntax)
+        complexSyntaxButton.setOnClickListener {
+            //navigate to the problem selection page with complex syntax data
+        }
     }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
