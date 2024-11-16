@@ -19,6 +19,27 @@
         <action
             android:id="@+id/action_homePage_to_search"
             app:destination="@id/search" />
+        <action
+            android:id="@+id/home_to_simple_syntax_exercise"
+            app:destination="@id/exerciseSelection" >
+            <argument
+                android:name="exerciseType"
+                android:defaultValue="1" />
+        </action>
+        <action
+            android:id="@+id/home_to_compound_syntax_exercise"
+            app:destination="@id/exerciseSelection" >
+            <argument
+                android:name="exerciseType"
+                android:defaultValue="2" />
+        </action>
+        <action
+            android:id="@+id/home_to_complex_syntax_exercise"
+            app:destination="@id/exerciseSelection" >
+            <argument
+                android:name="exerciseType"
+                android:defaultValue="3" />
+        </action>
     </fragment>
     <fragment
         android:id="@+id/settings_fragment"
@@ -64,5 +85,18 @@
         <action
             android:id="@+id/action_search_to_homePage"
             app:destination="@id/homePage" />
+    </fragment>
+    <fragment
+        android:id="@+id/exerciseSelection"
+        android:name="com.cs407.lingua.ExerciseSelection"
+        android:label="fragment_exercise_selection"
+        tools:layout="@layout/fragment_exercise_selection" >
+        <action
+            android:id="@+id/exercise_to_home"
+            app:destination="@id/homePage" />
+        <argument
+            android:name="exerciseType"
+            app:argType="integer"
+            android:defaultValue="0" />
     </fragment>
 </navigation>
