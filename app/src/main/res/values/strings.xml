@@ -39,6 +39,11 @@
     <string name="compound">Compound</string>
     <string name="favorites">Favorites</string>
 
+    <string name="simple_phonology_description">[INSERT SIMPLE PHONOLOGY DESCRIPTION HERE]</string>
+    <string name="complex_phonology_description">[INSERT COMPLEX PHONOLOGY DESCRIPTION HERE]</string>
+    <string name="simple_syntax_description">A Simple Syntax quiz that is great for beginner practice. Generally consists of multiple choice and syntax tree problems.</string>
+    <string name="complex_syntax_description">[INSERT COMPLEX SYNTAX DESCRIPTION HERE]</string>
+
     <string-array name="primary_options">
         <item>Purple</item>
         <item>Red</item>

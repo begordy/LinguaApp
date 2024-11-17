@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.GridView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -35,13 +36,52 @@ class ExerciseSelection : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_exercise_selection, container, false)
         val quizTitle = view.findViewById<TextView>(R.id.quizTitle)
+        val questionCount = view.findViewById<TextView>(R.id.questionCount)
+        val difficulty = view.findViewById<TextView>(R.id.difficultyLevel)
+        val tagsGrid = view.findViewById<GridView>(R.id.tags)
+        val description = view.findViewById<TextView>(R.id.quizDescription)
         val args = this.arguments
+        // TODO: Can this just be hardcoded?
         when(args?.getInt("exerciseType")) {
             1 -> {
                 quizTitle.text = "Simple Syntax"
+                questionCount.text = "Questions: 10"
+                difficulty.text = "Easy"
+                val tagsModelArrayList = ArrayList<TagModel>();
+                tagsModelArrayList.add(TagModel("Short Answer"))
+                tagsModelArrayList.add(TagModel("Syntax Tree"))
+                tagsModelArrayList.add(TagModel("Single"))
+
+                val adapter = TagAdapter(requireContext(), tagsModelArrayList)
+                tagsGrid.adapter = adapter
+                description.text = getString(R.string.simple_syntax_description)
             }
-            2 -> quizTitle.text = "Compound Syntax"
-            3 -> quizTitle.text = "Complex Syntax"
+            2 -> {
+                quizTitle.text = "Complex Syntax"
+                questionCount.text = "Questions: 20"
+                difficulty.text = "Hard"
+                val tagsModelArrayList = ArrayList<TagModel>();
+                tagsModelArrayList.add(TagModel("Creepy"))
+                tagsModelArrayList.add(TagModel("Wet"))
+                tagsModelArrayList.add(TagModel("???????"))
+
+                val adapter = TagAdapter(requireContext(), tagsModelArrayList)
+                tagsGrid.adapter = adapter
+                description.text = getString(R.string.complex_syntax_description)
+            }
+            3 -> {
+                quizTitle.text = "Compound Syntax"
+                questionCount.text = "Questions: 15"
+                difficulty.text = "Medium"
+                val tagsModelArrayList = ArrayList<TagModel>();
+                tagsModelArrayList.add(TagModel("Help"))
+                tagsModelArrayList.add(TagModel("Bees"))
+                tagsModelArrayList.add(TagModel("Guh"))
+
+                val adapter = TagAdapter(requireContext(), tagsModelArrayList)
+                tagsGrid.adapter = adapter
+                description.text = getString(R.string.simple_phonology_description)
+            }
         }
         return view
     }

@@ -23,7 +23,7 @@
         android:layout_marginLeft="20sp"
         android:layout_marginRight="20sp"
         android:layout_marginBottom="10sp"
-        android:text="Simple Syntax"
+        android:text="The Ooze"
         android:textSize="40sp" />
 
     <LinearLayout
@@ -57,19 +57,21 @@
                     android:id="@+id/questionCount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Questions: ??" />
+                    android:text="Questions: 420" />
 
                 <TextView
                     android:id="@+id/difficultyLevel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Absurd" />
+                    android:text="Absurd like what the heck" />
 
                 <GridView
                     android:id="@+id/tags"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:numColumns="2" />
+                    android:horizontalSpacing="5dp"
+                    android:numColumns="2"
+                    android:verticalSpacing="5dp" />
 
             </LinearLayout>
 
