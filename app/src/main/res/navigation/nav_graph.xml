@@ -21,7 +21,7 @@
             app:destination="@id/search" />
         <action
             android:id="@+id/home_to_simple_syntax_exercise"
-            app:destination="@id/exerciseSelection" >
+            app:destination="@id/exerciseSelection">
             <argument
                 android:name="exerciseType"
                 android:defaultValue="3" />
