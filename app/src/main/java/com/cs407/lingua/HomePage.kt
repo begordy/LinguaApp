@@ -46,21 +46,27 @@ class HomePage : Fragment() {
         }
 
         //Set listener for selecting each activity category
-        val simpleSyntaxButton = view.findViewById<Button>(R.id.simple_syntax)
-        simpleSyntaxButton.setOnClickListener {
-            //navigate to the problem selection page with simple syntax data (passed int = 1)
-            findNavController().navigate(R.id.home_to_simple_syntax_exercise)
+        val simplePhonologyButton = view.findViewById<Button>(R.id.simple_phonology)
+        simplePhonologyButton.setOnClickListener {
+            //navigate to the problem selection page with simple phonology data (passed int = 1)
+            findNavController().navigate(R.id.home_to_simple_phonology_exercise)
         }
 
-        val compoundSyntaxButton = view.findViewById<Button>(R.id.compound_syntax)
-        compoundSyntaxButton.setOnClickListener {
-            //navigate to the problem selection page with compound syntax data (passed int = 2)
-            findNavController().navigate(R.id.home_to_compound_syntax_exercise)
+        val complexPhonologyButton = view.findViewById<Button>(R.id.complex_phonology)
+        complexPhonologyButton.setOnClickListener {
+            //navigate to the problem selection page with complex phonology data (passed int = 2)
+            findNavController().navigate(R.id.home_to_complex_phonology_exercise)
+        }
+
+        val simpleSyntaxButton = view.findViewById<Button>(R.id.simple_syntax)
+        simpleSyntaxButton.setOnClickListener {
+            //navigate to the problem selection page with simple syntax data (passed int = 3)
+            findNavController().navigate(R.id.home_to_simple_syntax_exercise)
         }
 
         val complexSyntaxButton = view.findViewById<Button>(R.id.complex_syntax)
         complexSyntaxButton.setOnClickListener {
-            //navigate to the problem selection page with complex syntax data (passed int = 3)
+            //navigate to the problem selection page with complex syntax data (passed int = 4)
             findNavController().navigate(R.id.home_to_complex_syntax_exercise)
         }
     }

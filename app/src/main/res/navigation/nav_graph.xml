@@ -24,21 +24,28 @@
             app:destination="@id/exerciseSelection" >
             <argument
                 android:name="exerciseType"
-                android:defaultValue="1" />
-        </action>
-        <action
-            android:id="@+id/home_to_compound_syntax_exercise"
-            app:destination="@id/exerciseSelection" >
-            <argument
-                android:name="exerciseType"
-                android:defaultValue="2" />
+                android:defaultValue="3" />
         </action>
         <action
             android:id="@+id/home_to_complex_syntax_exercise"
             app:destination="@id/exerciseSelection" >
             <argument
                 android:name="exerciseType"
-                android:defaultValue="3" />
+                android:defaultValue="4" />
+        </action>
+        <action
+            android:id="@+id/home_to_simple_phonology_exercise"
+            app:destination="@id/exerciseSelection" >
+            <argument
+                android:name="exerciseType"
+                android:defaultValue="1" />
+        </action>
+        <action
+            android:id="@+id/home_to_complex_phonology_exercise"
+            app:destination="@id/exerciseSelection" >
+            <argument
+                android:name="exerciseType"
+                android:defaultValue="2" />
         </action>
     </fragment>
     <fragment

@@ -1,104 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:theme="@style/Base.Theme.Lingua"
-    android:background="?attr/colorSecondary">
+    android:background="?attr/colorSecondary"
+    android:orientation="vertical"
+    android:theme="@style/Base.Theme.Lingua">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/lingua_logo"
+            android:layout_width="130.5dp"
+            android:layout_height="117dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            app:cardBackgroundColor="#BDBDBD"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="20dp">
+
+            <ImageView
+                android:id="@+id/myImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/logo_desc"
+                android:src="@drawable/lingua_logo" />
+
+        </androidx.cardview.widget.CardView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/simple_phonology"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:text="@string/simple_phonology_button"
+                    android:textColor="?attr/colorSecondary"
+                    android:textSize="31sp"
+                    app:cornerRadius="20dp"
+                    app:icon="@drawable/simple_phonology"
+                    app:iconSize="110dp"
+                    app:strokeWidth="@dimen/cardview_default_radius" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/complex_phonology"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:text="@string/complex_phonology_button"
+                    android:textColor="?attr/colorSecondary"
+                    android:textSize="31sp"
+                    app:cornerRadius="20dp"
+                    app:icon="@drawable/complex_phonology"
+                    app:iconSize="110dp"
+                    app:strokeWidth="@dimen/cardview_default_radius" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/simple_syntax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:text="@string/simple_syntax_button"
+                    android:textColor="?attr/colorSecondary"
+                    android:textSize="35sp"
+                    app:cornerRadius="20dp"
+                    app:icon="@drawable/simple_syntax"
+                    app:iconSize="110dp"
+                    app:strokeWidth="@dimen/cardview_default_radius" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/complex_syntax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:text="@string/complex_syntax_button"
+                    android:textColor="?attr/colorSecondary"
+                    android:textSize="35sp"
+                    app:cornerRadius="20dp"
+                    app:icon="@drawable/complex_syntax"
+                    app:iconSize="110dp"
+                    app:strokeWidth="@dimen/cardview_default_radius" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         android:background="?attr/colorSecondary"
-        app:menu="@menu/menu_main"
-        app:labelVisibilityMode="labeled"
         app:itemActiveIndicatorStyle="@null"
         app:itemTextAppearanceActiveBoldEnabled="false"
-        />
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/simple_syntax"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/simple_button"
-        android:backgroundTint="?attr/colorPrimary"
-        app:strokeWidth="@dimen/cardview_default_radius"
-        android:strokeColor="@color/black"
-        app:icon="@drawable/simple_linguistics"
-        android:textSize="35sp"
-        app:iconSize="110dp"
-        app:cornerRadius="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="300dp"
-        android:textColor="?attr/colorSecondary"
-        />
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/compound_syntax"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/compound_button"
-        android:backgroundTint="?attr/colorPrimary"
-        app:strokeWidth="@dimen/cardview_default_radius"
-        android:strokeColor="@color/black"
-        app:icon="@drawable/compound_linguistics"
-        android:textSize="31sp"
-        app:iconSize="110dp"
-        app:cornerRadius="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/simple_syntax"
-        android:layout_marginTop="5dp"
-        android:textColor="?attr/colorSecondary"
-        />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/complex_syntax"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/complex_button"
-        android:backgroundTint="?attr/colorPrimary"
-        app:strokeWidth="@dimen/cardview_default_radius"
-        android:strokeColor="@color/black"
-        app:icon="@drawable/complex_linguistics"
-        android:textSize="35sp"
-        app:iconSize="110dp"
-        app:cornerRadius="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/compound_syntax"
-        android:layout_marginTop="5dp"
-        android:textColor="?attr/colorSecondary"
-        />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/lingua_logo"
-        app:cardBackgroundColor="#BDBDBD"
-        android:layout_width="290dp"
-        android:layout_height="260dp"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="20dp"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/simple_syntax"
-        >
-
-    <ImageView
-        android:id="@+id/myImageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/logo_desc"
-        android:src="@drawable/lingua_logo" />
-
-    </androidx.cardview.widget.CardView>
-
+        app:menu="@menu/menu_main" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

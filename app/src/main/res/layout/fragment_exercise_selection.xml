@@ -32,12 +32,12 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/exerciseIcon"
             android:layout_width="0dp"
             android:layout_height="130dp"
             android:layout_marginLeft="20dp"
             android:layout_weight="1"
-            android:src="@drawable/simple_linguistics" />
+            android:src="@drawable/simple_syntax" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="230dp"
