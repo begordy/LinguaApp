@@ -1,0 +1,170 @@
+﻿[
+  {
+    "symbol": "p",
+    "manner": "stop",
+    "manner2": "plosive",
+    "place": "bilabial",
+    "voicing": "voiceless"
+  },
+  {
+    "symbol": "b",
+    "manner": "stop",
+    "manner2": "plosive",
+    "place": "bilabial",
+    "voicing": "voiced"
+  },
+  {
+    "symbol": "t",
+    "manner": "stop",
+    "manner2": "plosive",
+    "place": "alveolar",
+    "voicing": "voiceless"
+  },
+  {
+    "symbol": "d",
+    "manner": "stop",
+    "manner2": "plosive",
+    "place": "alveolar",
+    "voicing": "voiced"
+  },
+  {
+    "symbol": "k",
+    "manner": "stop",
+    "manner2": "plosive",
+    "place": "velar",
+    "voicing": "voiceless"
+  },
+  {
+    "symbol": "g",
+    "manner": "stop",
+    "manner2": "plosive",
+    "place": "velar",
+    "voicing": "voiced"
+  },
+  {
+    "symbol": "ʔ",
+    "manner": "stop",
+    "manner2": "plosive",
+    "place": "glottal",
+    "voicing": "voiceless"
+  },
+  {
+    "symbol": "m",
+    "manner": "nasal",
+    "manner2": "-",
+    "place": "bilabial",
+    "voicing": "voiced"
+  },
+  {
+    "symbol": "n",
+    "manner": "nasal",
+    "manner2": "-",
+    "place": "alveolar",
+    "voicing": "voiced"
+  },
+  {
+    "symbol": "ŋ",
+    "manner": "nasal",
+    "manner2": "-",
+    "place": "velar",
+    "voicing": "voiced"
+  },
+  {
+    "symbol": "ɾ",
+    "manner": "tap",
+    "manner2": "flap",
+    "place": "alveolar",
+    "voicing": "voiced"
+  },
+  {
+    "symbol": "f",
+    "manner": "fricative",
+    "manner2": "-",
+    "place": "labio-dental",
+    "voicing": "voiceless"
+  },
+  {
+    "symbol": "v",
+    "manner": "fricative",
+    "manner2": "-",
+    "place": "labio-dental",
+    "voicing": "voiced"
+  },
+  {
+    "symbol": "θ",
+    "manner": "fricative",
+    "manner2": "-",
+    "place": "dental",
+    "voicing": "voiceless"
+  },
+  {
+    "symbol": "ð",
+    "manner": "fricative",
+    "manner2": "-",
+    "place": "dental",
+    "voicing": "voiced"
+  },
+  {
+    "symbol": "s",
+    "manner": "fricative",
+    "manner2": "-",
+    "place": "alveolar",
+    "voicing": "voiceless"
+  },
+  {
+    "symbol": "z",
+    "manner": "fricative",
+    "manner2": "-",
+    "place": "alveolar",
+    "voicing": "voiced"
+  },
+  {
+    "symbol": "ʃ",
+    "manner": "fricative",
+    "manner2": "-",
+    "place": "post-alveolar",
+    "voicing": "voiceless"
+  },
+  {
+    "symbol": "ʒ",
+    "manner": "fricative",
+    "manner2": "-",
+    "place": "post-alveolar",
+    "voicing": "voiced"
+  },
+  {
+    "symbol": "h",
+    "manner": "fricative",
+    "manner2": "-",
+    "place": "glottal",
+    "voicing": "voiceless"
+  },
+  {
+    "symbol": "ɹ",
+    "manner": "approximant",
+    "manner2": "liquid",
+    "place": "alveolar",
+    "voicing": "voiced"
+  },
+  {
+    "symbol": "j",
+    "manner": "approximant",
+    "manner2": "glide",
+    "place": "palatal",
+    "voicing": "voiced"
+  },
+  {
+    "symbol": "l",
+    "manner": "approximant",
+    "manner2": "liquid",
+    "place": "alveolar",
+    "voicing": "voiced"
+  },
+  {
+    "symbol": "w",
+    "manner": "approximant",
+    "manner2": "glide",
+    "place": "labio-velar",
+    "voicing": "voiced"
+  }
+]
