@@ -1,0 +1,152 @@
+﻿[
+  {
+    "question": "Which manner of articulation has a complete blockage of airflow then sudden release?",
+    "answer": "stop",
+    "otherOptions": "fricative_nasal_liquid"
+  },
+  {
+    "question": "Which manner of articulation has a continuous but constricted airflow through the mouth?",
+    "answer": "fricative",
+    "otherOptions": "stop_nasal_approximant"
+  },
+  {
+    "question": "Which manner of articulation has the articulators very close together but not touching?",
+    "answer": "fricative",
+    "otherOptions": "plosive_glide_nasal"
+  },
+  {
+    "question": "Which manner of articulation has a complete blockage of airflow then a slow release?",
+    "answer": "affricate",
+    "otherOptions": "stop_approximant_tap"
+  },
+  {
+    "question": "Which manner of articulation has the tip of tongue rapidly contact the roof the mouth once?",
+    "answer": "tap",
+    "otherOptions": "stop_fricative_affricate"
+  },
+  {
+    "question": "Which manner of articulation can have either oral or nasal airflow?",
+    "answer": "plosive",
+    "otherOptions": "fricative_flap_glide"
+  },
+  {
+    "question": "If a spectrogram is in Hz and the first formant is high, what type of vowel does that indicate?",
+    "answer": "low",
+    "otherOptions": "high"
+  },
+  {
+    "question": "If a spectrogram is in Hz and the first formant is low, what type of vowel does that indicate?",
+    "answer": "high",
+    "otherOptions": "low"
+  },
+  {
+    "question": "If a spectrogram is in Hz and the second formant is high, what type of vowel does that indicate?",
+    "answer": "front",
+    "otherOptions": "back"
+  },
+  {
+    "question": "If a spectrogram is in Hz and the second formant is low, what type of vowel does that indicate?",
+    "answer": "back",
+    "otherOptions": "front"
+  },
+  {
+    "question": "If a spectrogram is in Bark and the first formant is high, what type of vowel does that indicate?",
+    "answer": "high",
+    "otherOptions": "low"
+  },
+  {
+    "question": "If a spectrogram is in Bark and the first formant is low, what type of vowel does that indicate?",
+    "answer": "low",
+    "otherOptions": "high"
+  },
+  {
+    "question": "If a spectrogram is in Bark and the second formant is high, what type of vowel does that indicate?",
+    "answer": "back",
+    "otherOptions": "front"
+  },
+  {
+    "question": "If a spectrogram is in Bark and the second formant is low, what type of vowel does that indicate?",
+    "answer": "front",
+    "otherOptions": "back"
+  },
+  {
+    "question": "Which manner of articulation doesn’t have formants?",
+    "answer": "fricatives",
+    "otherOptions": "plosives_nasals_approximants"
+  },
+  {
+    "question": "Which manner of articulation has one formant and one 'anti-formant'?",
+    "answer": "nasals",
+    "otherOptions": "plosives_fricatives_approximants"
+  },
+  {
+    "question": "Which approximants are distinguished by their 1st and 2nd formants?",
+    "answer": "glides",
+    "otherOptions": "liquids"
+  },
+  {
+    "question": "Which approximants rae distinguished by their 2nd and 3rd formants?",
+    "answer": "liquids",
+    "otherOptions": "glides"
+  },
+  {
+    "question": "What is the voice onset time (VOT) for voiced consonants?",
+    "answer": "< 0 ms",
+    "otherOptions": "0 - 35 ms_35+ ms"
+  },
+  {
+    "question": "What is the voice onset time (VOT) for voiceless unaspirated consonants?",
+    "answer": "0 - 35 ms",
+    "otherOptions": "< 0 ms_35+ ms"
+  },
+  {
+    "question": "What is the voice onset time (VOT) for voiceless plain consonants?",
+    "answer": "0 - 35 ms",
+    "otherOptions": "< 0 ms_35+ ms"
+  },
+  {
+    "question": "What is the voice onset time (VOT) for voiceless aspirated consonants?",
+    "answer": "35+ ms",
+    "otherOptions": "< 0 ms_0 - 35 ms"
+  },
+  {
+    "question": "Which voicing is also called ‘prevoiced’?",
+    "answer": "voiced",
+    "otherOptions": "voiceless plain_voiceless aspirated"
+  },
+  {
+    "question": "Which voicing is also called ‘short lag’?",
+    "answer": "voiceless plain",
+    "otherOptions": "voiced_voiceless aspirated"
+  },
+  {
+    "question": "Which voicing is also called ‘long lag’?",
+    "answer": "voiceless aspirated",
+    "otherOptions": "voiced_voiceless plain"
+  },
+  {
+    "question": "Which feature does not help identify plosives in a spectrogram?",
+    "answer": "amplitude",
+    "otherOptions": "duration_VOT_voicing band"
+  },
+  {
+    "question": "Low vowels are inherently shorter than high vowels.",
+    "answer": "false",
+    "otherOptions": "true"
+  },
+  {
+    "question": "In a spectrogram, affricates look like noisy stops.",
+    "answer": "true",
+    "otherOptions": "false"
+  },
+  {
+    "question": "[h] & [ʔ] pattern sometimes as obstruents and sometimes as sonorants.",
+    "answer": "true",
+    "otherOptions": "false"
+  },
+  {
+    "question": "Liquids are also called semivowels, and appear as exaggerated vowels in a spectrogram.",
+    "answer": "false",
+    "otherOptions": "true"
+  }
+]
