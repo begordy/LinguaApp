@@ -1,0 +1,102 @@
+﻿[
+  {
+    "orthography": "This gives a little context",
+    "answer": "[S[NP[N]][VP[V][NP[D][A][N]]]]"
+  },
+  {
+    "orthography": "It surges over land",
+    "answer": "[S[NP[N]][VP[V][PP[P][NP[N]]]]]"
+  },
+  {
+    "orthography": "I am afraid of it",
+    "answer": "[S[NP[N]][VP[V][AP[A][PP[P][NP[N]]]]]]"
+  },
+  {
+    "orthography": "I walked by the shallow crystal stream",
+    "answer": "[S[NP[N]][VP[V][PP[P][NP[D][AP[A][A]][N]]]]]"
+  },
+  {
+    "orthography": "I did not include my schedule for college algebra",
+    "answer": "[S[NP[N]][VP[V][Adv][VP[V][NP[NP[D][N]][PP[P][NP[N][N]]]]"
+  },
+  {
+    "orthography": "I have a final on Thursday of next week for that",
+    "answer": "[S[NP[N]][VP[V][NP[NP[D][N]][PP[P][NP[NP[N]][PP[P][NP[A][N]]]]]][PP[P][NP[N]]]]]"
+  },
+  {
+    "orthography": "They are really cute",
+    "answer": "[S[NP[N]][VP[V][AP[Adv][A]]]]"
+  },
+  {
+    "orthography": "I’m really proud of myself",
+    "answer": "[S[NP[N]][VP[V][AP[Adv][A][PP[P][NP[N]]]]]]"
+  },
+  {
+    "orthography": "She had to give me a return and re-scan it",
+    "answer": "[S[NP[N]][VP[V][S[VP[TO][VP[VP[V][NP[N]][NP[D][N]]][Conj][VP[V][NP[N]]]]]]]]"
+  },
+  {
+    "orthography": "Hopefully they’ll be here in about a week",
+    "answer": "[S[AdvP[Adv]][NP[N]][VP[V][VP[V][Adv][PP[P][NP[Adv][D][N]]]]]]"
+  },
+  {
+    "orthography": "Fear is arguably as old as life",
+    "answer": "[S[NP[N]][VP[V][Adv][AP[AP[Adv][A]][PP[P][NP[N]]]]]]"
+  },
+  {
+    "orthography": "It is deeply ingrained in the living organisms",
+    "answer": "[S[NP[N]][VP[V][AP[Adv][A][PP[P][NP[D][A][N]]]]]]"
+  },
+  {
+    "orthography": "We also learn from observation such witnessing a predator attacking another human",
+    "answer": "[S[NP[N]][Adv][VP[V][PP[P][NP[NP[N]][PP[A][P][VP[V][S[NP[D][N]][VP[V][NP[D][N]]]]]]]]]]"
+  },
+  {
+    "orthography": "By trusting them we would not die",
+    "answer": "[S[PP[P][VP[V][NP[N]]]][NP[N]][VP[V][Adv][VP[V]]]]"
+  },
+  {
+    "orthography": "It may be dogs or cats or something else",
+    "answer": "[S[NP[N]][VP[V][VP[V][NP[NP[N]][Conj][NP[N]][Conj][NP[N][Adv]]]]]]"
+  },
+  {
+    "orthography": "It is because it is spring and inside the ground something is stirring",
+    "answer": "[S[NP[N]][VP[V][S[Conj][S[S[NP[N]][VP[V][NP[N]]]][Conj][S[PP[P][NP[D][N]]][NP[N]][VP[V][VP[V]]]]]]]]"
+  },
+  {
+    "orthography": "I wanted to feel the rough edge of the collar of his coat against my cheek",
+    "answer": "[S[NP[N]][VP[V][VP[TO][VP[V][NP[NP[D][A][N]][PP[P][NP[NP[D][N]][PP[P][NP[D][N]]]]]][PP[P][NP[D][N]]]]]]]"
+  },
+  {
+    "orthography": "I wanted to be young again and safe",
+    "answer": "[S[NP[N]][VP[V][VP[TO][VP[V][AP[AP[A][Adv]][Conj][AP[A]]]]]]"
+  },
+  {
+    "orthography": "We walked back through the school",
+    "answer": "[S[NP[N]][VP[V][Adv][PP[P][NP[D][N]]]]]"
+  },
+  {
+    "orthography": "He saw his friends run forward as their names were called",
+    "answer": "[S[NP[N]][VP[V][S[NP[D][N]][VP[V][Adv][S[Conj][S[NP[D][N]][VP[V][VP[V]]]]]]]]]"
+  },
+  {
+    "orthography": "This is where we must make our stand",
+    "answer": "[S[NP[N]][VP[V][S[Conj][S[NP[N]][VP[V][VP[V][NP[D][N]]]]]]]]"
+  },
+  {
+    "orthography": "The enemy can not be allowed to advance any further",
+    "answer": "[S[NP[D][N]][VP[V][Adv][VP[V][VP[V][VP[TO][VP[V][AdvP[D][Adv]]]]]]]]"
+  },
+  {
+    "orthography": "His name would be called soon",
+    "answer": "[S[NP[D][N]][VP[V][VP[V][VP[V][Adv]]]]"
+  },
+  {
+    "orthography": "He felt a sense of doom",
+    "answer": "[S[NP[N]][VP[V][NP[NP[D][N]][PP[P][NP[N]]]]]"
+  },
+  {
+    "orthography": "At that moment his worst fears had not only been altogether realised but far exceeded",
+    "answer": "[S[PP[P][NP[D][N]]][NP[D][A][N]][VP[V][VP[AdvP[Adv][Adv]][V][VP[VP[Adv][V]][Conj][VP[Adv][V]]]]]]"
+  }
+]
