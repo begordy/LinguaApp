@@ -6,7 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.cardview.widget.CardView
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.OrientationHelper
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomePage : Fragment() {
@@ -44,6 +48,18 @@ class HomePage : Fragment() {
                 else -> false
             }
         }
+
+        val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView)
+
+        val samples: ArrayList<String> = ArrayList()
+
+        for (i in 1..4) {
+            samples.add("Card $i")
+        }
+
+        recyclerView.layoutManager = LinearLayoutManager(requireContext(), RecyclerView.HORIZONTAL, false)
+        recyclerView.adapter = SampleQuiz(samples)
+
 
         //Set listener for selecting each activity category
         val simplePhonologyButton = view.findViewById<Button>(R.id.simple_phonology)

@@ -7,17 +7,94 @@
     android:orientation="vertical"
     android:theme="@style/Base.Theme.Lingua"
     tools:context=".search">
-<SearchView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="20dp"
-    android:background="?attr/colorSecondary"
-    />
+
+
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="?attr/colorSecondary" />
 
     <Space
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_weight="1" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/simple_phonology"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="?attr/colorPrimary"
+                android:text="@string/simple_phonology_button"
+                android:textColor="?attr/colorSecondary"
+                android:textSize="31sp"
+                app:cornerRadius="20dp"
+                app:icon="@drawable/simple_phonology"
+                app:iconSize="110dp"
+                app:strokeWidth="@dimen/cardview_default_radius" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/complex_phonology"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="?attr/colorPrimary"
+                android:text="@string/complex_phonology_button"
+                android:textColor="?attr/colorSecondary"
+                android:textSize="31sp"
+                app:cornerRadius="20dp"
+                app:icon="@drawable/complex_phonology"
+                app:iconSize="110dp"
+                app:strokeWidth="@dimen/cardview_default_radius" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/simple_syntax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="?attr/colorPrimary"
+                android:text="@string/simple_syntax_button"
+                android:textColor="?attr/colorSecondary"
+                android:textSize="35sp"
+                app:cornerRadius="20dp"
+                app:icon="@drawable/simple_syntax"
+                app:iconSize="110dp"
+                app:strokeWidth="@dimen/cardview_default_radius" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/complex_syntax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="?attr/colorPrimary"
+                android:text="@string/complex_syntax_button"
+                android:textColor="?attr/colorSecondary"
+                android:textSize="35sp"
+                app:cornerRadius="20dp"
+                app:icon="@drawable/complex_syntax"
+                app:iconSize="110dp"
+                app:strokeWidth="@dimen/cardview_default_radius" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
