@@ -17,13 +17,15 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.app.ActivityCompat.recreate
+import androidx.core.content.ContextCompat
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
 class settings_fragment : Fragment() {
 
-
+    private lateinit var settingsViewModel: SettingsViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,10 +49,13 @@ class settings_fragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        settingsViewModel = ViewModelProvider(this).get(SettingsViewModel::class.java)
         val primary_spinner: Spinner = view.findViewById(R.id.primary_spinner)
         val secondary_spinner: Spinner = view.findViewById(R.id.secondary_spinner)
         val toolbar: Toolbar = view.findViewById(R.id.toolbar)
 
+        settingsViewModel.primaryColor.value?.let { toolbar.setBackgroundColor(it) }
+        settingsViewModel.secondaryColor.value?.let { view.setBackgroundColor(it) }
 
         // Set the toolbar as the action bar
         (activity as? AppCompatActivity)?.setSupportActionBar(toolbar)
@@ -85,13 +90,59 @@ class settings_fragment : Fragment() {
             secondary_spinner.adapter = adapter
         }
 
+        settingsViewModel.primaryColor.value?.let { color ->
+            val selectedPosition = when (color) {
+                Color.parseColor("#673AB7")-> 0 // Purple
+                Color.RED -> 1 // Red
+                Color.BLUE -> 2 // Blue
+                else -> 0 // Default to Red if color is not found
+            }
+            primary_spinner.setSelection(selectedPosition)
+        }
+
+        settingsViewModel.secondaryColor.value?.let { color ->
+            val selectedPosition = when (color) {
+                Color.WHITE-> 0 // White
+                Color.LTGRAY -> 1 // Grey
+                Color.YELLOW -> 2 // Yellow
+                else -> 0 // Default to White
+            }
+            secondary_spinner.setSelection(selectedPosition)
+        }
+
+
         primary_spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parentView: AdapterView<*>, view: View?, position: Int, id: Long) {
                 val selectedItem = parentView.getItemAtPosition(position) as String
                 //implement for each primary color :)
                 if(selectedItem.equals("Blue")){
-                    Toast.makeText(context, "Blue Selected", Toast.LENGTH_SHORT).show()
+                    settingsViewModel.savePrimaryColor(Color.BLUE)
+                }
+                if (selectedItem.equals("Purple")){
+                    settingsViewModel.savePrimaryColor(Color.parseColor("#673AB7"))
+                }
+                if (selectedItem.equals("Red")){
+                    settingsViewModel.savePrimaryColor(Color.RED)
+                }
+                // Do something with the selected item
+            }
 
+            override fun onNothingSelected(parentView: AdapterView<*>) {
+                // Handle case where no item is selected
+            }
+        }
+        secondary_spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parentView: AdapterView<*>, view: View?, position: Int, id: Long) {
+                val selectedItem = parentView.getItemAtPosition(position) as String
+                //implement for each primary color :)
+                if(selectedItem.equals("White")){
+                    settingsViewModel.saveSecondaryColor(Color.WHITE)
+                }
+                if (selectedItem.equals("Grey")){
+                    settingsViewModel.saveSecondaryColor(Color.LTGRAY)
+                }
+                if (selectedItem.equals("Yellow")){
+                    settingsViewModel.saveSecondaryColor(Color.YELLOW)
                 }
                 // Do something with the selected item
             }
