@@ -5,11 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
 class favorites : Fragment() {
+
+    private lateinit var settingsViewModel: SettingsViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +29,8 @@ class favorites : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val bottomNavigationView: BottomNavigationView = view.findViewById(R.id.bottom_navigation)
-
+        settingsViewModel = ViewModelProvider(this).get(SettingsViewModel::class.java)
+        settingsViewModel.secondaryColor.value?.let { view.setBackgroundColor(it) }
         // Set a listener to handle item selection
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {

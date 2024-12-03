@@ -5,11 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.GridView
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 
 // TODO: Rename parameter arguments, choose names that match
@@ -24,6 +26,8 @@ private const val ARG_PARAM2 = "param2"
  */
 class ExerciseSelection : Fragment() {
 
+    private lateinit var settingsViewModel: SettingsViewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -34,6 +38,7 @@ class ExerciseSelection : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        settingsViewModel = ViewModelProvider(this).get(SettingsViewModel::class.java)
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_exercise_selection, container, false)
         val quizTitle = view.findViewById<TextView>(R.id.quizTitle)
@@ -42,6 +47,9 @@ class ExerciseSelection : Fragment() {
         val tagsGrid = view.findViewById<GridView>(R.id.tags)
         val description = view.findViewById<TextView>(R.id.quizDescription)
         val image = view.findViewById<ImageView>(R.id.exerciseIcon)
+        val startQuiz = view.findViewById<Button>(R.id.button)
+        settingsViewModel.primaryColor.value?.let { startQuiz.setBackgroundColor(it) }
+        settingsViewModel.secondaryColor.value?.let { view.setBackgroundColor(it) }
         val args = this.arguments
         // TODO: Can this just be hardcoded?
         when(args?.getInt("exerciseType")) {
@@ -114,7 +122,7 @@ class ExerciseSelection : Fragment() {
         (activity as? AppCompatActivity)?.setSupportActionBar(toolbar)
         (activity as? AppCompatActivity)?.supportActionBar?.setDisplayHomeAsUpEnabled(true)
         (activity as? AppCompatActivity)?.supportActionBar?.setHomeAsUpIndicator(R.drawable.back_arrow)
-
+        settingsViewModel.primaryColor.value?.let { toolbar.setBackgroundColor(it) }
         // Clicking back arrow goes back to home
         toolbar.setNavigationOnClickListener {
             findNavController().navigateUp()
