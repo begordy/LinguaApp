@@ -47,7 +47,40 @@ class SettingsViewModel(application: Application): AndroidViewModel(application)
         sharedPreferences.edit().putInt("secondaryColor", color).apply()
         secondaryColor.value = color
     }
+    fun saveEasySelection(boolean: Boolean){
+        sharedPreferences.edit().putBoolean("easy", boolean).apply()
+        easy.value = boolean
+    }
 
+    fun saveMediumSelection(boolean: Boolean){
+        sharedPreferences.edit().putBoolean("medium", boolean).apply()
+        medium.value = boolean
+    }
+
+    fun saveHardSelection(boolean: Boolean) {
+        sharedPreferences.edit().putBoolean("hard", boolean).apply()
+        hard.value = boolean
+    }
+
+    fun saveSimpleSelection(boolean: Boolean) {
+        sharedPreferences.edit().putBoolean("simple", boolean).apply()
+        simple.value = boolean
+    }
+
+    fun saveComplexSelection(boolean: Boolean) {
+        sharedPreferences.edit().putBoolean("complex", boolean).apply()
+        complex.value = boolean
+    }
+
+    fun saveCompoundSelection(boolean: Boolean) {
+        sharedPreferences.edit().putBoolean("compound", boolean).apply()
+        compound.value = boolean
+    }
+
+    fun saveToastSelection(boolean: Boolean) {
+        sharedPreferences.edit().putBoolean("toastAllowed", boolean).apply()
+        toastAllowed.value = boolean
+    }
 
 }
 

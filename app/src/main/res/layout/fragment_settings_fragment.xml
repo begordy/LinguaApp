@@ -134,7 +134,7 @@
         android:layout_marginEnd="20dp"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
     <Switch
-        android:id="@+id/Hard_switch"
+        android:id="@+id/hard_switch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/hard"

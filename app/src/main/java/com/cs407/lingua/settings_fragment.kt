@@ -12,6 +12,7 @@ import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
+import android.widget.Switch
 import android.widget.Toast
 
 import androidx.appcompat.app.AppCompatActivity
@@ -53,6 +54,79 @@ class settings_fragment : Fragment() {
         val primary_spinner: Spinner = view.findViewById(R.id.primary_spinner)
         val secondary_spinner: Spinner = view.findViewById(R.id.secondary_spinner)
         val toolbar: Toolbar = view.findViewById(R.id.toolbar)
+        val easy: Switch = view.findViewById(R.id.easy_switch)
+        val medium: Switch = view.findViewById(R.id.medium_switch)
+        val hard: Switch = view.findViewById(R.id.hard_switch)
+        val simple: Switch = view.findViewById(R.id.simple_switch)
+        val complex: Switch = view.findViewById(R.id.complex_switch)
+        val compound: Switch = view.findViewById(R.id.compound_switch)
+        val toastSwitch: Switch = view.findViewById(R.id.toast_switch)
+        val notificationSwitch: Switch = view.findViewById(R.id.notification_switch)
+
+        easy.isChecked = settingsViewModel.easy.value == true
+        medium.isChecked = settingsViewModel.medium.value == true
+        hard.isChecked = settingsViewModel.hard.value == true
+        simple.isChecked = settingsViewModel.simple.value == true
+        complex.isChecked = settingsViewModel.complex.value == true
+        compound.isChecked = settingsViewModel.compound.value == true
+        toastSwitch.isChecked = settingsViewModel.toastAllowed.value == true
+        notificationSwitch.isChecked = settingsViewModel.notificationAllowed.value == true
+
+        easy.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                settingsViewModel.saveEasySelection(true)
+            } else{
+                settingsViewModel.saveEasySelection(false)
+            }
+        }
+
+        medium.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                settingsViewModel.saveMediumSelection(true)
+            } else{
+                settingsViewModel.saveMediumSelection(false)
+            }
+        }
+        hard.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                settingsViewModel.saveHardSelection(true)
+            } else {
+                settingsViewModel.saveHardSelection(false)
+            }
+        }
+
+        simple.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                settingsViewModel.saveSimpleSelection(true)
+            } else {
+                settingsViewModel.saveSimpleSelection(false)
+            }
+        }
+
+        complex.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                settingsViewModel.saveComplexSelection(true)
+            } else {
+                settingsViewModel.saveComplexSelection(false)
+            }
+        }
+
+        compound.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                settingsViewModel.saveCompoundSelection(true)
+            } else {
+                settingsViewModel.saveCompoundSelection(false)
+            }
+        }
+
+        toastSwitch.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                settingsViewModel.saveToastSelection(true)
+            } else {
+                settingsViewModel.saveToastSelection(false)
+            }
+        }
+
 
         settingsViewModel.primaryColor.value?.let { toolbar.setBackgroundColor(it) }
         settingsViewModel.secondaryColor.value?.let { view.setBackgroundColor(it) }
@@ -124,7 +198,6 @@ class settings_fragment : Fragment() {
                 if (selectedItem.equals("Red")){
                     settingsViewModel.savePrimaryColor(Color.RED)
                 }
-                // Do something with the selected item
             }
 
             override fun onNothingSelected(parentView: AdapterView<*>) {
@@ -144,7 +217,6 @@ class settings_fragment : Fragment() {
                 if (selectedItem.equals("Yellow")){
                     settingsViewModel.saveSecondaryColor(Color.YELLOW)
                 }
-                // Do something with the selected item
             }
 
             override fun onNothingSelected(parentView: AdapterView<*>) {
