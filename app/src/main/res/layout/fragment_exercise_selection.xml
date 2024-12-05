@@ -40,6 +40,7 @@
             android:src="@drawable/simple_syntax" />
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/infoCard"
             android:layout_width="230dp"
             android:layout_height="130dp"
             android:layout_marginLeft="20dp"

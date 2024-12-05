@@ -1,5 +1,6 @@
 package com.cs407.lingua
 
+import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -12,14 +13,13 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.cardview.widget.CardView
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.cs407.lingua.DataLoader.QInfo
+import org.jetbrains.skia.ColorSpace
+import kotlin.math.min
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
@@ -40,7 +40,7 @@ class ExerciseSelection : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        settingsViewModel = ViewModelProvider(this).get(SettingsViewModel::class.java)
+        settingsViewModel = ViewModelProvider(this)[SettingsViewModel::class.java]
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_exercise_selection, container, false)
         val quizTitle = view.findViewById<TextView>(R.id.quizTitle)
@@ -50,8 +50,20 @@ class ExerciseSelection : Fragment() {
         val description = view.findViewById<TextView>(R.id.quizDescription)
         val image = view.findViewById<ImageView>(R.id.exerciseIcon)
         val startQuiz = view.findViewById<Button>(R.id.button)
+        val infoCard = view.findViewById<CardView>(R.id.infoCard)
         settingsViewModel.primaryColor.value?.let { startQuiz.setBackgroundColor(it) }
         settingsViewModel.secondaryColor.value?.let { view.setBackgroundColor(it) }
+        val oColor = settingsViewModel.primaryColor.value
+        val infoCardRed = oColor?.let { Color.red(it) }
+        val infoCardGreen = oColor?.let { Color.green(it) }
+        val infoCardBlue = oColor?.let { Color.blue(it) }
+        val infoCardAlpha = oColor?.let { Color.alpha(it) }
+        val newColor = Color.argb(
+            infoCardAlpha!!,
+            min(infoCardRed!! + 150,255),
+            min(infoCardGreen!! + 150,255),
+            min(infoCardBlue!! + 150,255))
+        infoCard.setCardBackgroundColor(newColor)
         val args = this.arguments
         // TODO: Can this just be hardcoded?
         when(args?.getInt("exerciseType")) {
@@ -155,16 +167,27 @@ class ExerciseSelection : Fragment() {
         }
         val tag = question.fragmentID
         if(tag.compareTo("") != 0){
-            when(tag){
-                "mc2" -> {
-
-                }
-                "mc3" -> {}
-                "mc4" -> {}
-                "fillBlank" -> {}
-                "syntaxSim" -> {}
-                "syntaxAdv" -> {}
-            }
+            //TODO: replace this cuz this is tester code for each fragment type
+            val bundle = Bundle()
+            bundle.putString("questionText", "This is a tester question designed to test things. Make this long enough.")
+            bundle.putString("correctAnswer", "Correct Answer")
+            bundle.putStringArray("optionList", arrayOf("Option 1", "Option 2", "Option 3"))
+            findNavController().navigate(R.id.selection_to_mc2, bundle)
+            //TODO: Uncomment this cuz this is the actual code
+//            when(tag){
+//                "mc2" -> {
+//                    val bundle = Bundle()
+//                    bundle.putString("questionText", question.question)
+//                    bundle.putString("correctAnswer", question.answer)
+//                    bundle.putStringArray("optionList", question.options)
+//                    findNavController().navigate(R.id.selection_to_mc2, bundle)
+//                }
+//                "mc3" -> {}
+//                "mc4" -> {}
+//                "fillBlank" -> {}
+//                "syntaxSim" -> {}
+//                "syntaxAdv" -> {}
+//            }
         }else{
             Toast.makeText(requireContext(), "DataLoader or Mode Assignment Error", Toast.LENGTH_SHORT).show()
         }
@@ -184,8 +207,6 @@ class ExerciseSelection : Fragment() {
         fun newInstance(param1: String, param2: String) =
             ExerciseSelection().apply {
                 arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
                 }
             }
     }

@@ -23,7 +23,7 @@ object DataLoader {
                         val options = questions[q][2].split("_").toTypedArray()
                         return QInfo("mc4", questions[q][0], questions[q][1], options)
                     }
-                    else -> return QInfo("", "error", "error", emptyArray<String>())
+                    else -> return QInfo("", "choice 1 error", "choice 1 error", emptyArray<String>())
                 }
             }
 
@@ -97,8 +97,8 @@ object DataLoader {
                 }
 
                 var fragID = ""
-                var question = "error"
-                var answer = "error"
+                var question = "choice 3 error"
+                var answer = "choice 3 error"
                 var options = emptyArray<String>()
 
                 num = (1..2).random()
@@ -141,7 +141,7 @@ object DataLoader {
                                 1 -> "What is the manner of articulation for this symbol? /"
                                 2 -> "What is the place of articulation for this symbol? /"
                                 3 -> "What is the voicing for this symbol? /"
-                                else -> "error"
+                                else -> "choice 3 consonant error"
                             }
                         }
                         else {
@@ -149,7 +149,7 @@ object DataLoader {
                                 1 -> "What is the height of this symbol? /"
                                 2 -> "What is the depth of this symbol? /"
                                 3 -> "What is the roundedness of this symbol? /"
-                                else -> "error"
+                                else -> "choice 3 vowel error"
                             }
                         }
                         question += data[q][0] + "/"
@@ -177,7 +177,7 @@ object DataLoader {
 
                 val answer = data[q][0]
 
-                var question = "error"
+                var question = "choice 5 error"
                 val num = (1..2).random()
                 when(num) {
                     1 -> {
@@ -194,11 +194,11 @@ object DataLoader {
 
             6 -> { // ipa transcription (json)
                 // TODO !!!!!!!!!!!!!!!!!
-                return QInfo("", "error", "error", emptyArray<String>())
+                return QInfo("", "choice 6 error", "error", emptyArray<String>())
             }
 
             else -> {
-                return QInfo("", "error", "error", emptyArray<String>())
+                return QInfo("", "choice ?? error", "error", emptyArray<String>())
             }
         }
     }

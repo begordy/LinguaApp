@@ -105,5 +105,99 @@
             android:name="exerciseType"
             app:argType="integer"
             android:defaultValue="0" />
+        <action
+            android:id="@+id/selection_to_mc2"
+            app:destination="@id/MCQuestion" >
+            <argument
+                android:name="numOptions"
+                android:defaultValue="2" />
+        </action>
+        <action
+            android:id="@+id/selection_to_mc3"
+            app:destination="@id/MCQuestion" >
+            <argument
+                android:name="numOptions"
+                android:defaultValue="3" />
+        </action>
+        <action
+            android:id="@+id/selection_to_mc4"
+            app:destination="@id/MCQuestion" >
+            <argument
+                android:name="numOptions"
+                android:defaultValue="4" />
+        </action>
+        <action
+            android:id="@+id/selection_to_syntaxAdv"
+            app:destination="@id/syntaxAdvancedQuestion" />
+        <action
+            android:id="@+id/selection_to_syntaxSim"
+            app:destination="@id/syntaxSimpleQuestion" />
+        <action
+            android:id="@+id/selection_to_fillBlank"
+            app:destination="@id/fillBlankQuestion" />
+    </fragment>
+    <fragment
+        android:id="@+id/fillBlankQuestion"
+        android:name="com.cs407.lingua.FillBlankQuestion"
+        android:label="fragment_fill_blank_question"
+        tools:layout="@layout/fragment_fill_blank_question" >
+        <argument
+            android:name="questionText"
+            app:argType="string" />
+        <argument
+            android:name="correctAnswer"
+            app:argType="string" />
+        <argument
+            android:name="optionList"
+            app:argType="string[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/syntaxAdvancedQuestion"
+        android:name="com.cs407.lingua.SyntaxAdvancedQuestion"
+        android:label="fragment_syntax_advanced_question"
+        tools:layout="@layout/fragment_syntax_advanced_question" >
+        <argument
+            android:name="questionText"
+            app:argType="string" />
+        <argument
+            android:name="correctAnswer"
+            app:argType="string" />
+        <argument
+            android:name="optionList"
+            app:argType="string[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/syntaxSimpleQuestion"
+        android:name="com.cs407.lingua.SyntaxSimpleQuestion"
+        android:label="fragment_syntax_simple_question"
+        tools:layout="@layout/fragment_syntax_simple_question" >
+        <argument
+            android:name="questionText"
+            app:argType="string" />
+        <argument
+            android:name="correctAnswer"
+            app:argType="string" />
+        <argument
+            android:name="optionList"
+            app:argType="string[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/MCQuestion"
+        android:name="com.cs407.lingua.MCQuestion"
+        android:label="fragment_mc_question"
+        tools:layout="@layout/fragment_mc_question" >
+        <argument
+            android:name="numOptions"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="questionText"
+            app:argType="string" />
+        <argument
+            android:name="correctAnswer"
+            app:argType="string" />
+        <argument
+            android:name="optionList"
+            app:argType="string[]" />
     </fragment>
 </navigation>
