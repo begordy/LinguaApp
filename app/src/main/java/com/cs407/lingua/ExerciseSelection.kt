@@ -9,10 +9,12 @@ import android.widget.Button
 import android.widget.GridView
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.cs407.lingua.DataLoader.QInfo
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -66,6 +68,7 @@ class ExerciseSelection : Fragment() {
                 tagsGrid.adapter = adapter
                 description.text = getString(R.string.simple_phonology_description)
                 image.setImageResource(R.drawable.simple_phonology)
+                startQuiz.setOnClickListener {startQuiz(1)}
             }
             2 -> {
                 quizTitle.text = "Complex Phonology"
@@ -80,6 +83,7 @@ class ExerciseSelection : Fragment() {
                 tagsGrid.adapter = adapter
                 description.text = getString(R.string.complex_phonology_description)
                 image.setImageResource(R.drawable.complex_phonology)
+                startQuiz.setOnClickListener {startQuiz(2)}
             }
             3 -> {
                 quizTitle.text = "Simple Syntax"
@@ -94,6 +98,7 @@ class ExerciseSelection : Fragment() {
                 tagsGrid.adapter = adapter
                 description.text = getString(R.string.simple_syntax_description)
                 image.setImageResource(R.drawable.simple_syntax)
+                startQuiz.setOnClickListener {startQuiz(3)}
             }
             4 -> {
                 quizTitle.text = "Complex Syntax"
@@ -108,8 +113,10 @@ class ExerciseSelection : Fragment() {
                 tagsGrid.adapter = adapter
                 description.text = getString(R.string.complex_syntax_description)
                 image.setImageResource(R.drawable.complex_syntax)
+                startQuiz.setOnClickListener {startQuiz(4)}
             }
         }
+
         return view
     }
 
@@ -127,6 +134,39 @@ class ExerciseSelection : Fragment() {
         toolbar.setNavigationOnClickListener {
             findNavController().navigateUp()
             //findNavController().navigate(R.id.action_settings_fragment_to_homePage)
+        }
+    }
+
+    private fun startQuiz(mode: Int){
+        var question = QInfo("", "error", "error", emptyArray<String>())
+        when(mode){
+            1 -> {
+                question = DataLoader.simplePhonetics()
+            }
+            2 -> {
+                question = DataLoader.advancedPhonetics()
+            }
+            3 -> {
+                question = DataLoader.simpleSyntax()
+            }
+            4 -> {
+                question = DataLoader.advancedPhonetics()
+            }
+        }
+        val tag = question.fragmentID
+        if(tag.compareTo("") != 0){
+            when(tag){
+                "mc2" -> {
+
+                }
+                "mc3" -> {}
+                "mc4" -> {}
+                "fillBlank" -> {}
+                "syntaxSim" -> {}
+                "syntaxAdv" -> {}
+            }
+        }else{
+            Toast.makeText(requireContext(), "DataLoader or Mode Assignment Error", Toast.LENGTH_SHORT).show()
         }
     }
 
