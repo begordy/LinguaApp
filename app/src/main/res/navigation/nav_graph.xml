@@ -150,6 +150,12 @@
         <argument
             android:name="optionList"
             app:argType="string[]" />
+        <action
+            android:id="@+id/fillBlank_to_questionResult"
+            app:destination="@id/questionResult" />
+        <action
+            android:id="@+id/fillBlank_to_quizResult"
+            app:destination="@id/quizResult" />
     </fragment>
     <fragment
         android:id="@+id/syntaxAdvancedQuestion"
@@ -165,6 +171,12 @@
         <argument
             android:name="optionList"
             app:argType="string[]" />
+        <action
+            android:id="@+id/syntax_to_questionResult"
+            app:destination="@id/questionResult" />
+        <action
+            android:id="@+id/syntax_to_quizResult"
+            app:destination="@id/quizResult" />
     </fragment>
     <fragment
         android:id="@+id/syntaxSimpleQuestion"
@@ -199,5 +211,35 @@
         <argument
             android:name="optionList"
             app:argType="string[]" />
+        <action
+            android:id="@+id/MCQuestion_to_questionResult"
+            app:destination="@id/questionResult" />
+        <action
+            android:id="@+id/MCQuestion_to_quizResult"
+            app:destination="@id/quizResult" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionResult"
+        android:name="com.cs407.lingua.QuestionResult"
+        android:label="fragment_question_result"
+        tools:layout="@layout/fragment_question_result" >
+        <action
+            android:id="@+id/questionResult_to_MCQuestion"
+            app:destination="@id/MCQuestion" />
+        <action
+            android:id="@+id/questionResult_to_fillBlankQuestion"
+            app:destination="@id/fillBlankQuestion" />
+        <action
+            android:id="@+id/questionResult_to_syntax"
+            app:destination="@id/syntaxAdvancedQuestion" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizResult"
+        android:name="com.cs407.lingua.QuizResult"
+        android:label="fragment_quiz_result"
+        tools:layout="@layout/fragment_quiz_result" >
+        <action
+            android:id="@+id/quizResult_to_homePage"
+            app:destination="@id/homePage" />
     </fragment>
 </navigation>
