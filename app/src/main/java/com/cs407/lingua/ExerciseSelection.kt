@@ -171,8 +171,8 @@ class ExerciseSelection : Fragment() {
             val bundle = Bundle()
             bundle.putString("questionText", "This is a tester question designed to test things. Make this long enough.")
             bundle.putString("correctAnswer", "Correct Answer")
-            bundle.putStringArray("optionList", arrayOf("Option 1", "Option 2", "Option 3"))
-            findNavController().navigate(R.id.selection_to_mc2, bundle)
+            //bundle.putStringArray("optionList", arrayOf("Option 1", "Option 2", "Option 3"))
+            findNavController().navigate(R.id.selection_to_fillBlank, bundle)
             //TODO: Uncomment this cuz this is the actual code
 //            when(tag){
 //                "mc2" -> {
@@ -182,11 +182,45 @@ class ExerciseSelection : Fragment() {
 //                    bundle.putStringArray("optionList", question.options)
 //                    findNavController().navigate(R.id.selection_to_mc2, bundle)
 //                }
-//                "mc3" -> {}
-//                "mc4" -> {}
-//                "fillBlank" -> {}
-//                "syntaxSim" -> {}
-//                "syntaxAdv" -> {}
+//                "mc3" -> {
+//                    val bundle = Bundle()
+//                    bundle.putString("questionText", question.question)
+//                    bundle.putString("correctAnswer", question.answer)
+//                    bundle.putStringArray("optionList", question.options)
+//                    findNavController().navigate(R.id.selection_to_mc3, bundle)
+//                }
+//                "mc4" -> {
+//                    val bundle = Bundle()
+//                    bundle.putString("questionText", question.question)
+//                    bundle.putString("correctAnswer", question.answer)
+//                    bundle.putStringArray("optionList", question.options)
+//                    findNavController().navigate(R.id.selection_to_mc4, bundle)
+//                }
+//                "mc" -> {
+//                    val bundle = Bundle()
+//                    bundle.putString("questionText", question.question)
+//                    bundle.putString("correctAnswer", question.answer)
+//                    bundle.putStringArray("optionList", question.options)
+//                    findNavController().navigate(R.id.selection_to_mc2, bundle)
+//                }
+//                "fillBlank" -> {
+//                    val bundle = Bundle()
+//                    bundle.putString("questionText", question.question)
+//                    bundle.putString("correctAnswer", question.answer)
+//                    findNavController().navigate(R.id.selection_to_fillBlank, bundle)
+//                }
+//                "syntaxSim" -> {
+//                    val bundle = Bundle()
+//                    bundle.putString("questionText", question.question)
+//                    bundle.putString("correctAnswer", question.answer)
+//                    findNavController().navigate(R.id.selection_to_syntaxSim, bundle)
+//                }
+//                "syntaxAdv" -> {
+//                    val bundle = Bundle()
+//                    bundle.putString("questionText", question.question)
+//                    bundle.putString("correctAnswer", question.answer)
+//                    findNavController().navigate(R.id.selection_to_syntaxAdv, bundle)
+//                }
 //            }
         }else{
             Toast.makeText(requireContext(), "DataLoader or Mode Assignment Error", Toast.LENGTH_SHORT).show()

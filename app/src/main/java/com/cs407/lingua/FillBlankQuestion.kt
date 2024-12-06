@@ -5,11 +5,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+private var correctAnswer: String? = ""
 
 /**
  * A simple [Fragment] subclass.
@@ -17,15 +21,11 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class FillBlankQuestion : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private lateinit var settingsViewModel: SettingsViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
         }
     }
 
@@ -33,8 +33,36 @@ class FillBlankQuestion : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        settingsViewModel = ViewModelProvider(this)[SettingsViewModel::class.java]
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fill_blank_question, container, false)
+        val view = inflater.inflate(R.layout.fragment_fill_blank_question, container, false)
+        val questionText = view.findViewById<TextView>(R.id.fillBlankQuestionText)
+        val questionEntry = view.findViewById<EditText>(R.id.fillBlankText)
+        val submitButton = view.findViewById<Button>(R.id.submitButton2)
+        settingsViewModel.primaryColor.value?.let { submitButton.setBackgroundColor(it) }
+        settingsViewModel.secondaryColor.value?.let { view.setBackgroundColor(it) }
+
+        questionText.text = arguments?.getString("questionText")
+        correctAnswer = arguments?.getString("correctAnswer")
+
+        return view
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val toolbar: Toolbar = view.findViewById(R.id.toolbar4)
+
+
+        // Set the toolbar as the action bar
+        (activity as? AppCompatActivity)?.setSupportActionBar(toolbar)
+        (activity as? AppCompatActivity)?.supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        (activity as? AppCompatActivity)?.supportActionBar?.setHomeAsUpIndicator(R.drawable.back_arrow)
+        settingsViewModel.primaryColor.value?.let { toolbar.setBackgroundColor(it) }
+        // Clicking back arrow goes back to home
+        toolbar.setNavigationOnClickListener {
+            findNavController().navigateUp()
+            //findNavController().navigate(R.id.action_settings_fragment_to_homePage)
+        }
     }
 
     companion object {
@@ -51,8 +79,6 @@ class FillBlankQuestion : Fragment() {
         fun newInstance(param1: String, param2: String) =
             FillBlankQuestion().apply {
                 arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
                 }
             }
     }
