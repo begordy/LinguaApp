@@ -6,6 +6,8 @@ object DataLoader {
     data class QInfo(val fragmentID: String, val question: String, val answer: String,
                      val options: Array<String>)
 
+    // TODO -- getGlossingDict() (outside of functions so it inits only once)
+
     fun simplePhonetics(): QInfo {
 
         val choice = (1..6).random()
@@ -516,6 +518,13 @@ class StoredData {
                 arrayOf("voiced","b","d","g","v","ʒ","ð","z"),
                 arrayOf("voiceless","p","t","k","f","ʃ","θ","s")
             )
+        }
+
+        fun getGlossDict(): Int {
+            val glossData = Utils.parseJSON()
+            // TODO -- convert JSON list to Dict for faster access
+            // key is orthography; value is a list of its glosses (remove spaces from string!!!)
+            return 0
         }
 
         fun getAdvHardcodedQuestions(): Array<Array<String>> { // question, answer, options
