@@ -171,8 +171,8 @@ class ExerciseSelection : Fragment() {
             val bundle = Bundle()
             bundle.putString("questionText", "This is a tester question designed to test things. Make this long enough.")
             bundle.putString("correctAnswer", "Correct Answer")
-            //bundle.putStringArray("optionList", arrayOf("Option 1", "Option 2", "Option 3"))
-            findNavController().navigate(R.id.selection_to_fillBlank, bundle)
+            bundle.putStringArray("optionList", arrayOf("Option 1", "Option 2", "Option 3"))
+            findNavController().navigate(R.id.selection_to_mc2, bundle)
             //TODO: Uncomment this cuz this is the actual code
 //            when(tag){
 //                "mc2" -> {

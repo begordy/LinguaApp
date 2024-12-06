@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.lifecycle.ViewModelProvider
@@ -44,6 +45,14 @@ class FillBlankQuestion : Fragment() {
 
         questionText.text = arguments?.getString("questionText")
         correctAnswer = arguments?.getString("correctAnswer")
+
+        submitButton.setOnClickListener {
+            if(correctAnswer?.compareTo(questionEntry.text.toString()) == 0){
+                Toast.makeText(requireContext(), "Entered Correct Answer", Toast.LENGTH_SHORT).show()
+            }else{
+                Toast.makeText(requireContext(), "Your entered answer of \"" + questionEntry.text.toString() + "\" is incorrect", Toast.LENGTH_SHORT).show()
+            }
+        }
 
         return view
     }

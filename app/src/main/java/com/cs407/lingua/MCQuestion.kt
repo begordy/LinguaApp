@@ -74,6 +74,15 @@ class MCQuestion : Fragment() {
                 Log.i("MCQuestion", "Selected Option " + i.toString())
                 Log.i("MCQuestion", "Correct Option: " + correctOption.toString())
             }
+            submitButton.setOnClickListener {
+                if(selectedOption == correctOption){
+                    //TODO: make this navigate to something else
+                    Toast.makeText(requireContext(), "Correct Answer Selected", Toast.LENGTH_SHORT).show()
+                }else{
+                    //TODO: make this navigate to something else
+                    Toast.makeText(requireContext(), "Wrong Answer Selected", Toast.LENGTH_SHORT).show()
+                }
+            }
         }else{
             Toast.makeText(requireContext(), "Error loading options", Toast.LENGTH_SHORT).show()
         }
