@@ -195,12 +195,16 @@ object DataLoader {
             }
 
             6 -> { // ipa transcription (json)
-                // TODO !!!!!!!!!!!!!!!!!
-                return QInfo("", "choice 6 error", "error", emptyArray<String>())
+                val key = glossDict.keys.random()
+                val valueList = glossDict[key] as ArrayList<String>
+                val value = valueList.random()
+                val question = "Transcribe this word into orthography:\n/$value/"
+
+                return QInfo("fillBlank", question, key, emptyArray<String>())
             }
 
             else -> {
-                return QInfo("", "choice ?? error", "error", emptyArray<String>())
+                return QInfo("", "choice error", "error", emptyArray<String>())
             }
         }
     }
