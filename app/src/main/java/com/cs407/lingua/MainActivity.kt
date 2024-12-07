@@ -43,8 +43,14 @@ class MainActivity : AppCompatActivity() {
             if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 // If permission is granted, schedule daily notifications
                 scheduleDailyNotification()
+            } else {
+                cancelDailyNotification()
             }
         }
+    }
+
+    private fun cancelDailyNotification() {
+        WorkManager.getInstance(applicationContext).cancelUniqueWork("studyReminder")
     }
 
     private fun scheduleDailyNotification() {

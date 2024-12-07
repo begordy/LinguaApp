@@ -73,6 +73,8 @@ class settings_fragment : Fragment() {
 
         if(NotificationManagerCompat.from(requireContext()).areNotificationsEnabled()){
             scheduleDailyNotification(requireContext())
+        }else {
+            context?.let { WorkManager.getInstance(it).cancelUniqueWork("studyReminder") }
         }
 
 
