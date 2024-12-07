@@ -60,6 +60,22 @@ class settings_fragment : Fragment() {
             notificationSwitch.isChecked = context?.let { NotificationManagerCompat.from(it).areNotificationsEnabled() } == true
         }
 
+        fun scheduleDailyNotification(context: Context) {
+            val dailyNotificationRequest = PeriodicWorkRequest.Builder(
+                NotificationWorker::class.java,
+                15, TimeUnit.MINUTES // Periodic task, repeat every 15 minutes for demonstration
+            )
+                .setInitialDelay(1, TimeUnit.SECONDS)
+                .build()
+
+            WorkManager.getInstance(context).enqueueUniquePeriodicWork("studyReminder", ExistingPeriodicWorkPolicy.KEEP,dailyNotificationRequest)
+        }
+
+        if(NotificationManagerCompat.from(requireContext()).areNotificationsEnabled()){
+            scheduleDailyNotification(requireContext())
+        }
+
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
