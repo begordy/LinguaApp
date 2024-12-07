@@ -6,6 +6,8 @@ object DataLoader {
     data class QInfo(val fragmentID: String, val question: String, val answer: String,
                      val options: Array<String>)
 
+    private val glossDict = StoredData.getGlossDict() as MutableMap<String, ArrayList<String>>
+
     fun simplePhonetics(): QInfo {
 
         val choice = (1..6).random()
@@ -193,12 +195,16 @@ object DataLoader {
             }
 
             6 -> { // ipa transcription (json)
-                // TODO !!!!!!!!!!!!!!!!!
-                return QInfo("", "choice 6 error", "error", emptyArray<String>())
+                val key = glossDict.keys.random()
+                val valueList = glossDict[key] as ArrayList<String>
+                val value = valueList.random()
+                val question = "Transcribe this word into orthography:\n/$value/"
+
+                return QInfo("fillBlank", question, key, emptyArray<String>())
             }
 
             else -> {
-                return QInfo("", "choice ?? error", "error", emptyArray<String>())
+                return QInfo("", "choice error", "error", emptyArray<String>())
             }
         }
     }
@@ -516,6 +522,26 @@ class StoredData {
                 arrayOf("voiced","b","d","g","v","ʒ","ð","z"),
                 arrayOf("voiceless","p","t","k","f","ʃ","θ","s")
             )
+        }
+
+        fun getGlossDict(): MutableMap<String, ArrayList<String>> {
+            val glossData = Utils.parseJSON()
+            val dict = mutableMapOf<String, ArrayList<String>>()
+
+            for(entry: WordData in glossData) {
+                val gloss = entry.glossing.replace(" ", "")
+
+                var list: ArrayList<String>? = null
+                list = if(dict.containsKey(entry.orthography)) {
+                    dict[entry.orthography] // preexisting key's value list
+                } else {
+                    ArrayList() // make new value list for new key
+                }
+                list?.add(gloss)
+                dict[entry.orthography] = list as ArrayList<String>
+            }
+
+            return dict
         }
 
         fun getAdvHardcodedQuestions(): Array<Array<String>> { // question, answer, options

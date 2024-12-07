@@ -67,7 +67,7 @@ class FillBlankQuestion : Fragment() {
         (activity as? AppCompatActivity)?.supportActionBar?.setDisplayHomeAsUpEnabled(true)
         (activity as? AppCompatActivity)?.supportActionBar?.setHomeAsUpIndicator(R.drawable.back_arrow)
         settingsViewModel.primaryColor.value?.let { toolbar.setBackgroundColor(it) }
-        // Clicking back arrow goes back to home
+        // TODO: Clicking back arrow prompts user if they want to leave the quiz before navigating to home
         toolbar.setNavigationOnClickListener {
             findNavController().navigateUp()
             //findNavController().navigate(R.id.action_settings_fragment_to_homePage)
