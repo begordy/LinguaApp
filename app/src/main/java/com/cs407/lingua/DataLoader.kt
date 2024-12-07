@@ -6,7 +6,7 @@ object DataLoader {
     data class QInfo(val fragmentID: String, val question: String, val answer: String,
                      val options: Array<String>)
 
-    // TODO -- getGlossingDict() (outside of functions so it inits only once)
+    private val glossDict = StoredData.getGlossDict() as MutableMap<String, ArrayList<String>>
 
     fun simplePhonetics(): QInfo {
 
@@ -520,11 +520,24 @@ class StoredData {
             )
         }
 
-        fun getGlossDict(): Int {
+        fun getGlossDict(): MutableMap<String, ArrayList<String>> {
             val glossData = Utils.parseJSON()
-            // TODO -- convert JSON list to Dict for faster access
-            // key is orthography; value is a list of its glosses (remove spaces from string!!!)
-            return 0
+            val dict = mutableMapOf<String, ArrayList<String>>()
+
+            for(entry: WordData in glossData) {
+                val gloss = entry.glossing.replace(" ", "")
+
+                var list: ArrayList<String>? = null
+                list = if(dict.containsKey(entry.orthography)) {
+                    dict[entry.orthography] // preexisting key's value list
+                } else {
+                    ArrayList() // make new value list for new key
+                }
+                list?.add(gloss)
+                dict[entry.orthography] = list as ArrayList<String>
+            }
+
+            return dict
         }
 
         fun getAdvHardcodedQuestions(): Array<Array<String>> { // question, answer, options
