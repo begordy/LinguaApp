@@ -1,6 +1,8 @@
 package com.cs407.lingua
 
-import android.content.res.ColorStateList
+import android.content.Context
+import android.content.Intent
+import android.content.pm.PackageManager
 import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -14,25 +16,38 @@ import android.widget.ArrayAdapter
 import android.widget.Spinner
 import android.widget.Switch
 import android.widget.Toast
-
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
+import android.provider.Settings
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import androidx.core.app.ActivityCompat.recreate
+import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.snackbar.Snackbar
 
 
 class settings_fragment : Fragment() {
 
     private lateinit var settingsViewModel: SettingsViewModel
+    private lateinit var permissionLauncher: ActivityResultLauncher<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
-
+        permissionLauncher = registerForActivityResult(
+            ActivityResultContracts.RequestPermission()
+        ) { isGranted ->
+            if (isGranted) {
+                // Handle granted permission (e.g., enable notifications)
+            } else {
+                // Handle denied permission (e.g., disable notifications)
+            }
+        }
     }
+
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
@@ -44,6 +59,7 @@ class settings_fragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_settings_fragment, container, false)
     }
@@ -70,7 +86,71 @@ class settings_fragment : Fragment() {
         complex.isChecked = settingsViewModel.complex.value == true
         compound.isChecked = settingsViewModel.compound.value == true
         toastSwitch.isChecked = settingsViewModel.toastAllowed.value == true
-        notificationSwitch.isChecked = settingsViewModel.notificationAllowed.value == true
+        notificationSwitch.isChecked = context?.let { NotificationManagerCompat.from(it).areNotificationsEnabled() } == true
+
+        notificationSwitch.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                // Check if notification permission is granted
+                if (ContextCompat.checkSelfPermission(
+                        requireContext(),
+                        android.Manifest.permission.POST_NOTIFICATIONS
+                    ) != PackageManager.PERMISSION_GRANTED
+                ) {
+                    // Request permission if not granted
+                    Snackbar.make(requireView(), "Notification permission is Disabled.\nGo to settings?", Snackbar.LENGTH_LONG)
+                        .setAction("Settings") {
+                            val intent = Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS).apply {
+                                putExtra(Settings.EXTRA_APP_PACKAGE, requireContext().packageName)
+                            }
+                            startActivity(intent)
+                        }
+                        .show()
+                } else {
+                    //notifications already granted
+                    Snackbar.make(
+                        requireView(),
+                        "Notification permission is Enabled.\nGo to settings?",
+                        Snackbar.LENGTH_LONG
+                    )
+                        .setAction("Settings") {
+                            val intent = Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS).apply {
+                                putExtra(Settings.EXTRA_APP_PACKAGE, requireContext().packageName)
+                            }
+                            startActivity(intent)
+                        }
+                        .show()
+                }
+            } else {
+                if (ContextCompat.checkSelfPermission(
+                        requireContext(),
+                        android.Manifest.permission.POST_NOTIFICATIONS
+                    ) != PackageManager.PERMISSION_GRANTED
+                ){
+                    Snackbar.make(requireView(), "Notification permission is Disabled.\nGo to settings?", Snackbar.LENGTH_LONG)
+                        .setAction("Settings") {
+                            val intent = Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS).apply {
+                                putExtra(Settings.EXTRA_APP_PACKAGE, requireContext().packageName)
+                            }
+                            startActivity(intent)
+                        }
+                        .show()
+                } else {
+                    Snackbar.make(
+                        requireView(),
+                        "Notification permission is Enabled.\nGo to settings?",
+                        Snackbar.LENGTH_LONG
+                    )
+                        .setAction("Settings") {
+                            val intent = Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS).apply {
+                                putExtra(Settings.EXTRA_APP_PACKAGE, requireContext().packageName)
+                            }
+                            startActivity(intent)
+                        }
+                        .show()
+                }
+            }
+        }
+
 
         easy.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
@@ -140,7 +220,7 @@ class settings_fragment : Fragment() {
         (activity as? AppCompatActivity)?.supportActionBar?.title = "Settings"
         (activity as? AppCompatActivity)?.setSupportActionBar(toolbar)
 
-        // Clicking back arrow goes back to home
+        // Clicking back arrow goes back
         toolbar.setNavigationOnClickListener {
             findNavController().navigateUp()
             //findNavController().navigate(R.id.action_settings_fragment_to_homePage)
@@ -169,7 +249,7 @@ class settings_fragment : Fragment() {
                 Color.parseColor("#673AB7")-> 0 // Purple
                 Color.RED -> 1 // Red
                 Color.BLUE -> 2 // Blue
-                else -> 0 // Default to Red if color is not found
+                else -> 0 // Default to Purple if color is not found
             }
             primary_spinner.setSelection(selectedPosition)
         }
@@ -179,7 +259,7 @@ class settings_fragment : Fragment() {
                 Color.WHITE-> 0 // White
                 Color.LTGRAY -> 1 // Grey
                 Color.YELLOW -> 2 // Yellow
-                else -> 0 // Default to White
+                else -> 0 // Default to White if color is not found
             }
             secondary_spinner.setSelection(selectedPosition)
         }
