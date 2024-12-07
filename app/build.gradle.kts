@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -46,6 +47,7 @@ dependencies {
     implementation(libs.androidx.preference)
     implementation(libs.androidx.gridlayout)
     implementation(libs.androidx.ui.desktop)
+    implementation(libs.firebase.auth)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -54,5 +56,6 @@ dependencies {
     implementation("com.google.code.gson:gson:2.10.1")
     implementation("androidx.work:work-runtime:2.8.0")
     implementation("com.otaliastudios:zoomlayout:1.9.0")
+    implementation("com.google.firebase:firebase-auth:23.1.0")
 
 }

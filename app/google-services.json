@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "305512126067",
+    "project_id": "lingua-562a5",
+    "storage_bucket": "lingua-562a5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:305512126067:android:9e67e48f27c295e489bc06",
+        "android_client_info": {
+          "package_name": "com.cs407.lingua"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNEQx00lmlxCl-KEDUpAR3TP3UvpPgO-c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
