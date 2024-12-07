@@ -19,7 +19,7 @@ class SettingsViewModel(application: Application): AndroidViewModel(application)
     val primaryColor = MutableLiveData<Int>()
     val secondaryColor = MutableLiveData<Int>()
 //    val notificationAllowed = MutableLiveData<Boolean>()
-    val toastAllowed = MutableLiveData<Boolean>()
+    val vibAllowed = MutableLiveData<Boolean>()
     val easy = MutableLiveData<Boolean>()
     val medium = MutableLiveData<Boolean>()
     val hard = MutableLiveData<Boolean>()
@@ -31,7 +31,7 @@ class SettingsViewModel(application: Application): AndroidViewModel(application)
         primaryColor.value = sharedPreferences.getInt("primaryColor", Color.parseColor("#673AB7"))
         secondaryColor.value = sharedPreferences.getInt("secondaryColor", Color.WHITE)
     //    notificationAllowed.value = sharedPreferences.getBoolean("notificationAllowed", false)
-        toastAllowed.value = sharedPreferences.getBoolean("toastAllowed", true)
+        vibAllowed.value = sharedPreferences.getBoolean("vibAllowed", true)
         easy.value = sharedPreferences.getBoolean("easy", true)
         medium.value = sharedPreferences.getBoolean("medium", true)
         hard.value = sharedPreferences.getBoolean("hard", true)
@@ -78,9 +78,9 @@ class SettingsViewModel(application: Application): AndroidViewModel(application)
         compound.value = boolean
     }
 
-    fun saveToastSelection(boolean: Boolean) {
-        sharedPreferences.edit().putBoolean("toastAllowed", boolean).apply()
-        toastAllowed.value = boolean
+    fun saveVibSelection(boolean: Boolean) {
+        sharedPreferences.edit().putBoolean("vibAllowed", boolean).apply()
+        vibAllowed.value = boolean
     }
 
 }

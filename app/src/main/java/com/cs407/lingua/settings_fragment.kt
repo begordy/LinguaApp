@@ -95,7 +95,7 @@ class settings_fragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        settingsViewModel = ViewModelProvider(this).get(SettingsViewModel::class.java)
+        settingsViewModel = ViewModelProvider(this)[SettingsViewModel::class.java]
         val primary_spinner: Spinner = view.findViewById(R.id.primary_spinner)
         val secondary_spinner: Spinner = view.findViewById(R.id.secondary_spinner)
         val toolbar: Toolbar = view.findViewById(R.id.toolbar)
@@ -105,7 +105,7 @@ class settings_fragment : Fragment() {
         val simple: Switch = view.findViewById(R.id.simple_switch)
         val complex: Switch = view.findViewById(R.id.complex_switch)
         val compound: Switch = view.findViewById(R.id.compound_switch)
-        val toastSwitch: Switch = view.findViewById(R.id.toast_switch)
+        val vibSwitch: Switch = view.findViewById(R.id.vib_switch)
         val notificationSwitch: Switch = view.findViewById(R.id.notification_switch)
 
         easy.isChecked = settingsViewModel.easy.value == true
@@ -114,7 +114,7 @@ class settings_fragment : Fragment() {
         simple.isChecked = settingsViewModel.simple.value == true
         complex.isChecked = settingsViewModel.complex.value == true
         compound.isChecked = settingsViewModel.compound.value == true
-        toastSwitch.isChecked = settingsViewModel.toastAllowed.value == true
+        vibSwitch.isChecked = settingsViewModel.vibAllowed.value == true
         notificationSwitch.isChecked = context?.let { NotificationManagerCompat.from(it).areNotificationsEnabled() } == true
 
 
@@ -245,11 +245,11 @@ class settings_fragment : Fragment() {
             }
         }
 
-        toastSwitch.setOnCheckedChangeListener { _, isChecked ->
+        vibSwitch.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
-                settingsViewModel.saveToastSelection(true)
+                settingsViewModel.saveVibSelection(true)
             } else {
-                settingsViewModel.saveToastSelection(false)
+                settingsViewModel.saveVibSelection(false)
             }
         }
 

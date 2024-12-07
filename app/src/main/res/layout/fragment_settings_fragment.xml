@@ -88,10 +88,10 @@
         android:layout_marginEnd="20dp"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
     <Switch
-        android:id="@+id/toast_switch"
+        android:id="@+id/vib_switch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/allow_toast_messages"
+        android:text="@string/allow_vibrations"
         android:textSize="20sp"
         android:layout_marginTop="10dp"
         android:layout_marginStart="20dp"
