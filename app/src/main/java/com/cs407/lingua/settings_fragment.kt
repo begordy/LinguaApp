@@ -48,6 +48,15 @@ class settings_fragment : Fragment() {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        val notificationSwitch: Switch? = view?.findViewById(R.id.notification_switch)
+
+        if (notificationSwitch != null) {
+            notificationSwitch.isChecked = context?.let { NotificationManagerCompat.from(it).areNotificationsEnabled() } == true
+        }
+
+    }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
