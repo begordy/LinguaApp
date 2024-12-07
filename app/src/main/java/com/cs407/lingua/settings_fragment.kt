@@ -63,7 +63,7 @@ class settings_fragment : Fragment() {
         fun scheduleDailyNotification(context: Context) {
             val dailyNotificationRequest = PeriodicWorkRequest.Builder(
                 NotificationWorker::class.java,
-                15, TimeUnit.MINUTES // Periodic task, repeat every 15 minutes for demonstration
+                1, TimeUnit.DAYS // Periodic task, repeat each day
             )
                 .setInitialDelay(1, TimeUnit.SECONDS)
                 .build()
@@ -122,7 +122,7 @@ class settings_fragment : Fragment() {
         fun scheduleDailyNotification(context: Context) {
             val dailyNotificationRequest = PeriodicWorkRequest.Builder(
                 NotificationWorker::class.java,
-                15, TimeUnit.MINUTES // Periodic task, repeat every 15 minutes for demonstration
+                1, TimeUnit.DAYS // Periodic task, repeat each day
             )
                 .setInitialDelay(1, TimeUnit.SECONDS)
                 .build()

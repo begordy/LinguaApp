@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
     private fun scheduleDailyNotification() {
         val dailyNotificationRequest = PeriodicWorkRequest.Builder(
             NotificationWorker::class.java,
-            15, TimeUnit.MINUTES // Periodic task, repeat every 15 minutes for demonstration
+            1, TimeUnit.DAYS // Periodic task, repeat each day
         )
             .setInitialDelay(1, TimeUnit.SECONDS)   // Delay start (would be set to 1 day)
             .build()

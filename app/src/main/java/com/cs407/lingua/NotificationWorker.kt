@@ -4,6 +4,7 @@ import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
+import android.graphics.BitmapFactory
 import android.os.Build
 import androidx.core.app.NotificationCompat
 import androidx.work.Worker
@@ -11,6 +12,7 @@ import androidx.work.WorkerParameters
 
 
 class NotificationWorker(context: Context, workerParams: WorkerParameters) : Worker(context, workerParams) {
+    val largeIcon = BitmapFactory.decodeResource(context.resources, R.drawable.lingua_logo)
 
     override fun doWork(): Result {
         val notificationManager = applicationContext.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
@@ -25,7 +27,8 @@ class NotificationWorker(context: Context, workerParams: WorkerParameters) : Wor
         }
 
         val notification: Notification = NotificationCompat.Builder(applicationContext, "daily_notification_channel")
-            .setSmallIcon(R.drawable.lingua_logo)
+            .setSmallIcon(R.drawable.notification_logo)
+            .setLargeIcon(largeIcon)
             .setContentTitle("Daily Study Reminder")
             .setContentText("This is your daily study reminder notification!")
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
