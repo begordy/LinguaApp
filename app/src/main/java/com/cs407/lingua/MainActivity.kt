@@ -13,6 +13,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.ViewModelProvider
 import android.Manifest
+import androidx.work.ExistingPeriodicWorkPolicy
 import androidx.work.PeriodicWorkRequest
 import androidx.work.WorkManager
 import java.util.concurrent.TimeUnit
@@ -28,12 +29,10 @@ class MainActivity : AppCompatActivity() {
                 != PackageManager.PERMISSION_GRANTED) {
                 requestNotificationPermission()
             } else {
-                // If permission is already granted, schedule daily notifications
-                //scheduleDailyNotification()
+                scheduleDailyNotification()
             }
         } else {
-            // No need to request permission for older versions
-            //scheduleDailyNotification()
+            scheduleDailyNotification()
         }
     }
 
@@ -55,7 +54,7 @@ class MainActivity : AppCompatActivity() {
         )
             .setInitialDelay(1, TimeUnit.SECONDS)   // Delay start (would be set to 1 day)
             .build()
-        WorkManager.getInstance(applicationContext).enqueue(dailyNotificationRequest)
+        WorkManager.getInstance(applicationContext).enqueueUniquePeriodicWork("studyReminder", ExistingPeriodicWorkPolicy.KEEP,dailyNotificationRequest)
     }
 
     private fun requestNotificationPermission() {

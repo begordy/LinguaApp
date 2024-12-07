@@ -25,8 +25,12 @@ import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import androidx.work.ExistingPeriodicWorkPolicy
+import androidx.work.PeriodicWorkRequest
+import androidx.work.WorkManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.snackbar.Snackbar
+import java.util.concurrent.TimeUnit
 
 
 class settings_fragment : Fragment() {
@@ -96,6 +100,23 @@ class settings_fragment : Fragment() {
         compound.isChecked = settingsViewModel.compound.value == true
         toastSwitch.isChecked = settingsViewModel.toastAllowed.value == true
         notificationSwitch.isChecked = context?.let { NotificationManagerCompat.from(it).areNotificationsEnabled() } == true
+
+
+
+        fun scheduleDailyNotification(context: Context) {
+            val dailyNotificationRequest = PeriodicWorkRequest.Builder(
+                NotificationWorker::class.java,
+                15, TimeUnit.MINUTES // Periodic task, repeat every 15 minutes for demonstration
+            )
+                .setInitialDelay(1, TimeUnit.SECONDS)
+                .build()
+
+            WorkManager.getInstance(context).enqueueUniquePeriodicWork("studyReminder", ExistingPeriodicWorkPolicy.KEEP,dailyNotificationRequest)
+        }
+
+        if(NotificationManagerCompat.from(requireContext()).areNotificationsEnabled()){
+            scheduleDailyNotification(requireContext())
+        }
 
         notificationSwitch.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
