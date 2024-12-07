@@ -43,7 +43,7 @@ class MCQuestion : Fragment() {
         val view = inflater.inflate(R.layout.fragment_mc_question, container, false)
         val questionText = view.findViewById<TextView>(R.id.question)
         val questionOptions = view.findViewById<RadioGroup>(R.id.questionOptions)
-        val submitButton = view.findViewById<Button>(R.id.submitButton)
+        val submitButton = view.findViewById<Button>(R.id.submitBar)
         settingsViewModel.primaryColor.value?.let { submitButton.setBackgroundColor(it) }
         settingsViewModel.secondaryColor.value?.let { view.setBackgroundColor(it) }
 

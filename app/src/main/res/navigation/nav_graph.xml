@@ -156,21 +156,6 @@
             app:destination="@id/questionResult" />
     </fragment>
     <fragment
-        android:id="@+id/syntaxSimpleQuestion"
-        android:name="com.cs407.lingua.SyntaxSimpleQuestion"
-        android:label="fragment_syntax_simple_question"
-        tools:layout="@layout/fragment_syntax_simple_question" >
-        <argument
-            android:name="questionText"
-            app:argType="string" />
-        <argument
-            android:name="correctAnswer"
-            app:argType="string" />
-        <argument
-            android:name="optionList"
-            app:argType="string[]" />
-    </fragment>
-    <fragment
         android:id="@+id/MCQuestion"
         android:name="com.cs407.lingua.MCQuestion"
         android:label="fragment_mc_question"
