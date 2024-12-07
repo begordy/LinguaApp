@@ -24,6 +24,7 @@ import com.google.android.material.progressindicator.CircularProgressIndicator
  */
 class QuestionResult : Fragment() {
     private lateinit var settingsViewModel: SettingsViewModel
+    private lateinit var vibrationHelper: VibrationHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -109,6 +110,15 @@ class QuestionResult : Fragment() {
         (activity as? AppCompatActivity)?.supportActionBar?.setDisplayHomeAsUpEnabled(true)
         (activity as? AppCompatActivity)?.supportActionBar?.setHomeAsUpIndicator(R.drawable.back_arrow)
         settingsViewModel.primaryColor.value?.let { toolbar.setBackgroundColor(it) }
+
+        vibrationHelper = VibrationHelper(requireContext(), settingsViewModel)
+
+        if(arguments?.getBoolean("correct") == true){
+            vibrationHelper.vibrateCorrectAnswer()
+        } else {
+            vibrationHelper.vibrateWrongAnswer()
+        }
+
         // TODO: Clicking back arrow prompts user if they want to leave the quiz before navigating to home
         toolbar.setNavigationOnClickListener {
             //findNavController().navigateUp()

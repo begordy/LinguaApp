@@ -148,4 +148,5 @@
     <string name="correct_answer">Correct Answer: %s</string>
     <string name="progress_text">%d/%d</string>
     <string name="complete_text">You have completed the %s quiz</string>
+    <string name="allow_vibrations">Allow Vibrations</string>
 </resources>
