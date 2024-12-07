@@ -156,21 +156,22 @@ class ExerciseSelection : Fragment() {
         //quizInfo[3] = type of quiz
         val quizInfo: Array<Int>
         var question = QInfo("", "error", "error", emptyArray<String>())
+        val dataLoader = settingsViewModel.dataLoader
         when(mode){
             1 -> {
-                question = DataLoader.simplePhonetics()
+                question = dataLoader.simplePhonetics()
                 arrayOf(0,0,20,mode)
             }
             2 -> {
-                question = DataLoader.advancedPhonetics()
+                question = dataLoader.advancedPhonetics()
                 arrayOf(0,0,15,mode)
             }
             3 -> {
-                question = DataLoader.simpleSyntax()
+                question = dataLoader.simpleSyntax()
                 arrayOf(0,0,10,mode)
             }
             4 -> {
-                question = DataLoader.advancedPhonetics()
+                question = dataLoader.advancedPhonetics()
                 arrayOf(0,0,5,mode)
             }
         }
@@ -181,6 +182,7 @@ class ExerciseSelection : Fragment() {
             bundle.putString("questionText", "This is a tester question designed to test things. Make this long enough.")
             bundle.putString("correctAnswer", "Correct Answer")
             bundle.putStringArray("optionList", arrayOf("Option 1", "Option 2", "Option 3"))
+
             findNavController().navigate(R.id.selection_to_mc2, bundle)
             //TODO: Uncomment this cuz this is the actual code
 //            when(tag){
