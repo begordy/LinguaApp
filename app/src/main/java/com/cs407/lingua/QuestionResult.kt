@@ -1,5 +1,6 @@
 package com.cs407.lingua
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -13,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.cs407.lingua.DataLoader.QInfo
 import com.google.android.material.progressindicator.CircularProgressIndicator
 
 /**
@@ -42,21 +44,65 @@ class QuestionResult : Fragment() {
         val progressIndicator = view.findViewById<CircularProgressIndicator>(R.id.circle)
         val progressText = view.findViewById<TextView>(R.id.progressText)
 
+        val quizInfo = arguments?.getIntArray("quizInfo") as IntArray
+
         if(arguments?.getBoolean("correct") == true){
             resultImage.setImageResource(R.drawable.green_check)
-
-        }else if(arguments?.getBoolean("correct") == false){
+            quizInfo[0] += 1 // increment # of questions correct
+            correctAnswerDisplay.visibility = View.INVISIBLE
+        }
+        else if(arguments?.getBoolean("correct") == false){
             resultImage.setImageResource(R.drawable.red_x)
-        }else{
+            if( quizInfo[3] == 3 || quizInfo[3] == 4 ) { // ie. syntax
+                correctAnswerDisplay.visibility = View.INVISIBLE
+            }
+            else { // display correct answer
+                correctAnswerDisplay.text = getString(R.string.correct_answer,
+                    arguments?.getString("correctAnswer"))
+            }
+        }
+        else{
             Toast.makeText(requireContext(),"Error getting correctness", Toast.LENGTH_SHORT).show()
         }
+
+        quizInfo[1] += 1 // increment # of questions completed
+
+        progressIndicator.progress = (((quizInfo[1].toDouble()/quizInfo[2])) * 100).toInt()
+        progressText.text = getString(R.string.progress_text, quizInfo[1], quizInfo[2])
+
+        nextQButton.setOnClickListener() {
+            val bundle = Bundle()
+            bundle.putIntArray("quizInfo", quizInfo) // PASS QUIZ INFO
+
+            if(quizInfo[1] == quizInfo[2]) { // all questions completed
+                findNavController().navigate(R.id.questionResult_to_quizResult, bundle)
+            }
+            else {
+                val dataLoader = settingsViewModel.dataLoader
+                val question = when(quizInfo[3]){
+                    1 -> dataLoader.simplePhonetics()
+                    2 -> dataLoader.advancedPhonetics()
+                    3 -> dataLoader.simpleSyntax()
+                    4 -> dataLoader.advancedSyntax()
+                    else -> QInfo("", "error", "error", emptyArray<String>())
+                }
+                bundle.putString("questionText", question.question)
+                bundle.putString("correctAnswer", question.answer)
+                bundle.putStringArray("optionList", question.options)
+                when(question.fragmentID){
+                    "mc" -> findNavController().navigate(R.id.questionResult_to_MCQuestion, bundle)
+                    "fillBlank" -> findNavController().navigate(R.id.questionResult_to_fillBlankQuestion, bundle)
+                    "syntax" -> findNavController().navigate(R.id.questionResult_to_syntax, bundle)
+                }
+            }
+        }
+
         return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val toolbar: Toolbar = view.findViewById(R.id.toolbar6)
-
 
         // Set the toolbar as the action bar
         (activity as? AppCompatActivity)?.setSupportActionBar(toolbar)
@@ -65,8 +111,8 @@ class QuestionResult : Fragment() {
         settingsViewModel.primaryColor.value?.let { toolbar.setBackgroundColor(it) }
         // TODO: Clicking back arrow prompts user if they want to leave the quiz before navigating to home
         toolbar.setNavigationOnClickListener {
-            findNavController().navigateUp()
-            //findNavController().navigate(R.id.action_settings_fragment_to_homePage)
+            //findNavController().navigateUp()
+            findNavController().navigate(R.id.questionResult_to_home)
         }
     }
 

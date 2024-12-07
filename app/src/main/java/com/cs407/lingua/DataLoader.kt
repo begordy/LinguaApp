@@ -1,6 +1,5 @@
 package com.cs407.lingua
 
-
 object DataLoader {
 
     data class QInfo(val fragmentID: String, val question: String, val answer: String,
@@ -23,7 +22,7 @@ object DataLoader {
                     }
                     2 -> {
                         val options = questions[q][2].split("_").toTypedArray()
-                        return QInfo("mc4", questions[q][0], questions[q][1], options)
+                        return QInfo("mc", questions[q][0], questions[q][1], options)
                     }
                     else -> return QInfo("", "choice 1 error", "choice 1 error", emptyArray<String>())
                 }
@@ -81,7 +80,7 @@ object DataLoader {
                     }
                 }
 
-                return QInfo("mc2", questionString, answer, arrayOf(incorrectOption))
+                return QInfo("mc", questionString, answer, arrayOf(incorrectOption))
             }
 
             3 -> { // questions using IPA symbol info
@@ -106,7 +105,7 @@ object DataLoader {
                 num = (1..2).random()
                 when (num) {
                     1 -> { // Which IPA symbol represents a [voiced velar stop]
-                        fragID = "mc4"
+                        fragID = "mc"
 
                         val q = data.indices.random()
                         question = "Which IPA symbol represents a "
@@ -219,13 +218,7 @@ object DataLoader {
             }
             2 -> {
                 val options = questions[q][2].split("_").toTypedArray()
-                var fragID = ""
-                when(options.size) {
-                    1 -> fragID = "mc2"
-                    2 -> fragID = "mc3"
-                    3 -> fragID = "mc4"
-                }
-                return QInfo(fragID, questions[q][0], questions[q][1], options)
+                return QInfo("mc", questions[q][0], questions[q][1], options)
             }
             else -> return QInfo("", "error", "error", emptyArray<String>())
         }
@@ -235,14 +228,14 @@ object DataLoader {
         val questions = StoredData.getSyntaxSimple()
         val q = questions.indices.random()
 
-        return QInfo("syntaxSimple", questions[q][0], questions[q][1], emptyArray<String>())
+        return QInfo("syntax", questions[q][0], questions[q][1], emptyArray<String>())
     }
 
     fun advancedSyntax(): QInfo {
         val questions = StoredData.getSyntaxAdvanced()
         val q = questions.indices.random()
 
-        return QInfo("syntaxAdv", questions[q][0], questions[q][1], emptyArray<String>())
+        return QInfo("syntax", questions[q][0], questions[q][1], emptyArray<String>())
     }
 
 }
@@ -591,7 +584,7 @@ class StoredData {
                 "glides",
                 "liquids" ),
             arrayOf(
-                "Which approximants rae distinguished by their 2nd and 3rd formants?",
+                "Which approximants are distinguished by their 2nd and 3rd formants?",
                 "liquids",
                 "glides" ),
             arrayOf(

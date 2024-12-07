@@ -5,6 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.TextView
+import androidx.navigation.fragment.findNavController
+import com.google.android.material.progressindicator.CircularProgressIndicator
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -33,8 +37,32 @@ class QuizResult : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_quiz_result, container, false)
+        val view = inflater.inflate(R.layout.fragment_quiz_result, container, false)
+
+        val homeButton = view.findViewById<Button>(R.id.homeButton)
+        val completeText = view.findViewById<TextView>(R.id.completeText)
+        val correctIndicator = view.findViewById<CircularProgressIndicator>(R.id.circle)
+        val correctText = view.findViewById<TextView>(R.id.correctText)
+
+        val quizInfo = arguments?.getIntArray("quizInfo") as IntArray
+
+        val type = when(quizInfo[3]) {
+            1 -> "Simple Phonetics"
+            2 -> "Advanced Phonetics"
+            3 -> "Simple Syntax"
+            4 -> "Advanced Syntax"
+            else -> "error"
+        }
+        completeText.text = getString(R.string.complete_text, type)
+
+        correctIndicator.progress = (((quizInfo[0].toDouble()/quizInfo[2])) * 100).toInt()
+        correctText.text = getString(R.string.progress_text, quizInfo[0], quizInfo[2])
+
+        homeButton.setOnClickListener() {
+            findNavController().navigate(R.id.quizResult_to_homePage)
+        }
+
+        return view
     }
 
     companion object {

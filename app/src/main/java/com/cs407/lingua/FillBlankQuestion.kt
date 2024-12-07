@@ -47,11 +47,17 @@ class FillBlankQuestion : Fragment() {
         correctAnswer = arguments?.getString("correctAnswer")
 
         submitButton.setOnClickListener {
+            val bundle = Bundle()
+            bundle.putIntArray("quizInfo", arguments?.getIntArray("quizInfo")) // PASS QUIZ INFO
+            bundle.putString("correctAnswer", correctAnswer) // for QuestionResult to display
             if(correctAnswer?.compareTo(questionEntry.text.toString()) == 0){
-                Toast.makeText(requireContext(), "Entered Correct Answer", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(requireContext(), "Entered Correct Answer", Toast.LENGTH_SHORT).show()
+                bundle.putBoolean("correct", true)
             }else{
-                Toast.makeText(requireContext(), "Your entered answer of \"" + questionEntry.text.toString() + "\" is incorrect", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(requireContext(), "Your entered answer of \"" + questionEntry.text.toString() + "\" is incorrect", Toast.LENGTH_SHORT).show()
+                bundle.putBoolean("correct", false)
             }
+            findNavController().navigate(R.id.fillBlank_to_questionResult, bundle)
         }
 
         return view
@@ -69,8 +75,8 @@ class FillBlankQuestion : Fragment() {
         settingsViewModel.primaryColor.value?.let { toolbar.setBackgroundColor(it) }
         // TODO: Clicking back arrow prompts user if they want to leave the quiz before navigating to home
         toolbar.setNavigationOnClickListener {
-            findNavController().navigateUp()
-            //findNavController().navigate(R.id.action_settings_fragment_to_homePage)
+            //findNavController().navigateUp()
+            findNavController().navigate(R.id.fillBlank_to_home)
         }
     }
 

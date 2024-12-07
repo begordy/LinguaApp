@@ -106,32 +106,12 @@
             app:argType="integer"
             android:defaultValue="0" />
         <action
-            android:id="@+id/selection_to_mc2"
+            android:id="@+id/selection_to_mc"
             app:destination="@id/MCQuestion" >
-            <argument
-                android:name="numOptions"
-                android:defaultValue="2" />
         </action>
         <action
-            android:id="@+id/selection_to_mc3"
-            app:destination="@id/MCQuestion" >
-            <argument
-                android:name="numOptions"
-                android:defaultValue="3" />
-        </action>
-        <action
-            android:id="@+id/selection_to_mc4"
-            app:destination="@id/MCQuestion" >
-            <argument
-                android:name="numOptions"
-                android:defaultValue="4" />
-        </action>
-        <action
-            android:id="@+id/selection_to_syntaxAdv"
+            android:id="@+id/selection_to_syntax"
             app:destination="@id/syntaxAdvancedQuestion" />
-        <action
-            android:id="@+id/selection_to_syntaxSim"
-            app:destination="@id/syntaxSimpleQuestion" />
         <action
             android:id="@+id/selection_to_fillBlank"
             app:destination="@id/fillBlankQuestion" />
@@ -153,6 +133,9 @@
         <action
             android:id="@+id/fillBlank_to_questionResult"
             app:destination="@id/questionResult" />
+        <action
+            android:id="@+id/fillBlank_to_home"
+            app:destination="@id/homePage" />
     </fragment>
     <fragment
         android:id="@+id/syntaxAdvancedQuestion"
@@ -208,6 +191,9 @@
         <action
             android:id="@+id/MCQuestion_to_questionResult"
             app:destination="@id/questionResult" />
+        <action
+            android:id="@+id/mc_to_home"
+            app:destination="@id/homePage" />
     </fragment>
     <fragment
         android:id="@+id/questionResult"
@@ -226,6 +212,9 @@
         <action
             android:id="@+id/questionResult_to_quizResult"
             app:destination="@id/quizResult" />
+        <action
+            android:id="@+id/questionResult_to_home"
+            app:destination="@id/homePage" />
     </fragment>
     <fragment
         android:id="@+id/quizResult"

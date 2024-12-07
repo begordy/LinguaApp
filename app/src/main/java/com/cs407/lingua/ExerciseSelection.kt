@@ -144,8 +144,8 @@ class ExerciseSelection : Fragment() {
         settingsViewModel.primaryColor.value?.let { toolbar.setBackgroundColor(it) }
         // Clicking back arrow goes back to home
         toolbar.setNavigationOnClickListener {
-            findNavController().navigateUp()
-            //findNavController().navigate(R.id.action_settings_fragment_to_homePage)
+            //findNavController().navigateUp()
+            findNavController().navigate(R.id.exercise_to_home)
         }
     }
 
@@ -154,86 +154,48 @@ class ExerciseSelection : Fragment() {
         //quizInfo[1] = number of questions completed
         //quizInfo[2] = total number of questions
         //quizInfo[3] = type of quiz
-        val quizInfo: Array<Int>
+        var quizInfo = IntArray(4)
+        quizInfo[0] = 0
+        quizInfo[1] = 0
+        quizInfo[3] = mode
         var question = QInfo("", "error", "error", emptyArray<String>())
         val dataLoader = settingsViewModel.dataLoader
         when(mode){
             1 -> {
                 question = dataLoader.simplePhonetics()
-                arrayOf(0,0,20,mode)
+                quizInfo[2] = 15
             }
             2 -> {
                 question = dataLoader.advancedPhonetics()
-                arrayOf(0,0,15,mode)
+                quizInfo[2] = 10
             }
             3 -> {
                 question = dataLoader.simpleSyntax()
-                arrayOf(0,0,10,mode)
+                quizInfo[2] = 10
             }
             4 -> {
-                question = dataLoader.advancedPhonetics()
-                arrayOf(0,0,5,mode)
+                question = dataLoader.advancedSyntax()
+                quizInfo[2] = 5
             }
         }
-        val tag = question.fragmentID
-        if(tag.compareTo("") != 0){
-            //TODO: replace this cuz this is tester code for each fragment type
+        if(question.fragmentID.compareTo("") != 0){
             val bundle = Bundle()
-            bundle.putString("questionText", "This is a tester question designed to test things. Make this long enough.")
-            bundle.putString("correctAnswer", "Correct Answer")
-            bundle.putStringArray("optionList", arrayOf("Option 1", "Option 2", "Option 3"))
+            //bundle.putString("questionText", "This is a tester question designed to test things. Make this long enough.")
+            //bundle.putString("correctAnswer", "Correct Answer")
+            //bundle.putStringArray("optionList", arrayOf("Option 1", "Option 2", "Option 3"))
+            bundle.putString("questionText", question.question)
+            bundle.putString("correctAnswer", question.answer)
+            bundle.putStringArray("optionList", question.options)
 
-            findNavController().navigate(R.id.selection_to_mc2, bundle)
-            //TODO: Uncomment this cuz this is the actual code
-//            when(tag){
-//                "mc2" -> {
-//                    val bundle = Bundle()
-//                    bundle.putString("questionText", question.question)
-//                    bundle.putString("correctAnswer", question.answer)
-//                    bundle.putStringArray("optionList", question.options)
-//                    findNavController().navigate(R.id.selection_to_mc2, bundle)
-//                }
-//                "mc3" -> {
-//                    val bundle = Bundle()
-//                    bundle.putString("questionText", question.question)
-//                    bundle.putString("correctAnswer", question.answer)
-//                    bundle.putStringArray("optionList", question.options)
-//                    findNavController().navigate(R.id.selection_to_mc3, bundle)
-//                }
-//                "mc4" -> {
-//                    val bundle = Bundle()
-//                    bundle.putString("questionText", question.question)
-//                    bundle.putString("correctAnswer", question.answer)
-//                    bundle.putStringArray("optionList", question.options)
-//                    findNavController().navigate(R.id.selection_to_mc4, bundle)
-//                }
-//                "mc" -> {
-//                    val bundle = Bundle()
-//                    bundle.putString("questionText", question.question)
-//                    bundle.putString("correctAnswer", question.answer)
-//                    bundle.putStringArray("optionList", question.options)
-//                    findNavController().navigate(R.id.selection_to_mc2, bundle)
-//                }
-//                "fillBlank" -> {
-//                    val bundle = Bundle()
-//                    bundle.putString("questionText", question.question)
-//                    bundle.putString("correctAnswer", question.answer)
-//                    findNavController().navigate(R.id.selection_to_fillBlank, bundle)
-//                }
-//                "syntaxSim" -> {
-//                    val bundle = Bundle()
-//                    bundle.putString("questionText", question.question)
-//                    bundle.putString("correctAnswer", question.answer)
-//                    findNavController().navigate(R.id.selection_to_syntaxSim, bundle)
-//                }
-//                "syntaxAdv" -> {
-//                    val bundle = Bundle()
-//                    bundle.putString("questionText", question.question)
-//                    bundle.putString("correctAnswer", question.answer)
-//                    findNavController().navigate(R.id.selection_to_syntaxAdv, bundle)
-//                }
-//            }
-        }else{
+            bundle.putIntArray("quizInfo", quizInfo) // PASS QUIZ INFO
+
+            when(question.fragmentID){
+                "mc" -> findNavController().navigate(R.id.selection_to_mc, bundle)
+                "fillBlank" -> findNavController().navigate(R.id.selection_to_fillBlank, bundle)
+                "syntax" -> findNavController().navigate(R.id.selection_to_syntax, bundle)
+            }
+        }
+        else{
             Toast.makeText(requireContext(), "DataLoader or Mode Assignment Error", Toast.LENGTH_SHORT).show()
         }
     }

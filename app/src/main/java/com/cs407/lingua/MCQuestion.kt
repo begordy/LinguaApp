@@ -76,6 +76,8 @@ class MCQuestion : Fragment() {
             }
             submitButton.setOnClickListener {
                 val bundle = Bundle()
+                bundle.putIntArray("quizInfo", arguments?.getIntArray("quizInfo")) // PASS QUIZ INFO
+                bundle.putString("correctAnswer", correctAnswer) // for QuestionResult to display
                 if(selectedOption == correctOption){
                     bundle.putBoolean("correct", true)
                 }else{
@@ -101,8 +103,8 @@ class MCQuestion : Fragment() {
         settingsViewModel.primaryColor.value?.let { toolbar.setBackgroundColor(it) }
         // TODO: Clicking back arrow prompts user if they want to leave the quiz before navigating to home
         toolbar.setNavigationOnClickListener {
-            findNavController().navigateUp()
-            //findNavController().navigate(R.id.action_settings_fragment_to_homePage)
+            //findNavController().navigateUp()
+            findNavController().navigate(R.id.mc_to_home)
         }
     }
 
