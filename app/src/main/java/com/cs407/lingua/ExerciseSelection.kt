@@ -69,7 +69,7 @@ class ExerciseSelection : Fragment() {
         when(args?.getInt("exerciseType")) {
             1 -> {
                 quizTitle.text = "Simple Phonology"
-                questionCount.text = "Questions: 10"
+                questionCount.text = "Questions: 20"
                 difficulty.text = "Easy"
                 val tagsModelArrayList = ArrayList<TagModel>();
                 tagsModelArrayList.add(TagModel("Multiple Choice"))
@@ -83,8 +83,8 @@ class ExerciseSelection : Fragment() {
                 startQuiz.setOnClickListener {startQuiz(1)}
             }
             2 -> {
-                quizTitle.text = "Complex Phonology"
-                questionCount.text = "Questions: 20"
+                quizTitle.text = "Advanced Phonology"
+                questionCount.text = "Questions: 15"
                 difficulty.text = "Hard"
                 val tagsModelArrayList = ArrayList<TagModel>();
                 tagsModelArrayList.add(TagModel("PRAAT"))
@@ -99,7 +99,7 @@ class ExerciseSelection : Fragment() {
             }
             3 -> {
                 quizTitle.text = "Simple Syntax"
-                questionCount.text = "Questions: 15"
+                questionCount.text = "Questions: 10"
                 difficulty.text = "Medium"
                 val tagsModelArrayList = ArrayList<TagModel>();
                 tagsModelArrayList.add(TagModel("Short Answer"))
@@ -113,8 +113,8 @@ class ExerciseSelection : Fragment() {
                 startQuiz.setOnClickListener {startQuiz(3)}
             }
             4 -> {
-                quizTitle.text = "Complex Syntax"
-                questionCount.text = "Questions: 30"
+                quizTitle.text = "Advanced Syntax"
+                questionCount.text = "Questions: 5"
                 difficulty.text = "Hard"
                 val tagsModelArrayList = ArrayList<TagModel>();
                 tagsModelArrayList.add(TagModel("Creepy"))
@@ -150,19 +150,28 @@ class ExerciseSelection : Fragment() {
     }
 
     private fun startQuiz(mode: Int){
+        //quizInfo[0] = number of correct answers
+        //quizInfo[1] = number of questions completed
+        //quizInfo[2] = total number of questions
+        //quizInfo[3] = type of quiz
+        val quizInfo: Array<Int>
         var question = QInfo("", "error", "error", emptyArray<String>())
         when(mode){
             1 -> {
                 question = DataLoader.simplePhonetics()
+                arrayOf(0,0,20,mode)
             }
             2 -> {
                 question = DataLoader.advancedPhonetics()
+                arrayOf(0,0,15,mode)
             }
             3 -> {
                 question = DataLoader.simpleSyntax()
+                arrayOf(0,0,10,mode)
             }
             4 -> {
                 question = DataLoader.advancedPhonetics()
+                arrayOf(0,0,5,mode)
             }
         }
         val tag = question.fragmentID

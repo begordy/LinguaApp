@@ -153,9 +153,6 @@
         <action
             android:id="@+id/fillBlank_to_questionResult"
             app:destination="@id/questionResult" />
-        <action
-            android:id="@+id/fillBlank_to_quizResult"
-            app:destination="@id/quizResult" />
     </fragment>
     <fragment
         android:id="@+id/syntaxAdvancedQuestion"
@@ -174,9 +171,6 @@
         <action
             android:id="@+id/syntax_to_questionResult"
             app:destination="@id/questionResult" />
-        <action
-            android:id="@+id/syntax_to_quizResult"
-            app:destination="@id/quizResult" />
     </fragment>
     <fragment
         android:id="@+id/syntaxSimpleQuestion"
@@ -214,9 +208,6 @@
         <action
             android:id="@+id/MCQuestion_to_questionResult"
             app:destination="@id/questionResult" />
-        <action
-            android:id="@+id/MCQuestion_to_quizResult"
-            app:destination="@id/quizResult" />
     </fragment>
     <fragment
         android:id="@+id/questionResult"
@@ -232,6 +223,9 @@
         <action
             android:id="@+id/questionResult_to_syntax"
             app:destination="@id/syntaxAdvancedQuestion" />
+        <action
+            android:id="@+id/questionResult_to_quizResult"
+            app:destination="@id/quizResult" />
     </fragment>
     <fragment
         android:id="@+id/quizResult"

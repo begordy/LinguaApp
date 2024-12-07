@@ -75,13 +75,13 @@ class MCQuestion : Fragment() {
                 Log.i("MCQuestion", "Correct Option: " + correctOption.toString())
             }
             submitButton.setOnClickListener {
+                val bundle = Bundle()
                 if(selectedOption == correctOption){
-                    //TODO: make this navigate to something else
-                    Toast.makeText(requireContext(), "Correct Answer Selected", Toast.LENGTH_SHORT).show()
+                    bundle.putBoolean("correct", true)
                 }else{
-                    //TODO: make this navigate to something else
-                    Toast.makeText(requireContext(), "Wrong Answer Selected", Toast.LENGTH_SHORT).show()
+                    bundle.putBoolean("correct", false)
                 }
+                findNavController().navigate(R.id.MCQuestion_to_questionResult, bundle)
             }
         }else{
             Toast.makeText(requireContext(), "Error loading options", Toast.LENGTH_SHORT).show()
@@ -99,7 +99,7 @@ class MCQuestion : Fragment() {
         (activity as? AppCompatActivity)?.supportActionBar?.setDisplayHomeAsUpEnabled(true)
         (activity as? AppCompatActivity)?.supportActionBar?.setHomeAsUpIndicator(R.drawable.back_arrow)
         settingsViewModel.primaryColor.value?.let { toolbar.setBackgroundColor(it) }
-        // Clicking back arrow goes back to home
+        // TODO: Clicking back arrow prompts user if they want to leave the quiz before navigating to home
         toolbar.setNavigationOnClickListener {
             findNavController().navigateUp()
             //findNavController().navigate(R.id.action_settings_fragment_to_homePage)
