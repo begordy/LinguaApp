@@ -26,7 +26,7 @@ class SettingsViewModel(application: Application): AndroidViewModel(application)
     val simple = MutableLiveData<Boolean>()
     val complex = MutableLiveData<Boolean>()
     val compound = MutableLiveData<Boolean>()
-
+    val dataLoader = DataLoader
     init {
         primaryColor.value = sharedPreferences.getInt("primaryColor", Color.parseColor("#673AB7"))
         secondaryColor.value = sharedPreferences.getInt("secondaryColor", Color.WHITE)

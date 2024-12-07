@@ -53,4 +53,6 @@ dependencies {
     implementation("com.google.android.material:material:1.12.0")
     implementation("com.google.code.gson:gson:2.10.1")
     implementation("androidx.work:work-runtime:2.8.0")
+    implementation("com.otaliastudios:zoomlayout:1.9.0")
+
 }
