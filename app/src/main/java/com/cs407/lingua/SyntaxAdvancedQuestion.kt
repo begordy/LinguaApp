@@ -65,7 +65,11 @@ class SyntaxAdvancedQuestion : Fragment() {
     private var mCanvas: Canvas? = null
 
     private var outRect = Rect()
-    private var location: IntArray = intArrayOf(-1,-1)
+    private var lines = ArrayList<Line>()
+    private var movingLines = ArrayList<Int>()
+    //true = moving start, false = moving end
+    private var whichEnd = ArrayList<Boolean>()
+    private var movingLineDeltas = ArrayList<ArrayList<Int>>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -257,6 +261,23 @@ class SyntaxAdvancedQuestion : Fragment() {
                 mYDelta = yScreenTouch - lp.topMargin
                 workspaceContainer?.setHorizontalPanEnabled(false)
                 workspaceContainer?.setVerticalPanEnabled(false)
+
+                //check for which lines need to be moved
+                for(line in lines){
+                    if(line.startCardInt == cardView.id){
+                        movingLines.add(line.drawableIndex)
+                        val coords = arrayListOf(xScreenTouch - drawableSurface!!.pointsDown[line.drawableIndex].x,
+                                                 yScreenTouch - drawableSurface!!.pointsDown[line.drawableIndex].y)
+                        movingLineDeltas.add(coords)
+                        whichEnd.add(true)
+                    }else if(line.endCardInt == cardView.id){
+                        movingLines.add(line.drawableIndex)
+                        val coords = arrayListOf(xScreenTouch - drawableSurface!!.pointsUp[line.drawableIndex].x,
+                                                 yScreenTouch - drawableSurface!!.pointsUp[line.drawableIndex].y)
+                        movingLineDeltas.add(coords)
+                        whichEnd.add(false)
+                    }
+                }
                 Log.i("mOnTouchListener", "Called Action Down: (" + mXDelta + ", " + mYDelta + ")")
             }
             MotionEvent.ACTION_MOVE -> {
@@ -269,10 +290,31 @@ class SyntaxAdvancedQuestion : Fragment() {
                     (mRootHeight - cardView.height).coerceAtMost(yScreenTouch - mYDelta)
                 )
                 lp.topMargin = y
+                for(i in 0..< movingLines.size){
+                    val lineX = 0.coerceAtLeast(
+                        mRootWidth.coerceAtMost(xScreenTouch - movingLineDeltas[i][0])
+                    )
+                    val lineY = 0.coerceAtLeast(
+                        mRootHeight.coerceAtMost(yScreenTouch - movingLineDeltas[i][1])
+                    )
+                    if(whichEnd[i]){
+                        drawableSurface!!.pointsDown[movingLines[i]].x = lineX
+                        drawableSurface!!.pointsDown[movingLines[i]].y = lineY
+                        drawableSurface?.invalidate()
+                    }else{
+                        drawableSurface!!.pointsUp[movingLines[i]].x = lineX
+                        drawableSurface!!.pointsUp[movingLines[i]].y = lineY
+                        drawableSurface?.invalidate()
+                    }
+                }
                 Log.i("mOnTouchListener", "Called Action Move: (" + x + ", " + y + ")")
                 cardView.layoutParams = lp
             }
             MotionEvent.ACTION_UP -> {
+                //clear all line arrays
+                movingLines = ArrayList<Int>()
+                whichEnd = ArrayList<Boolean>()
+                movingLineDeltas = ArrayList<ArrayList<Int>>()
                 workspaceContainer?.setHorizontalPanEnabled(true)
                 workspaceContainer?.setVerticalPanEnabled(true)
             }
@@ -304,10 +346,12 @@ class SyntaxAdvancedQuestion : Fragment() {
                     Log.i("ACTION_UP", "it happened on card " + cardView.id)
 
                     var onOtherCard = false
+                    var otherCardId = -1
                     for(child in workspace!!.children){
                         if(child is CardView && viewInBounds(child, motionEvent.x.toInt() + cardView.left, motionEvent.y.toInt() + cardView.top)){
                             if(child.id != cardView.id){
                                 onOtherCard = true
+                                otherCardId = child.id
                                 break
                             }
                         }
@@ -316,6 +360,7 @@ class SyntaxAdvancedQuestion : Fragment() {
                         drawableSurface!!.pointsUp[drawableSurface!!.pointsUp.size-1].x = motionEvent.x.toInt() + cardView.left
                         drawableSurface!!.pointsUp[drawableSurface!!.pointsUp.size-1].y = motionEvent.y.toInt() + cardView.top
                         drawableSurface?.invalidate()
+                        lines.add(Line(cardView.id, otherCardId, drawableSurface!!.pointsUp.size-1))
                     }else{
                         drawableSurface!!.pointsUp.removeAt(drawableSurface!!.pointsUp.size-1)
                         drawableSurface!!.pointsDown.removeAt(drawableSurface!!.pointsDown.size-1)
@@ -354,3 +399,5 @@ class SyntaxAdvancedQuestion : Fragment() {
             }
     }
 }
+
+data class Line(val startCardInt: Int, val endCardInt: Int, val drawableIndex: Int)
