@@ -92,6 +92,9 @@
         <action
             android:id="@+id/action_search_to_homePage"
             app:destination="@id/homePage" />
+        <action
+            android:id="@+id/action_search_to_exerciseSelection"
+            app:destination="@id/exerciseSelection" />
     </fragment>
     <fragment
         android:id="@+id/exerciseSelection"

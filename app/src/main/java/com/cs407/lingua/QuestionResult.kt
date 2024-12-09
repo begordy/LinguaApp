@@ -71,6 +71,8 @@ class QuestionResult : Fragment() {
         progressIndicator.progress = (((quizInfo[1].toDouble()/quizInfo[2])) * 100).toInt()
         progressText.text = getString(R.string.progress_text, quizInfo[1], quizInfo[2])
 
+
+        // Button for going to next question
         nextQButton.setOnClickListener() {
             val bundle = Bundle()
             bundle.putIntArray("quizInfo", quizInfo) // PASS QUIZ INFO
