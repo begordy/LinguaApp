@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import android.view.ViewTreeObserver
 import android.widget.Button
 import android.widget.HorizontalScrollView
+import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import android.widget.TextView
@@ -24,6 +25,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.otaliastudios.zoom.ZoomLayout
 import org.jetbrains.skia.Color
+import org.jetbrains.skia.Image
 
 /**
  * A simple [Fragment] subclass.
@@ -63,9 +65,7 @@ class SyntaxAdvancedQuestion : Fragment() {
         workspace!!.viewTreeObserver.addOnGlobalLayoutListener(
             object : ViewTreeObserver.OnGlobalLayoutListener{
                 override fun onGlobalLayout() {
-                    if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN){
-                        workspace!!.viewTreeObserver.removeOnGlobalLayoutListener(this)
-                    }
+                    workspace!!.viewTreeObserver.removeOnGlobalLayoutListener(this)
 
                     mRootWidth = workspace!!.width
                     mRootHeight = workspace!!.height
@@ -74,6 +74,9 @@ class SyntaxAdvancedQuestion : Fragment() {
         )
         val elementBar = view.findViewById<LinearLayout>(R.id.elementBarContainer)
         val submitButton = view.findViewById<Button>(R.id.submitButton)
+        val connectModeButton = view.findViewById<ImageButton>(R.id.connectModeButton)
+        val grabModeButton = view.findViewById<ImageButton>(R.id.grabModeButton)
+        //setting listeners etc. for the element bar
         for(child in elementBar.children){
             settingsViewModel.primaryColor.value?.let {
                 (child as CardView).setCardBackgroundColor(
@@ -106,6 +109,8 @@ class SyntaxAdvancedQuestion : Fragment() {
         }
         settingsViewModel.primaryColor.value?.let {
             submitButton.setBackgroundColor(it)
+            connectModeButton.background.setTint(it)
+            grabModeButton.background.setTint(it)
         }
         settingsViewModel.secondaryColor.value?.let {
             view.findViewById<HorizontalScrollView>(R.id.elementBar).setBackgroundColor(

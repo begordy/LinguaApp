@@ -332,7 +332,28 @@
             android:layout_width="wrap_content"
             android:layout_height="50sp"
             android:layout_gravity="center|center_vertical"
-            android:text="Submit" />
+            android:text="Submit"
+            app:cornerRadius="3sp" />
+
+        <ImageButton
+            android:id="@+id/connectModeButton"
+            android:layout_width="60sp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#7C4DFF"
+            android:scaleType="fitCenter"
+            android:src="@drawable/line_icon"
+            app:tint="#FFFFFF" />
+
+        <ImageButton
+            android:id="@+id/grabModeButton"
+            android:layout_width="60sp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:backgroundTint="#7C4DFF"
+            android:scaleType="fitCenter"
+            android:src="@drawable/grab_icon_5"
+            app:tint="#FFFFFF" />
+
     </androidx.cardview.widget.CardView>
 
 </RelativeLayout>
