@@ -1,5 +1,13 @@
 package com.cs407.lingua
 
+import android.annotation.SuppressLint
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import android.graphics.Canvas
+import android.graphics.Paint
+import android.graphics.Point
+import android.graphics.drawable.BitmapDrawable
+import android.graphics.drawable.Drawable
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
@@ -12,6 +20,7 @@ import android.view.ViewTreeObserver
 import android.widget.Button
 import android.widget.HorizontalScrollView
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import android.widget.TextView
@@ -26,6 +35,8 @@ import androidx.navigation.fragment.findNavController
 import com.otaliastudios.zoom.ZoomLayout
 import org.jetbrains.skia.Color
 import org.jetbrains.skia.Image
+import java.lang.Integer.max
+import kotlin.math.min
 
 /**
  * A simple [Fragment] subclass.
@@ -46,6 +57,11 @@ class SyntaxAdvancedQuestion : Fragment() {
     private var lastAddedElement: CardView? = null
     private var workspaceContainer: ZoomLayout? = null
     private var workspace: RelativeLayout? = null
+    private var drawableSurface: DrawableView? = null
+    private var primaryTintedColor: Int? = null
+
+    private var mBitmap: Bitmap? = null
+    private var mCanvas: Canvas? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,6 +69,7 @@ class SyntaxAdvancedQuestion : Fragment() {
         }
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -76,6 +93,12 @@ class SyntaxAdvancedQuestion : Fragment() {
         val submitButton = view.findViewById<Button>(R.id.submitButton)
         val connectModeButton = view.findViewById<ImageButton>(R.id.connectModeButton)
         val grabModeButton = view.findViewById<ImageButton>(R.id.grabModeButton)
+        drawableSurface = view.findViewById(R.id.drawableSurface)
+        drawableSurface!!.paint.isAntiAlias = true
+        drawableSurface!!.paint.strokeWidth = 6f;
+        drawableSurface!!.paint.color = Color.BLACK
+        drawableSurface!!.paint.style = Paint.Style.STROKE
+        drawableSurface!!.paint.strokeJoin = Paint.Join.ROUND
         //setting listeners etc. for the element bar
         for(child in elementBar.children){
             settingsViewModel.primaryColor.value?.let {
@@ -95,7 +118,7 @@ class SyntaxAdvancedQuestion : Fragment() {
                 tempText.setTextColor((child.getChildAt(0) as TextView).currentTextColor)
                 tempText.layoutParams = (child.getChildAt(0) as TextView).layoutParams
                 tempCardView.addView(tempText)
-                tempCardView.setOnTouchListener(mOnTouchListener)
+                tempCardView.setOnTouchListener(mGrabModeOnTouchListener)
                 val lp = RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
                 if(lastAddedElement != null){
                     lp.addRule(RelativeLayout.END_OF, lastAddedElement!!.id)
@@ -108,17 +131,54 @@ class SyntaxAdvancedQuestion : Fragment() {
             }
         }
         settingsViewModel.primaryColor.value?.let {
+            val infoCardRed = android.graphics.Color.red(it)
+            val infoCardGreen = android.graphics.Color.green(it)
+            val infoCardBlue = android.graphics.Color.blue(it)
+            val infoCardAlpha = android.graphics.Color.alpha(it)
+            primaryTintedColor = android.graphics.Color.argb(
+                infoCardAlpha,
+                max(infoCardRed - 50,0),
+                max(infoCardGreen - 50,0),
+                max(infoCardBlue - 50,0)
+            )
             submitButton.setBackgroundColor(it)
             connectModeButton.background.setTint(it)
-            grabModeButton.background.setTint(it)
+            grabModeButton.background.setTint(primaryTintedColor!!)
         }
         settingsViewModel.secondaryColor.value?.let {
-            view.findViewById<HorizontalScrollView>(R.id.elementBar).setBackgroundColor(
-                it
-            )
+            view.findViewById<HorizontalScrollView>(R.id.elementBar).setBackgroundColor(it)
             view.findViewById<CardView>(R.id.submitBar).setBackgroundColor(it)
         }
 
+        //button listeners
+        grabModeButton.setOnClickListener{
+            settingsViewModel.primaryColor.value?.let {
+                connectModeButton.background.setTint(it)
+                grabModeButton.background.setTint(primaryTintedColor!!)
+            }
+            for(child in workspace!!.children){
+                if(child is CardView){
+                    child.setOnTouchListener(mGrabModeOnTouchListener)
+                }
+            }
+        }
+        connectModeButton.setOnClickListener {
+            settingsViewModel.primaryColor.value?.let {
+                grabModeButton.background.setTint(it)
+                connectModeButton.background.setTint(primaryTintedColor!!)
+            }
+            for(child in workspace!!.children){
+                if(child is CardView){
+                    child.setOnTouchListener(mConnectModeOnTouchListener)
+                }
+            }
+        }
+
+        //setting drawable canvas
+        val options = BitmapFactory.Options()
+        options.inMutable = true
+        mBitmap = BitmapFactory.decodeResource(resources, R.drawable.grid_png_43560, options)
+        mCanvas = Canvas(mBitmap!!)
 
         val sentence = arguments?.getString("questionText")
         correctAnswer = arguments?.getString("correctAnswer")
@@ -140,7 +200,7 @@ class SyntaxAdvancedQuestion : Fragment() {
                 lpText.setMargins(px.toInt())
                 tempCard.addView(tempText, lpText)
                 tempCard.id = elementCount
-                tempCard.setOnTouchListener(mOnTouchListener)
+                tempCard.setOnTouchListener(mGrabModeOnTouchListener)
                 settingsViewModel.primaryColor.value?.let { tempCard.setCardBackgroundColor(it) }
                 elementCount++
                 if(prevCard != null){
@@ -177,7 +237,8 @@ class SyntaxAdvancedQuestion : Fragment() {
 
     }
 
-    val mOnTouchListener = View.OnTouchListener { cardView, motionEvent ->
+    @SuppressLint("ClickableViewAccessibility")
+    val mGrabModeOnTouchListener = View.OnTouchListener { cardView, motionEvent ->
         val xScreenTouch = motionEvent.rawX.toInt()
         val yScreenTouch = motionEvent.rawY.toInt()
         when(motionEvent.action){
@@ -210,6 +271,38 @@ class SyntaxAdvancedQuestion : Fragment() {
             MotionEvent.ACTION_UP -> {
                 workspaceContainer?.setHorizontalPanEnabled(true)
                 workspaceContainer?.setVerticalPanEnabled(true)
+            }
+        }
+        return@OnTouchListener true
+    }
+
+    @SuppressLint("ClickableViewAccessibility")
+    val mConnectModeOnTouchListener = View.OnTouchListener { cardView, motionEvent ->
+        if(drawableSurface != null){
+            when(motionEvent.action){
+                MotionEvent.ACTION_DOWN -> {
+                    workspaceContainer?.setHorizontalPanEnabled(false)
+                    workspaceContainer?.setVerticalPanEnabled(false)
+                    drawableSurface!!.pointsDown.add(Point())
+                    drawableSurface!!.pointsDown[drawableSurface!!.pointsDown.size-1].x = motionEvent.x.toInt() + cardView.left
+                    drawableSurface!!.pointsDown[drawableSurface!!.pointsDown.size-1].y = motionEvent.y.toInt() + cardView.top
+                }
+                MotionEvent.ACTION_MOVE -> {
+                    if(drawableSurface!!.pointsUp.size < drawableSurface!!.pointsDown.size){
+                        drawableSurface!!.pointsUp.add(Point())
+                    }
+                    drawableSurface!!.pointsUp[drawableSurface!!.pointsUp.size-1].x = motionEvent.x.toInt() + cardView.left
+                    drawableSurface!!.pointsUp[drawableSurface!!.pointsUp.size-1].y = motionEvent.y.toInt() + cardView.top
+                    drawableSurface?.invalidate()
+                }
+                MotionEvent.ACTION_UP -> {
+                    //TODO: check if it's on another card
+                    drawableSurface!!.pointsUp[drawableSurface!!.pointsUp.size-1].x = motionEvent.x.toInt() + cardView.left
+                    drawableSurface!!.pointsUp[drawableSurface!!.pointsUp.size-1].y = motionEvent.y.toInt() + cardView.top
+                    drawableSurface?.invalidate()
+                    workspaceContainer?.setHorizontalPanEnabled(true)
+                    workspaceContainer?.setVerticalPanEnabled(true)
+                }
             }
         }
         return@OnTouchListener true

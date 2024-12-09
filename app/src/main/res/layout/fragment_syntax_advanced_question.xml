@@ -315,7 +315,15 @@
         <RelativeLayout
             android:id="@+id/workspaceEditable"
             android:layout_width="800sp"
-            android:layout_height="800sp" />
+            android:layout_height="800sp" >
+
+            <com.cs407.lingua.DrawableView
+                android:id="@+id/drawableSurface"
+                android:layout_width="800sp"
+                android:layout_height="800sp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/grid_png_43560" />
+        </RelativeLayout>
 
     </com.otaliastudios.zoom.ZoomLayout>
 
