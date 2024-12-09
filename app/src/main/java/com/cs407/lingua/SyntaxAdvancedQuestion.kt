@@ -6,6 +6,7 @@ import android.graphics.BitmapFactory
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.graphics.Point
+import android.graphics.Rect
 import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
 import android.os.Build
@@ -62,6 +63,9 @@ class SyntaxAdvancedQuestion : Fragment() {
 
     private var mBitmap: Bitmap? = null
     private var mCanvas: Canvas? = null
+
+    private var outRect = Rect()
+    private var location: IntArray = intArrayOf(-1,-1)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -281,6 +285,7 @@ class SyntaxAdvancedQuestion : Fragment() {
         if(drawableSurface != null){
             when(motionEvent.action){
                 MotionEvent.ACTION_DOWN -> {
+                    Log.i("ACTION_DOWN", "setting origin id: " + cardView.id)
                     workspaceContainer?.setHorizontalPanEnabled(false)
                     workspaceContainer?.setVerticalPanEnabled(false)
                     drawableSurface!!.pointsDown.add(Point())
@@ -296,16 +301,39 @@ class SyntaxAdvancedQuestion : Fragment() {
                     drawableSurface?.invalidate()
                 }
                 MotionEvent.ACTION_UP -> {
-                    //TODO: check if it's on another card
-                    drawableSurface!!.pointsUp[drawableSurface!!.pointsUp.size-1].x = motionEvent.x.toInt() + cardView.left
-                    drawableSurface!!.pointsUp[drawableSurface!!.pointsUp.size-1].y = motionEvent.y.toInt() + cardView.top
-                    drawableSurface?.invalidate()
+                    Log.i("ACTION_UP", "it happened on card " + cardView.id)
+
+                    var onOtherCard = false
+                    for(child in workspace!!.children){
+                        if(child is CardView && viewInBounds(child, motionEvent.x.toInt() + cardView.left, motionEvent.y.toInt() + cardView.top)){
+                            if(child.id != cardView.id){
+                                onOtherCard = true
+                                break
+                            }
+                        }
+                    }
+                    if(onOtherCard) { //TODO: replace this with bound box checking
+                        drawableSurface!!.pointsUp[drawableSurface!!.pointsUp.size-1].x = motionEvent.x.toInt() + cardView.left
+                        drawableSurface!!.pointsUp[drawableSurface!!.pointsUp.size-1].y = motionEvent.y.toInt() + cardView.top
+                        drawableSurface?.invalidate()
+                    }else{
+                        drawableSurface!!.pointsUp.removeAt(drawableSurface!!.pointsUp.size-1)
+                        drawableSurface!!.pointsDown.removeAt(drawableSurface!!.pointsDown.size-1)
+                        drawableSurface?.invalidate()
+                    }
                     workspaceContainer?.setHorizontalPanEnabled(true)
                     workspaceContainer?.setVerticalPanEnabled(true)
                 }
             }
         }
         return@OnTouchListener true
+    }
+
+    private fun viewInBounds(view: View, x: Int, y: Int): Boolean {
+        view.getDrawingRect(outRect)
+        //workspace!!.offsetDescendantRectToMyCoords(view, outRect)
+        outRect.offset(view.left, view.top)
+        return outRect.contains(x,y)
     }
 
     companion object {
