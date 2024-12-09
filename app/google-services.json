@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "305512126067",
+    "firebase_url": "https://lingua-562a5-default-rtdb.firebaseio.com",
     "project_id": "lingua-562a5",
     "storage_bucket": "lingua-562a5.firebasestorage.app"
   },
@@ -12,7 +13,20 @@
           "package_name": "com.cs407.lingua"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "305512126067-qvtr71rosohmhopiebnmh6qieots8vh5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cs407.lingua",
+            "certificate_hash": "5dbf8982b250ec9f02cff6ac38aa121d955e898f"
+          }
+        },
+        {
+          "client_id": "305512126067-9sg3b7s29b4u109pqpeo7d9hsfgkm2ue.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyBNEQx00lmlxCl-KEDUpAR3TP3UvpPgO-c"
@@ -20,7 +34,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "305512126067-9sg3b7s29b4u109pqpeo7d9hsfgkm2ue.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
