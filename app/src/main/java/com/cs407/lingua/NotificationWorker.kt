@@ -19,18 +19,18 @@ class NotificationWorker(context: Context, workerParams: WorkerParameters) : Wor
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val channel = NotificationChannel(
-                "daily_notification_channel",
-                "Daily Notifications",
+                "study_notification_channel",
+                "Study Notifications",
                 NotificationManager.IMPORTANCE_DEFAULT
             )
             notificationManager.createNotificationChannel(channel)
         }
 
-        val notification: Notification = NotificationCompat.Builder(applicationContext, "daily_notification_channel")
+        val notification: Notification = NotificationCompat.Builder(applicationContext, "study_notification_channel")
             .setSmallIcon(R.drawable.notification_logo)
             .setLargeIcon(largeIcon)
-            .setContentTitle("Daily Study Reminder")
-            .setContentText("This is your daily study reminder notification!")
+            .setContentTitle("Study Reminder")
+            .setContentText("Reminder to study Linguistics!")
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
             .build()
 

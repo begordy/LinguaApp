@@ -18,26 +18,15 @@ class SettingsViewModel(application: Application): AndroidViewModel(application)
 
     val primaryColor = MutableLiveData<Int>()
     val secondaryColor = MutableLiveData<Int>()
-//    val notificationAllowed = MutableLiveData<Boolean>()
+    val notificationSelection = MutableLiveData<Int>()
     val vibAllowed = MutableLiveData<Boolean>()
-    val easy = MutableLiveData<Boolean>()
-    val medium = MutableLiveData<Boolean>()
-    val hard = MutableLiveData<Boolean>()
     val simple = MutableLiveData<Boolean>()
-    val complex = MutableLiveData<Boolean>()
-    val compound = MutableLiveData<Boolean>()
     val dataLoader = DataLoader
     init {
         primaryColor.value = sharedPreferences.getInt("primaryColor", Color.parseColor("#673AB7"))
         secondaryColor.value = sharedPreferences.getInt("secondaryColor", Color.WHITE)
-    //    notificationAllowed.value = sharedPreferences.getBoolean("notificationAllowed", false)
+        notificationSelection.value = sharedPreferences.getInt("notificationSelection", 1)  //Value is number of days frequency
         vibAllowed.value = sharedPreferences.getBoolean("vibAllowed", true)
-        easy.value = sharedPreferences.getBoolean("easy", true)
-        medium.value = sharedPreferences.getBoolean("medium", true)
-        hard.value = sharedPreferences.getBoolean("hard", true)
-        simple.value = sharedPreferences.getBoolean("simple", true)
-        complex.value = sharedPreferences.getBoolean("complex", true)
-        compound.value = sharedPreferences.getBoolean("compound", true)
     }
 
     fun savePrimaryColor(color: Int){
@@ -48,39 +37,15 @@ class SettingsViewModel(application: Application): AndroidViewModel(application)
         sharedPreferences.edit().putInt("secondaryColor", color).apply()
         secondaryColor.value = color
     }
-    fun saveEasySelection(boolean: Boolean){
-        sharedPreferences.edit().putBoolean("easy", boolean).apply()
-        easy.value = boolean
-    }
-
-    fun saveMediumSelection(boolean: Boolean){
-        sharedPreferences.edit().putBoolean("medium", boolean).apply()
-        medium.value = boolean
-    }
-
-    fun saveHardSelection(boolean: Boolean) {
-        sharedPreferences.edit().putBoolean("hard", boolean).apply()
-        hard.value = boolean
-    }
-
-    fun saveSimpleSelection(boolean: Boolean) {
-        sharedPreferences.edit().putBoolean("simple", boolean).apply()
-        simple.value = boolean
-    }
-
-    fun saveComplexSelection(boolean: Boolean) {
-        sharedPreferences.edit().putBoolean("complex", boolean).apply()
-        complex.value = boolean
-    }
-
-    fun saveCompoundSelection(boolean: Boolean) {
-        sharedPreferences.edit().putBoolean("compound", boolean).apply()
-        compound.value = boolean
-    }
 
     fun saveVibSelection(boolean: Boolean) {
         sharedPreferences.edit().putBoolean("vibAllowed", boolean).apply()
         vibAllowed.value = boolean
+    }
+
+    fun saveNotificationSelection(selection: Int) {
+        sharedPreferences.edit().putInt("notificationSelection", selection).apply()
+        notificationSelection.value = selection
     }
 
 }

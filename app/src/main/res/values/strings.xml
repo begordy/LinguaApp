@@ -70,6 +70,11 @@
         <item>Grey</item>
         <item>Yellow</item>
     </string-array>
+    <string-array name="notification_options">
+        <item>Daily</item>
+        <item>Every 2 Days</item>
+        <item>Weekly</item>
+    </string-array>
     <string name="large_text">
         "Material is the metaphor.\n\n"
 
@@ -164,4 +169,5 @@
     <string name="progress_text">%d/%d</string>
     <string name="complete_text">You have completed the %s quiz</string>
     <string name="allow_vibrations">Allow Vibrations</string>
+    <string name="notification_selection">Notification Frequency</string>
 </resources>

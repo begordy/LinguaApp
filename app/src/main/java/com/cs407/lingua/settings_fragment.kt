@@ -71,14 +71,18 @@ class settings_fragment : Fragment() {
         }
 
         fun scheduleDailyNotification(context: Context) {
-            val dailyNotificationRequest = PeriodicWorkRequest.Builder(
-                NotificationWorker::class.java,
-                1, TimeUnit.DAYS // Periodic task, repeat each day
-            )
-                .setInitialDelay(1, TimeUnit.SECONDS)
-                .build()
+            val dailyNotificationRequest = settingsViewModel.notificationSelection.value?.let {
+                PeriodicWorkRequest.Builder(
+                    NotificationWorker::class.java,
+                    it.toLong(), TimeUnit.DAYS // Periodic task, repeat each day
+                )
+                    .setInitialDelay(1, TimeUnit.SECONDS)
+                    .build()
+            }
 
-            WorkManager.getInstance(context).enqueueUniquePeriodicWork("studyReminder", ExistingPeriodicWorkPolicy.KEEP,dailyNotificationRequest)
+            if (dailyNotificationRequest != null) {
+                WorkManager.getInstance(context).enqueueUniquePeriodicWork("studyReminder", ExistingPeriodicWorkPolicy.KEEP,dailyNotificationRequest)
+            }
         }
 
         if(NotificationManagerCompat.from(requireContext()).areNotificationsEnabled()){
@@ -111,21 +115,10 @@ class settings_fragment : Fragment() {
         val primary_spinner: Spinner = view.findViewById(R.id.primary_spinner)
         val secondary_spinner: Spinner = view.findViewById(R.id.secondary_spinner)
         val toolbar: Toolbar = view.findViewById(R.id.toolbar)
-        val easy: Switch = view.findViewById(R.id.easy_switch)
-        val medium: Switch = view.findViewById(R.id.medium_switch)
-        val hard: Switch = view.findViewById(R.id.hard_switch)
-        val simple: Switch = view.findViewById(R.id.simple_switch)
-        val complex: Switch = view.findViewById(R.id.complex_switch)
-        val compound: Switch = view.findViewById(R.id.compound_switch)
         val vibSwitch: Switch = view.findViewById(R.id.vib_switch)
         val notificationSwitch: Switch = view.findViewById(R.id.notification_switch)
+        val notificationSelector: Spinner = view.findViewById(R.id.notification_spinner)
 
-        easy.isChecked = settingsViewModel.easy.value == true
-        medium.isChecked = settingsViewModel.medium.value == true
-        hard.isChecked = settingsViewModel.hard.value == true
-        simple.isChecked = settingsViewModel.simple.value == true
-        complex.isChecked = settingsViewModel.complex.value == true
-        compound.isChecked = settingsViewModel.compound.value == true
         vibSwitch.isChecked = settingsViewModel.vibAllowed.value == true
         notificationSwitch.isChecked = context?.let { NotificationManagerCompat.from(it).areNotificationsEnabled() } == true
 
@@ -157,14 +150,18 @@ class settings_fragment : Fragment() {
         }
 
         fun scheduleDailyNotification(context: Context) {
-            val dailyNotificationRequest = PeriodicWorkRequest.Builder(
-                NotificationWorker::class.java,
-                1, TimeUnit.DAYS // Periodic task, repeat each day
-            )
-                .setInitialDelay(1, TimeUnit.SECONDS)
-                .build()
+            val dailyNotificationRequest = settingsViewModel.notificationSelection.value?.let {
+                PeriodicWorkRequest.Builder(
+                    NotificationWorker::class.java,
+                    it.toLong(), TimeUnit.DAYS // Periodic task, repeat each day
+                )
+                    .setInitialDelay(1, TimeUnit.SECONDS)
+                    .build()
+            }
 
-            WorkManager.getInstance(context).enqueueUniquePeriodicWork("studyReminder", ExistingPeriodicWorkPolicy.KEEP,dailyNotificationRequest)
+            if (dailyNotificationRequest != null) {
+                WorkManager.getInstance(context).enqueueUniquePeriodicWork("studyReminder", ExistingPeriodicWorkPolicy.KEEP,dailyNotificationRequest)
+            }
         }
 
         if(NotificationManagerCompat.from(requireContext()).areNotificationsEnabled()){
@@ -235,52 +232,6 @@ class settings_fragment : Fragment() {
         }
 
 
-        easy.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) {
-                settingsViewModel.saveEasySelection(true)
-            } else{
-                settingsViewModel.saveEasySelection(false)
-            }
-        }
-
-        medium.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) {
-                settingsViewModel.saveMediumSelection(true)
-            } else{
-                settingsViewModel.saveMediumSelection(false)
-            }
-        }
-        hard.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) {
-                settingsViewModel.saveHardSelection(true)
-            } else {
-                settingsViewModel.saveHardSelection(false)
-            }
-        }
-
-        simple.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) {
-                settingsViewModel.saveSimpleSelection(true)
-            } else {
-                settingsViewModel.saveSimpleSelection(false)
-            }
-        }
-
-        complex.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) {
-                settingsViewModel.saveComplexSelection(true)
-            } else {
-                settingsViewModel.saveComplexSelection(false)
-            }
-        }
-
-        compound.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) {
-                settingsViewModel.saveCompoundSelection(true)
-            } else {
-                settingsViewModel.saveCompoundSelection(false)
-            }
-        }
 
         vibSwitch.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
@@ -291,7 +242,8 @@ class settings_fragment : Fragment() {
         }
 
 
-        settingsViewModel.primaryColor.value?.let { toolbar.setBackgroundColor(it) }
+        settingsViewModel.primaryColor.value?.let { toolbar.setBackgroundColor(it)  }
+        settingsViewModel.primaryColor.value?.let { logOutButton.setBackgroundColor(it)  }
         settingsViewModel.secondaryColor.value?.let { view.setBackgroundColor(it) }
 
         // Set the toolbar as the action bar
@@ -326,6 +278,24 @@ class settings_fragment : Fragment() {
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             secondary_spinner.adapter = adapter
         }
+        ArrayAdapter.createFromResource(
+            requireContext(),
+            R.array.notification_options,  // Array defined in strings.xml
+            android.R.layout.simple_spinner_item
+        ).also { adapter ->
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            notificationSelector.adapter = adapter
+        }
+
+        settingsViewModel.notificationSelection.value?.let { selection ->
+            val selectedPosition = when (selection) {
+                1 -> 0
+                2 -> 1
+                7 -> 2
+                else -> 0   //default to daily if not found
+            }
+            notificationSelector.setSelection(selectedPosition)
+        }
 
         settingsViewModel.primaryColor.value?.let { color ->
             val selectedPosition = when (color) {
@@ -352,13 +322,13 @@ class settings_fragment : Fragment() {
             override fun onItemSelected(parentView: AdapterView<*>, view: View?, position: Int, id: Long) {
                 val selectedItem = parentView.getItemAtPosition(position) as String
                 //implement for each primary color :)
-                if(selectedItem.equals("Blue")){
+                if(selectedItem == "Blue"){
                     settingsViewModel.savePrimaryColor(Color.BLUE)
                 }
-                if (selectedItem.equals("Purple")){
+                if (selectedItem == "Purple"){
                     settingsViewModel.savePrimaryColor(Color.parseColor("#673AB7"))
                 }
-                if (selectedItem.equals("Red")){
+                if (selectedItem == "Red"){
                     settingsViewModel.savePrimaryColor(Color.RED)
                 }
             }
@@ -371,13 +341,13 @@ class settings_fragment : Fragment() {
             override fun onItemSelected(parentView: AdapterView<*>, view: View?, position: Int, id: Long) {
                 val selectedItem = parentView.getItemAtPosition(position) as String
                 //implement for each primary color :)
-                if(selectedItem.equals("White")){
+                if(selectedItem == "White"){
                     settingsViewModel.saveSecondaryColor(Color.WHITE)
                 }
-                if (selectedItem.equals("Grey")){
+                if (selectedItem == "Grey"){
                     settingsViewModel.saveSecondaryColor(Color.LTGRAY)
                 }
-                if (selectedItem.equals("Yellow")){
+                if (selectedItem == "Yellow"){
                     settingsViewModel.saveSecondaryColor(Color.YELLOW)
                 }
             }
@@ -386,7 +356,25 @@ class settings_fragment : Fragment() {
                 // Handle case where no item is selected
             }
         }
+        notificationSelector.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parentView: AdapterView<*>, view: View?, position: Int, id: Long) {
+                val selectedItem = parentView.getItemAtPosition(position) as String
+                //implement for each primary color :)
+                if(selectedItem == "Daily"){
+                    settingsViewModel.saveNotificationSelection(1)
+                }
+                if (selectedItem == "Every 2 Days"){
+                    settingsViewModel.saveNotificationSelection(2)
+                }
+                if (selectedItem == "Weekly"){
+                    settingsViewModel.saveNotificationSelection(7)
+                }
+            }
 
+            override fun onNothingSelected(parentView: AdapterView<*>) {
+                // Handle case where no item is selected
+            }
+        }
         val bottomNavigationView: BottomNavigationView = view.findViewById(R.id.bottom_navigation)
 
         // Set a listener to handle item selection

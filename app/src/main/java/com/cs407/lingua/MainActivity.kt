@@ -24,6 +24,7 @@ import java.util.concurrent.TimeUnit
 class MainActivity : AppCompatActivity() {
 
     private var windowInsetsController: WindowInsetsControllerCompat? = null
+    private lateinit var settingsViewModel: SettingsViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         // Configure the behavior of the hidden system bars.
         windowInsetsController?.systemBarsBehavior =
             WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
-
+        settingsViewModel = ViewModelProvider(this)[SettingsViewModel::class.java]
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
@@ -73,13 +74,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun scheduleDailyNotification() {
-        val dailyNotificationRequest = PeriodicWorkRequest.Builder(
-            NotificationWorker::class.java,
-            1, TimeUnit.DAYS // Periodic task, repeat each day
-        )
-            .setInitialDelay(1, TimeUnit.SECONDS)   // Delay start (would be set to 1 day)
-            .build()
-        WorkManager.getInstance(applicationContext).enqueueUniquePeriodicWork("studyReminder", ExistingPeriodicWorkPolicy.KEEP,dailyNotificationRequest)
+        val dailyNotificationRequest = settingsViewModel.notificationSelection.value?.let {
+            PeriodicWorkRequest.Builder(
+                NotificationWorker::class.java,
+                it.toLong(), TimeUnit.DAYS // Periodic task, repeat each day
+            )
+                .setInitialDelay(1, TimeUnit.SECONDS)   // Delay start (would be set to 1 day)
+                .build()
+        }
+        if (dailyNotificationRequest != null) {
+            WorkManager.getInstance(applicationContext).enqueueUniquePeriodicWork("studyReminder", ExistingPeriodicWorkPolicy.KEEP,dailyNotificationRequest)
+        }
     }
 
     private fun requestNotificationPermission() {
