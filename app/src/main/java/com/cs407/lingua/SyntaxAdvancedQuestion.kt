@@ -139,7 +139,7 @@ class SyntaxAdvancedQuestion : Fragment() {
                 tempCardView.addView(tempText)
                 if(mode == 0){
                     tempCardView.setOnTouchListener(mGrabModeOnTouchListener)
-                }else if(mode ==1){
+                }else if(mode == 1){
                     tempCardView.setOnTouchListener(mConnectModeOnTouchListener)
                 }
                 val lp = RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
@@ -463,8 +463,10 @@ class SyntaxAdvancedQuestion : Fragment() {
                     if(hierarchy.size > 0){
                         if(!checkInUserAnswer(LineString(hierarchy[hierarchy.size-1],currElement))){
                             //answer is wrong, navigate away
-                            Toast.makeText(requireContext(), "Wrong Answer", Toast.LENGTH_SHORT).show()
-                            //TODO: remove (only for testing)
+                            val bundle = Bundle()
+                            bundle.putIntArray("quizInfo", arguments?.getIntArray("quizInfo")) // PASS QUIZ INFO
+                            bundle.putBoolean("correct", false)
+                            findNavController().navigate(R.id.syntax_to_questionResult, bundle)
                             correct = false
                             break
                         }
@@ -475,16 +477,20 @@ class SyntaxAdvancedQuestion : Fragment() {
             }else if(correctAnswer?.get(i) == ']'){
                 if(currElement.isNotEmpty()){
                     if(!checkInUserAnswer(LineString(hierarchy[hierarchy.size-1],currElement))){
-                        //answer is wrong
-                        Toast.makeText(requireContext(), "Wrong Answer", Toast.LENGTH_SHORT).show()
-                        //TODO: remove (only for testing)
+                        //answer is wrong, navigate away
+                        val bundle = Bundle()
+                        bundle.putIntArray("quizInfo", arguments?.getIntArray("quizInfo")) // PASS QUIZ INFO
+                        bundle.putBoolean("correct", false)
+                        findNavController().navigate(R.id.syntax_to_questionResult, bundle)
                         correct = false
                         break
                     }
                     if(!checkInUserAnswer(LineString(currElement, words!![wordTrack]))){
-                        //answer is wrong
-                        Toast.makeText(requireContext(), "Wrong Answer", Toast.LENGTH_SHORT).show()
-                        //TODO: remove (only for testing)
+                        //answer is wrong, navigate away
+                        val bundle = Bundle()
+                        bundle.putIntArray("quizInfo", arguments?.getIntArray("quizInfo")) // PASS QUIZ INFO
+                        bundle.putBoolean("correct", false)
+                        findNavController().navigate(R.id.syntax_to_questionResult, bundle)
                         correct = false
                         break
                     }
@@ -498,9 +504,12 @@ class SyntaxAdvancedQuestion : Fragment() {
                 currElement += correctAnswer?.get(i)
             }
         }
-        //TODO: remove (only for testing)
         if(correct){
-            Toast.makeText(requireContext(), "Right Answer", Toast.LENGTH_SHORT).show()
+            //if answer correct, navigate away
+            val bundle = Bundle()
+            bundle.putIntArray("quizInfo", arguments?.getIntArray("quizInfo")) // PASS QUIZ INFO
+            bundle.putBoolean("correct", true)
+            findNavController().navigate(R.id.syntax_to_questionResult, bundle)
         }
     }
 

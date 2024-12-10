@@ -56,7 +56,12 @@ class Login : AppCompatActivity() {
             val password = findViewById<TextInputEditText>(R.id.passwdInput).text.toString().trim()
 
             if (email.isNotEmpty() && password.isNotEmpty()) {
-
+                //TODO: remove this later cuz this is just so I can bypass the login page and actually get in
+                if(email.compareTo("admin") == 0 && password.compareTo("admin") == 0){
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
                 auth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener{
                         if (it.isSuccessful) {
