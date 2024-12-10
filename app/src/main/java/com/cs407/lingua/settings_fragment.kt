@@ -19,6 +19,7 @@ import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import android.provider.Settings
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.app.NotificationManagerCompat
@@ -28,8 +29,12 @@ import androidx.navigation.fragment.findNavController
 import androidx.work.ExistingPeriodicWorkPolicy
 import androidx.work.PeriodicWorkRequest
 import androidx.work.WorkManager
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.auth.FirebaseAuth
 import java.util.concurrent.TimeUnit
 
 
@@ -37,6 +42,9 @@ class settings_fragment : Fragment() {
 
     private lateinit var settingsViewModel: SettingsViewModel
     private lateinit var permissionLauncher: ActivityResultLauncher<String>
+    private lateinit var logoutButton: Button
+    private lateinit var auth: FirebaseAuth
+    private lateinit var googleSignInClient: GoogleSignInClient
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,6 +58,8 @@ class settings_fragment : Fragment() {
                 // Handle denied permission (e.g., disable notifications)
             }
         }
+
+
     }
 
     override fun onResume() {
@@ -119,7 +129,32 @@ class settings_fragment : Fragment() {
         vibSwitch.isChecked = settingsViewModel.vibAllowed.value == true
         notificationSwitch.isChecked = context?.let { NotificationManagerCompat.from(it).areNotificationsEnabled() } == true
 
+        val logOutButton = view.findViewById<Button>(R.id.logout)
+        auth = FirebaseAuth.getInstance()
 
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken(getString(R.string.default_web_client_id))
+            .requestEmail()
+            .build()
+
+        googleSignInClient = GoogleSignIn.getClient(requireContext(), gso)
+
+        logOutButton?.setOnClickListener{
+            auth.signOut()
+
+            googleSignInClient.signOut().addOnCompleteListener { task ->
+
+                if (task.isSuccessful) {
+                    val intent = Intent(requireContext(), Login::class.java)
+                    startActivity(intent)
+                    requireActivity().finish()
+                } else {
+                    Toast.makeText(requireContext(), "Logout Failed", Toast.LENGTH_SHORT).show()
+                }
+
+            }
+
+        }
 
         fun scheduleDailyNotification(context: Context) {
             val dailyNotificationRequest = PeriodicWorkRequest.Builder(

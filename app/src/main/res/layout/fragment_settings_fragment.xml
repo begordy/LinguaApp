@@ -1,184 +1,214 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".settings_fragment">
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        android:title="My Toolbar"
-        android:elevation="4dp" />
-    <TextView
-        android:id="@+id/color_scheme"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/color_scheme"
-        android:textStyle="bold"
-        android:textSize="30sp"
-        android:layout_marginStart="10dp"
-        />
-    <View
-        android:id="@+id/line1"
-        android:layout_width="350dp"
-        android:layout_height="2dp"
-        android:background="#BCBABA"
-        android:layout_marginTop="1dp"/>
-    <TextView
-        android:id="@+id/primary_color"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/primary_color"
-        android:textSize="20sp"
-        android:layout_marginStart="20dp"
-        />
-    <Spinner
-        android:id="@+id/primary_spinner"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        />
 
-    <TextView
-        android:id="@+id/secondary_color"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/secondary_color"
-        android:textSize="20sp"
-        android:layout_marginStart="20dp"
-        />
-    <Spinner
-        android:id="@+id/secondary_spinner"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        />
-    <TextView
-        android:id="@+id/notifications"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/notifications"
-        android:textStyle="bold"
-        android:textSize="30sp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
-        />
-    <View
-        android:id="@+id/line2"
-        android:layout_width="350dp"
-        android:layout_height="2dp"
-        android:background="#BCBABA"
-        android:layout_marginTop="1dp"/>
-    <Switch
-        android:id="@+id/notification_switch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/allow_notifications"
-        android:textSize="20sp"
-        android:layout_marginTop="2dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        tools:ignore="UseSwitchCompatOrMaterialXml" />
-    <Switch
-        android:id="@+id/vib_switch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/allow_vibrations"
-        android:textSize="20sp"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        tools:ignore="UseSwitchCompatOrMaterialXml" />
-    <TextView
-        android:id="@+id/filter"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/filter_syntax"
-        android:textStyle="bold"
-        android:textSize="30sp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
-        />
-    <View
-        android:id="@+id/line3"
-        android:layout_width="350dp"
-        android:layout_height="2dp"
-        android:background="#BCBABA"
-        android:layout_marginTop="1dp"/>
-    <Switch
-        android:id="@+id/easy_switch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/easy"
-        android:textSize="20sp"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        tools:ignore="UseSwitchCompatOrMaterialXml" />
-    <Switch
-        android:id="@+id/medium_switch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/medium"
-        android:textSize="20sp"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        tools:ignore="UseSwitchCompatOrMaterialXml" />
-    <Switch
-        android:id="@+id/hard_switch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/hard"
-        android:textSize="20sp"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        tools:ignore="UseSwitchCompatOrMaterialXml" />
-    <Switch
-        android:id="@+id/simple_switch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/simple"
-        android:textSize="20sp"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        tools:ignore="UseSwitchCompatOrMaterialXml" />
-    <Switch
-        android:id="@+id/complex_switch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/complex"
-        android:textSize="20sp"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        tools:ignore="UseSwitchCompatOrMaterialXml" />
-    <Switch
-        android:id="@+id/compound_switch"
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/compound"
-        android:textSize="20sp"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        tools:ignore="UseSwitchCompatOrMaterialXml" />
-    <Space
+    <!-- Wrap content in ScrollView -->
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:fillViewport="true">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:title="My Toolbar"
+                android:elevation="4dp" />
+
+            <TextView
+                android:id="@+id/color_scheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/color_scheme"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:layout_marginStart="10dp" />
+
+            <View
+                android:id="@+id/line1"
+                android:layout_width="350dp"
+                android:layout_height="2dp"
+                android:background="#BCBABA"
+                android:layout_marginTop="1dp" />
+
+            <TextView
+                android:id="@+id/primary_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/primary_color"
+                android:textSize="20sp"
+                android:layout_marginStart="20dp" />
+
+            <Spinner
+                android:id="@+id/primary_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp" />
+
+            <TextView
+                android:id="@+id/secondary_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/secondary_color"
+                android:textSize="20sp"
+                android:layout_marginStart="20dp" />
+
+            <Spinner
+                android:id="@+id/secondary_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp" />
+
+            <TextView
+                android:id="@+id/notifications"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/notifications"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp" />
+
+            <View
+                android:id="@+id/line2"
+                android:layout_width="350dp"
+                android:layout_height="2dp"
+                android:background="#BCBABA"
+                android:layout_marginTop="1dp" />
+
+            <Switch
+                android:id="@+id/notification_switch"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="@string/allow_notifications"
+                android:textSize="20sp"
+                android:layout_marginTop="2dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <Switch
+                android:id="@+id/vib_switch"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="@string/allow_vibrations"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <TextView
+                android:id="@+id/filter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/filter_syntax"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp" />
+
+            <View
+                android:id="@+id/line3"
+                android:layout_width="350dp"
+                android:layout_height="2dp"
+                android:background="#BCBABA"
+                android:layout_marginTop="1dp" />
+
+            <Switch
+                android:id="@+id/easy_switch"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="@string/easy"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <Switch
+                android:id="@+id/medium_switch"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="@string/medium"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <Switch
+                android:id="@+id/hard_switch"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="@string/hard"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <Switch
+                android:id="@+id/simple_switch"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="@string/simple"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <Switch
+                android:id="@+id/complex_switch"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="@string/complex"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <Switch
+                android:id="@+id/compound_switch"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="@string/compound"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <Button
+                android:id="@+id/logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/logout" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Bottom navigation bar outside ScrollView -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
@@ -188,4 +218,5 @@
         app:labelVisibilityMode="labeled"
         app:itemActiveIndicatorStyle="@null"
         app:itemTextAppearanceActiveBoldEnabled="false" />
+
 </LinearLayout>
