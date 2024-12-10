@@ -17,6 +17,16 @@
     <string name="login">Login</string>
     <string name="username">Username or Email</string>
     <string name="password">Password</string>
+    <string name="google">Login With Google</string>
+    <string name="logout">Logout</string>
+
+    <!-- Register Title -->
+    <string name="register">Register</string>
+    <string name="email">Email</string>
+    <string name="reg_user">Username</string>
+    <string name="register_button">Don\'t have an account? Register</string>
+    
+    <string name="web_client_id">305512126067-qvtr71rosohmhopiebnmh6qieots8vh5.apps.googleusercontent.com</string>
 
     <!-- Messages Preferences -->
     <string name="signature_title">Your signature</string>
