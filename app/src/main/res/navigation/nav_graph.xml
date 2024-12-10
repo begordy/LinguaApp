@@ -83,6 +83,7 @@
         android:name="com.cs407.lingua.search"
         android:label="fragment_search"
         tools:layout="@layout/fragment_search" >
+
         <action
             android:id="@+id/action_search_to_settings_fragment"
             app:destination="@id/settings_fragment" />
@@ -94,7 +95,13 @@
             app:destination="@id/homePage" />
         <action
             android:id="@+id/action_search_to_exerciseSelection"
-            app:destination="@id/exerciseSelection" />
+            app:destination="@id/exerciseSelection">
+            <argument
+                android:name="quizName"
+                app:argType="string"
+                android:defaultValue="" />
+        </action>
+
     </fragment>
     <fragment
         android:id="@+id/exerciseSelection"

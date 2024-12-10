@@ -40,13 +40,10 @@ class search : Fragment() {
         listView.visibility = View.GONE
 
         val arr = ArrayList<String>()
-        arr.add("Monday")
-        arr.add("Tuesday")
-        arr.add("Wednesday")
-        arr.add("Thursday")
-        arr.add("Friday")
-        arr.add("Saturday")
-        arr.add("Sunday")
+        arr.add("Simple Phonology")
+        arr.add("Complex Phonology")
+        arr.add("Simple Syntax")
+        arr.add("Complex Syntax")
 
 
 
@@ -71,19 +68,21 @@ class search : Fragment() {
             val selectedItem = adapter.getItem(position)
 
             val exerciseType = when (selectedItem) {
-                "Monday" -> 1
-                "Tuesday" -> 2
-                "Wednesday" -> 3
-                "Thursday" -> 4
-                "Friday" -> 5
-                "Saturday" -> 6
-                "Sunday" -> 7
+                "Simple Phonology" -> 1
+                "Complex Phonology" -> 2
+                "Simple Syntax" -> 3
+                "Complex Syntax" -> 4
                 else -> 0
             }
 
             // Create a Bundle and pass the argument
             val bundle = Bundle().apply {
                 putInt("exerciseType", exerciseType)
+                if (exerciseType != 0) {
+                    putString("quizName", "none")
+                } else {
+                    putString("quizName", selectedItem)
+                }
             }
 
             // Navigate using the action ID
