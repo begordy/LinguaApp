@@ -15,6 +15,17 @@
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme" />
 
+    <ImageButton
+        android:id="@+id/undoButton"
+        android:layout_width="60sp"
+        android:layout_height="60sp"
+        android:layout_alignEnd="@id/toolbar5"
+        android:layout_marginEnd="2sp"
+        android:backgroundTint="#7C4DFF"
+        android:scaleType="fitCenter"
+        android:src="@drawable/undo"
+        app:tint="#FFFFFF" />
+
     <HorizontalScrollView
         android:id="@+id/elementBar"
         android:layout_width="match_parent"

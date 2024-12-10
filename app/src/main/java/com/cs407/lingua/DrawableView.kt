@@ -19,8 +19,8 @@ import android.widget.ImageView
 class DrawableView(context: Context, attrs: AttributeSet) : ImageView(context, attrs) {
 
     val paint: Paint = Paint()
-    val pointsDown = ArrayList<Point>()
-    val pointsUp = ArrayList<Point>()
+    var pointsDown = ArrayList<Point>()
+    var pointsUp = ArrayList<Point>()
 
     init {
         paint.isAntiAlias = true

@@ -14,6 +14,8 @@ import android.os.Bundle
 import android.util.Log
 import android.util.TypedValue
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
@@ -25,6 +27,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.cardview.widget.CardView
@@ -66,10 +69,17 @@ class SyntaxAdvancedQuestion : Fragment() {
 
     private var outRect = Rect()
     private var lines = ArrayList<Line>()
+    private var linesString = ArrayList<LineString>()
+
     private var movingLines = ArrayList<Int>()
     //true = moving start, false = moving end
     private var whichEnd = ArrayList<Boolean>()
     private var movingLineDeltas = ArrayList<ArrayList<Int>>()
+
+    private var words: ArrayList<String>? = null
+    private var prevCard: CardView? = null
+    //0 = grab mode, 1 = connect mode
+    private var mode = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -101,6 +111,7 @@ class SyntaxAdvancedQuestion : Fragment() {
         val submitButton = view.findViewById<Button>(R.id.submitButton)
         val connectModeButton = view.findViewById<ImageButton>(R.id.connectModeButton)
         val grabModeButton = view.findViewById<ImageButton>(R.id.grabModeButton)
+        val undoButton = view.findViewById<ImageButton>(R.id.undoButton)
         drawableSurface = view.findViewById(R.id.drawableSurface)
         drawableSurface!!.paint.isAntiAlias = true
         drawableSurface!!.paint.strokeWidth = 6f;
@@ -126,7 +137,11 @@ class SyntaxAdvancedQuestion : Fragment() {
                 tempText.setTextColor((child.getChildAt(0) as TextView).currentTextColor)
                 tempText.layoutParams = (child.getChildAt(0) as TextView).layoutParams
                 tempCardView.addView(tempText)
-                tempCardView.setOnTouchListener(mGrabModeOnTouchListener)
+                if(mode == 0){
+                    tempCardView.setOnTouchListener(mGrabModeOnTouchListener)
+                }else if(mode ==1){
+                    tempCardView.setOnTouchListener(mConnectModeOnTouchListener)
+                }
                 val lp = RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
                 if(lastAddedElement != null){
                     lp.addRule(RelativeLayout.END_OF, lastAddedElement!!.id)
@@ -160,6 +175,7 @@ class SyntaxAdvancedQuestion : Fragment() {
 
         //button listeners
         grabModeButton.setOnClickListener{
+            mode = 0
             settingsViewModel.primaryColor.value?.let {
                 connectModeButton.background.setTint(it)
                 grabModeButton.background.setTint(primaryTintedColor!!)
@@ -171,6 +187,7 @@ class SyntaxAdvancedQuestion : Fragment() {
             }
         }
         connectModeButton.setOnClickListener {
+            mode = 1
             settingsViewModel.primaryColor.value?.let {
                 grabModeButton.background.setTint(it)
                 connectModeButton.background.setTint(primaryTintedColor!!)
@@ -181,6 +198,61 @@ class SyntaxAdvancedQuestion : Fragment() {
                 }
             }
         }
+        undoButton.setOnClickListener {
+            //first clear the canvas
+            lines = ArrayList<Line>()
+            linesString = ArrayList<LineString>()
+            drawableSurface!!.pointsUp = ArrayList<Point>()
+            drawableSurface!!.pointsDown = ArrayList<Point>()
+            val toDelete = ArrayList<Int>()
+            for(i in 0..< workspace!!.childCount){
+                if(workspace!!.getChildAt(i) is CardView){
+                    toDelete.add(i)
+                }
+            }
+            var offset = 0
+            for(i in toDelete){
+                workspace!!.removeView(workspace!!.getChildAt(i-offset))
+                offset++
+            }
+
+            //re-spawn in the words
+            for(word in words!!){
+                val tempCard = CardView(requireContext())
+                val tempText = TextView(requireContext())
+                tempText.text = word
+                tempText.setTextColor(Color.WHITE)
+                val lpText = ViewGroup.MarginLayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+                val r = requireContext().resources
+                val px = TypedValue.applyDimension(
+                    TypedValue.COMPLEX_UNIT_SP,
+                    10F,
+                    r.displayMetrics
+                )
+                lpText.setMargins(px.toInt())
+                tempCard.addView(tempText, lpText)
+                tempCard.id = elementCount
+                if(mode == 0) tempCard.setOnTouchListener(mGrabModeOnTouchListener)
+                else if(mode == 1) tempCard.setOnTouchListener(mConnectModeOnTouchListener)
+                settingsViewModel.primaryColor.value?.let { tempCard.setCardBackgroundColor(it) }
+                elementCount++
+                if(prevCard != null){
+                    val lp = RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+                    lp.addRule(RelativeLayout.END_OF, prevCard!!.id)
+                    (lp as ViewGroup.MarginLayoutParams).setMargins(0,0,20,0)
+                    workspace!!.addView(tempCard, lp)
+                }else{
+                    val lp = ViewGroup.MarginLayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+                    lp.setMargins(0,0,20,0)
+                    workspace!!.addView(tempCard, lp)
+                }
+                prevCard = tempCard
+            }
+
+            //invalidate drawing surface
+            drawableSurface!!.invalidate()
+        }
+        submitButton.setOnClickListener(mCheckAnswer)
 
         //setting drawable canvas
         val options = BitmapFactory.Options()
@@ -190,10 +262,10 @@ class SyntaxAdvancedQuestion : Fragment() {
 
         val sentence = arguments?.getString("questionText")
         correctAnswer = arguments?.getString("correctAnswer")
-        val words = sentence?.split(" ")
-        var prevCard: CardView? = null
+        words = sentence?.split(" ") as ArrayList<String>
+        //setting the elements for each word
         if (words != null) {
-            for(word in words){
+            for(word in words!!){
                 val tempCard = CardView(requireContext())
                 val tempText = TextView(requireContext())
                 tempText.text = word
@@ -213,7 +285,7 @@ class SyntaxAdvancedQuestion : Fragment() {
                 elementCount++
                 if(prevCard != null){
                     val lp = RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
-                    lp.addRule(RelativeLayout.END_OF, prevCard.id)
+                    lp.addRule(RelativeLayout.END_OF, prevCard!!.id)
                     (lp as ViewGroup.MarginLayoutParams).setMargins(0,0,20,0)
                     workspace!!.addView(tempCard, lp)
                 }else{
@@ -236,6 +308,7 @@ class SyntaxAdvancedQuestion : Fragment() {
         (activity as? AppCompatActivity)?.setSupportActionBar(toolbar)
         (activity as? AppCompatActivity)?.supportActionBar?.setDisplayHomeAsUpEnabled(true)
         (activity as? AppCompatActivity)?.supportActionBar?.setHomeAsUpIndicator(R.drawable.back_arrow)
+        //(activity as? AppCompatActivity)?.supportActionBar?.setDisplayOptions(R.menu.syntax_menu)
         settingsViewModel.primaryColor.value?.let { toolbar.setBackgroundColor(it) }
         // Clicking back arrow goes back to home
         toolbar.setNavigationOnClickListener {
@@ -347,11 +420,13 @@ class SyntaxAdvancedQuestion : Fragment() {
 
                     var onOtherCard = false
                     var otherCardId = -1
+                    var otherCardText = ""
                     for(child in workspace!!.children){
                         if(child is CardView && viewInBounds(child, motionEvent.x.toInt() + cardView.left, motionEvent.y.toInt() + cardView.top)){
                             if(child.id != cardView.id){
                                 onOtherCard = true
                                 otherCardId = child.id
+                                otherCardText = (child.getChildAt(0) as TextView).text.toString()
                                 break
                             }
                         }
@@ -361,6 +436,9 @@ class SyntaxAdvancedQuestion : Fragment() {
                         drawableSurface!!.pointsUp[drawableSurface!!.pointsUp.size-1].y = motionEvent.y.toInt() + cardView.top
                         drawableSurface?.invalidate()
                         lines.add(Line(cardView.id, otherCardId, drawableSurface!!.pointsUp.size-1))
+                        linesString.add(LineString(
+                            ((cardView as CardView).getChildAt(0) as TextView).text.toString(),
+                            otherCardText))
                     }else{
                         drawableSurface!!.pointsUp.removeAt(drawableSurface!!.pointsUp.size-1)
                         drawableSurface!!.pointsDown.removeAt(drawableSurface!!.pointsDown.size-1)
@@ -372,6 +450,73 @@ class SyntaxAdvancedQuestion : Fragment() {
             }
         }
         return@OnTouchListener true
+    }
+
+    private val mCheckAnswer = View.OnClickListener {
+        val hierarchy = ArrayList<String>()
+        var currElement = ""
+        var wordTrack = 0
+        var correct = true
+        for(i in 0 ..< correctAnswer?.length!!){
+            if(correctAnswer?.get(i) == '['){
+                if(currElement.isNotEmpty()){
+                    if(hierarchy.size > 0){
+                        if(!checkInUserAnswer(LineString(hierarchy[hierarchy.size-1],currElement))){
+                            //answer is wrong, navigate away
+                            Toast.makeText(requireContext(), "Wrong Answer", Toast.LENGTH_SHORT).show()
+                            //TODO: remove (only for testing)
+                            correct = false
+                            break
+                        }
+                    }
+                    hierarchy.add(currElement)
+                    currElement = ""
+                }
+            }else if(correctAnswer?.get(i) == ']'){
+                if(currElement.isNotEmpty()){
+                    if(!checkInUserAnswer(LineString(hierarchy[hierarchy.size-1],currElement))){
+                        //answer is wrong
+                        Toast.makeText(requireContext(), "Wrong Answer", Toast.LENGTH_SHORT).show()
+                        //TODO: remove (only for testing)
+                        correct = false
+                        break
+                    }
+                    if(!checkInUserAnswer(LineString(currElement, words!![wordTrack]))){
+                        //answer is wrong
+                        Toast.makeText(requireContext(), "Wrong Answer", Toast.LENGTH_SHORT).show()
+                        //TODO: remove (only for testing)
+                        correct = false
+                        break
+                    }
+                    wordTrack++
+                }else {
+                    hierarchy.removeAt(hierarchy.size-1)
+                }
+
+                currElement = ""
+            }else{
+                currElement += correctAnswer?.get(i)
+            }
+        }
+        //TODO: remove (only for testing)
+        if(correct){
+            Toast.makeText(requireContext(), "Right Answer", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun checkInUserAnswer(line: LineString): Boolean{
+        for(i in 0 ..< linesString.size){
+            if((line.startCard.compareTo(linesString[i].startCard) == 0) &&
+               (line.endCard.compareTo(linesString[i].endCard) == 0)){
+                linesString.removeAt(i)
+                return true
+            }else if((line.startCard.compareTo(linesString[i].endCard) == 0) &&
+                     (line.endCard.compareTo(linesString[i].startCard) == 0)){
+                linesString.removeAt(i)
+                return true
+            }
+        }
+        return false
     }
 
     private fun viewInBounds(view: View, x: Int, y: Int): Boolean {
@@ -401,3 +546,5 @@ class SyntaxAdvancedQuestion : Fragment() {
 }
 
 data class Line(val startCardInt: Int, val endCardInt: Int, val drawableIndex: Int)
+
+data class LineString(val startCard: String, val endCard: String)
