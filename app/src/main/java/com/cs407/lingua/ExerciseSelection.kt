@@ -2,6 +2,7 @@ package com.cs407.lingua
 
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -67,6 +68,14 @@ class ExerciseSelection : Fragment() {
         val args = this.arguments
         // TODO: Can this just be hardcoded?
         when(args?.getInt("exerciseType")) {
+            0 -> {
+                val quizName = args.getString("quizName") ?: ""
+
+                if (quizName.isNotBlank()) {
+
+                }
+            }
+
             1 -> {
                 quizTitle.text = "Simple Phonology"
                 questionCount.text = "Questions: 20"
@@ -199,6 +208,20 @@ class ExerciseSelection : Fragment() {
             Toast.makeText(requireContext(), "DataLoader or Mode Assignment Error", Toast.LENGTH_SHORT).show()
         }
     }
+
+    private fun fetchFirebase(
+        quizId: String,
+        quizTitle: TextView,
+        questionCount: TextView,
+        difficulty: TextView,
+        tagsGrid: GridView,
+        description: TextView,
+        image: ImageView,
+        startQuiz: Button
+    ) {
+
+    }
+
 
     companion object {
         /**

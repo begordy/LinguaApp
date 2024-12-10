@@ -1,10 +1,6 @@
 package com.cs407.lingua
-
-import android.content.ContentValues.TAG
 import android.os.Bundle
 import android.text.TextUtils
-import android.util.Log
-import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -12,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.textfield.TextInputEditText
-import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 
 class Register : AppCompatActivity() {
@@ -33,14 +28,14 @@ class Register : AppCompatActivity() {
         }
 
         auth = FirebaseAuth.getInstance()
-        email = findViewById(R.id.email)
-        password = findViewById(R.id.password)
+        email = findViewById(R.id.emailInput)
+        password = findViewById(R.id.passwordInput)
         regButton = findViewById(R.id.registerButton)
 
         regButton.setOnClickListener{
 
-            val emailInput = email.text.toString()
-            val passwordInput = password.text.toString()
+            val emailInput = email.text.toString().trim()
+            val passwordInput = password.text.toString().trim()
 
             // checking if email
             if (TextUtils.isEmpty(emailInput)) {
@@ -52,15 +47,11 @@ class Register : AppCompatActivity() {
             auth.createUserWithEmailAndPassword(emailInput, passwordInput)
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
-
                         Toast.makeText(this, "Account Created", Toast.LENGTH_SHORT).show()
 
                     } else {
-                        // If sign in fails, display a message to the user.
-                        Toast.makeText(
-                            this,
-                            "Authentication failed.",
-                            Toast.LENGTH_SHORT,
+                        Toast.makeText(this, "Authentication failed.",
+                            Toast.LENGTH_SHORT
                         ).show()
                     }
                 }
