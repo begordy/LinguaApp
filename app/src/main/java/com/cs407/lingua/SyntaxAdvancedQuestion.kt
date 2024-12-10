@@ -167,6 +167,7 @@ class SyntaxAdvancedQuestion : Fragment() {
             submitButton.setBackgroundColor(it)
             connectModeButton.background.setTint(it)
             grabModeButton.background.setTint(primaryTintedColor!!)
+            undoButton.background.setTint(it)
         }
         settingsViewModel.secondaryColor.value?.let {
             view.findViewById<HorizontalScrollView>(R.id.elementBar).setBackgroundColor(it)

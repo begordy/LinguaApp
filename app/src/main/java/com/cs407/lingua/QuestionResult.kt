@@ -1,6 +1,7 @@
 package com.cs407.lingua
 
 import android.annotation.SuppressLint
+import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -16,6 +17,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.cs407.lingua.DataLoader.QInfo
 import com.google.android.material.progressindicator.CircularProgressIndicator
+import kotlin.math.min
 
 /**
  * A simple [Fragment] subclass.
@@ -46,6 +48,20 @@ class QuestionResult : Fragment() {
         val progressText = view.findViewById<TextView>(R.id.progressText)
 
         val quizInfo = arguments?.getIntArray("quizInfo") as IntArray
+        val oColor = settingsViewModel.primaryColor.value
+        val progressIndicatorRed = oColor?.let { Color.red(it) }
+        val progressIndicatorGreen = oColor?.let { Color.green(it) }
+        val progressIndicatorBlue = oColor?.let { Color.blue(it) }
+        val progressIndicatorAlpha = oColor?.let { Color.alpha(it) }
+        val newColor = Color.argb(
+            progressIndicatorAlpha!!,
+            min(progressIndicatorRed!! + 150,255),
+            min(progressIndicatorGreen!! + 150,255),
+            min(progressIndicatorBlue!! + 150,255)
+        )
+        progressIndicator.trackColor = newColor
+        progressIndicator.setIndicatorColor(oColor)
+        nextQButton.setBackgroundColor(oColor)
 
         if(arguments?.getBoolean("correct") == true){
             resultImage.setImageResource(R.drawable.green_check)
@@ -112,6 +128,7 @@ class QuestionResult : Fragment() {
         (activity as? AppCompatActivity)?.supportActionBar?.setDisplayHomeAsUpEnabled(true)
         (activity as? AppCompatActivity)?.supportActionBar?.setHomeAsUpIndicator(R.drawable.back_arrow)
         settingsViewModel.primaryColor.value?.let { toolbar.setBackgroundColor(it) }
+        settingsViewModel.secondaryColor.value?.let{view.setBackgroundColor(it)}
 
         vibrationHelper = VibrationHelper(requireContext(), settingsViewModel)
 

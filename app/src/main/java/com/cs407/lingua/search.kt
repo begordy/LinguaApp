@@ -92,6 +92,7 @@ class search : Fragment() {
 
         val bottomNavigationView: BottomNavigationView = view.findViewById(R.id.bottom_navigation)
         settingsViewModel = ViewModelProvider(this).get(SettingsViewModel::class.java)
+        settingsViewModel.secondaryColor.value?.let { view.setBackgroundColor(it) }
         // Set a listener to handle item selection
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {

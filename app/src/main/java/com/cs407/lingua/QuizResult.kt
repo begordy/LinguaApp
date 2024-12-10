@@ -1,5 +1,6 @@
 package com.cs407.lingua
 
+import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,6 +10,9 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.progressindicator.CircularProgressIndicator
+import androidx.appcompat.widget.Toolbar
+import androidx.lifecycle.ViewModelProvider
+import kotlin.math.min
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,6 +28,7 @@ class QuizResult : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    private lateinit var settingsViewModel: SettingsViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,11 +43,12 @@ class QuizResult : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_quiz_result, container, false)
-
+        settingsViewModel = ViewModelProvider(this)[SettingsViewModel::class.java]
         val homeButton = view.findViewById<Button>(R.id.homeButton)
         val completeText = view.findViewById<TextView>(R.id.completeText)
         val correctIndicator = view.findViewById<CircularProgressIndicator>(R.id.circle)
         val correctText = view.findViewById<TextView>(R.id.correctText)
+        val toolbar = view.findViewById<Toolbar>(R.id.toolbar6)
 
         val quizInfo = arguments?.getIntArray("quizInfo") as IntArray
 
@@ -61,6 +67,22 @@ class QuizResult : Fragment() {
         homeButton.setOnClickListener() {
             findNavController().navigate(R.id.quizResult_to_homePage)
         }
+        settingsViewModel.primaryColor.value?.let { toolbar.setBackgroundColor(it) }
+        settingsViewModel.secondaryColor.value?.let{view.setBackgroundColor(it)}
+        settingsViewModel.primaryColor.value?.let { homeButton.setBackgroundColor(it) }
+        val oColor = settingsViewModel.primaryColor.value
+        val progressIndicatorRed = oColor?.let { Color.red(it) }
+        val progressIndicatorGreen = oColor?.let { Color.green(it) }
+        val progressIndicatorBlue = oColor?.let { Color.blue(it) }
+        val progressIndicatorAlpha = oColor?.let { Color.alpha(it) }
+        val newColor = Color.argb(
+            progressIndicatorAlpha!!,
+            min(progressIndicatorRed!! + 150,255),
+            min(progressIndicatorGreen!! + 150,255),
+            min(progressIndicatorBlue!! + 150,255)
+        )
+        correctIndicator.trackColor = newColor
+        correctIndicator.setIndicatorColor(oColor)
 
         return view
     }
