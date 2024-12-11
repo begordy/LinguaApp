@@ -8,10 +8,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.progressindicator.CircularProgressIndicator
 import androidx.appcompat.widget.Toolbar
 import androidx.lifecycle.ViewModelProvider
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.getValue
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 import kotlin.math.min
 
 // TODO: Rename parameter arguments, choose names that match
@@ -68,8 +73,28 @@ class QuizResult : Fragment() {
         homeButton.setOnClickListener() {
             findNavController().navigate(R.id.quizResult_to_homePage)
         }
+
+        val auth = Firebase.database
         saveButton.setOnClickListener {
-            //TODO: connect this with the favorites backend code
+            val uid = Firebase.auth.currentUser?.uid
+
+            if (uid != null) {
+                val favorites = Firebase.database.getReference("users/$uid/Favorites")
+
+                favorites.get().addOnSuccessListener {
+                    val current = it.getValue<List<String>>() ?: emptyList()
+                    val next = (current + type).toSet().toList()
+
+                    favorites.setValue(next).addOnCompleteListener{ task ->
+                        if (task.isSuccessful) {
+                            Toast.makeText(requireContext(), "Added $type to favorites", Toast.LENGTH_SHORT).show()
+                        } else {
+                            Toast.makeText(requireContext(), "Error! Unable to save quiz", Toast.LENGTH_SHORT).show()
+                        }
+                    }
+                }
+            }
+
         }
         settingsViewModel.primaryColor.value?.let { toolbar.setBackgroundColor(it) }
         settingsViewModel.secondaryColor.value?.let{view.setBackgroundColor(it)}

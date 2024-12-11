@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "com.cs407.lingua"
-        minSdk = 27
+        minSdk = 30
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -58,11 +58,16 @@ dependencies {
     implementation("com.google.code.gson:gson:2.10.1")
     implementation("androidx.work:work-runtime:2.8.0")
     implementation("com.otaliastudios:zoomlayout:1.9.0")
-    implementation("com.google.firebase:firebase-auth:23.1.0")
 
     implementation(platform("com.google.firebase:firebase-bom:33.7.0"))
     implementation("com.google.firebase:firebase-auth")
     implementation("com.google.android.gms:play-services-auth:21.2.0")
 
     implementation ("com.google.firebase:firebase-database:21.0.0")
+
+    // This is for biometric dependencies
+    implementation("androidx.biometric:biometric:1.2.0-alpha05")
+    implementation("androidx.core:core-ktx:1.12.0")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
+
 }
