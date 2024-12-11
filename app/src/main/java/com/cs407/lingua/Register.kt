@@ -67,6 +67,10 @@ class Register : AppCompatActivity() {
                         newUser.setValue(userInfo).addOnCompleteListener{
                             if (it.isSuccessful) {
                                 Toast.makeText(this, "Account Created", Toast.LENGTH_SHORT).show()
+
+                                val intent = Intent(this, MainActivity::class.java)
+                                startActivity(intent)
+                                finish()
                             } else {
                                 Toast.makeText(this, "Error with Account", Toast.LENGTH_SHORT).show()
                             }
