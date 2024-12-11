@@ -51,7 +51,6 @@ class HomePage : Fragment() {
             }
         }
 
-        val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView)
 
         val samples: ArrayList<String> = ArrayList()
 
@@ -59,8 +58,6 @@ class HomePage : Fragment() {
             samples.add("Card $i")
         }
 
-        recyclerView.layoutManager = LinearLayoutManager(requireContext(), RecyclerView.HORIZONTAL, false)
-        recyclerView.adapter = SampleQuiz(samples)
         settingsViewModel.secondaryColor.value?.let { view.setBackgroundColor(it) }
 
         //Set listener for selecting each activity category
