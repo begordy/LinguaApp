@@ -45,6 +45,7 @@ class QuizResult : Fragment() {
         val view = inflater.inflate(R.layout.fragment_quiz_result, container, false)
         settingsViewModel = ViewModelProvider(this)[SettingsViewModel::class.java]
         val homeButton = view.findViewById<Button>(R.id.homeButton)
+        val saveButton = view.findViewById<Button>(R.id.saveButton)
         val completeText = view.findViewById<TextView>(R.id.completeText)
         val correctIndicator = view.findViewById<CircularProgressIndicator>(R.id.circle)
         val correctText = view.findViewById<TextView>(R.id.correctText)
@@ -66,6 +67,9 @@ class QuizResult : Fragment() {
 
         homeButton.setOnClickListener() {
             findNavController().navigate(R.id.quizResult_to_homePage)
+        }
+        saveButton.setOnClickListener {
+            //TODO: connect this with the favorites backend code
         }
         settingsViewModel.primaryColor.value?.let { toolbar.setBackgroundColor(it) }
         settingsViewModel.secondaryColor.value?.let{view.setBackgroundColor(it)}
