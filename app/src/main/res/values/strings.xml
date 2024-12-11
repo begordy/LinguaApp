@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Lingua</string>
-    <string name="simple_phonology_button">Simple Phonology</string>
-    <string name="complex_phonology_button">Complex Phonology</string>
+    <string name="simple_phonology_button">Simple Phonetics</string>
+    <string name="complex_phonology_button">Advanced Phonetics</string>
     <string name="simple_syntax_button">Simple Syntax</string>
-    <string name="complex_syntax_button">Complex Syntax</string>
+    <string name="complex_syntax_button">Advanced Syntax</string>
     <string name="menu_search">Search</string>
     <string name="menu_home">Home</string>
     <string name="menu_settings">Settings</string>
