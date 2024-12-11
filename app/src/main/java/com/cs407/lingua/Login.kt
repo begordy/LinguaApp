@@ -28,6 +28,9 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.database
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.newSingleThreadContext
 
 class Login : AppCompatActivity() {
@@ -47,12 +50,8 @@ class Login : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_login)
 
-        if (!authenticated) {
-            authenticated = true
-            phoneAuth()
-        }
-
         auth = FirebaseAuth.getInstance()
+        val uid = auth.uid
 
         val currentUser: FirebaseUser? = auth.currentUser
         if (currentUser != null) {
@@ -63,6 +62,14 @@ class Login : AppCompatActivity() {
             return
         }
 
+        Firebase.database.getReference("users/$uid/Authentication").get().addOnSuccessListener { task ->
+            authenticated = task.getValue(Boolean::class.java) ?: false
+        }
+
+        if (!authenticated) {
+            authenticated = true
+            phoneAuth()
+        }
 
         val login = findViewById<Button>(R.id.loginButton)
 

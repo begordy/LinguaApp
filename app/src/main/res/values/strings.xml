@@ -170,5 +170,6 @@
     <string name="progress_text">%d/%d</string>
     <string name="complete_text">You have completed the %s quiz</string>
     <string name="allow_vibrations">Allow Vibrations</string>
+    <string name="allow_auth">Allow Authentication</string>
     <string name="notification_selection">Notification Frequency</string>
 </resources>

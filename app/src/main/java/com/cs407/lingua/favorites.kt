@@ -49,6 +49,31 @@ class favorites : Fragment() {
             bookmarked.adapter = adapter
         }
 
+        bookmarked.setOnItemClickListener { _, _, position, _ ->
+            val selectedItem = bookmarked.adapter.getItem(position)
+
+            val exerciseType = when (selectedItem) {
+                "Simple Phonology" -> 1
+                "Complex Phonology" -> 2
+                "Simple Syntax" -> 3
+                "Complex Syntax" -> 4
+                else -> 0
+            }
+
+            // Create a Bundle and pass the argument
+            val bundle = Bundle().apply {
+                putInt("exerciseType", exerciseType)
+                if (exerciseType != 0) {
+                    putString("quizName", "none")
+                } else {
+                    putString("quizName", selectedItem.toString())
+                }
+            }
+
+            // Navigate using the action ID
+            findNavController().navigate(R.id.action_favorites_to_exerciseSelection, bundle)
+        }
+
         val bottomNavigationView: BottomNavigationView = view.findViewById(R.id.bottom_navigation)
         settingsViewModel = ViewModelProvider(this).get(SettingsViewModel::class.java)
         settingsViewModel.secondaryColor.value?.let { view.setBackgroundColor(it) }

@@ -37,7 +37,7 @@ class search : Fragment() {
         searchView = view.findViewById(R.id.search_bar)
         listView = view.findViewById(R.id.list)
 
-        listView.visibility = View.GONE
+        listView.visibility = View.VISIBLE
 
         val arr = ArrayList<String>()
         arr.add("Simple Phonology")
@@ -57,7 +57,6 @@ class search : Fragment() {
                 }
 
                 override fun onQueryTextChange(s: String?): Boolean {
-                    listView.visibility = View.VISIBLE
                     adapter.filter.filter(s)
                     return false
                 }
