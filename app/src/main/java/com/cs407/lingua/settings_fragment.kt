@@ -120,6 +120,7 @@ class settings_fragment : Fragment() {
         val vibSwitch: Switch = view.findViewById(R.id.vib_switch)
         val notificationSwitch: Switch = view.findViewById(R.id.notification_switch)
         val notificationSelector: Spinner = view.findViewById(R.id.notification_spinner)
+        val deleteAccount: Button = view.findViewById(R.id.delete)
 
         vibSwitch.isChecked = settingsViewModel.vibAllowed.value == true
         notificationSwitch.isChecked = context?.let { NotificationManagerCompat.from(it).areNotificationsEnabled() } == true
@@ -149,6 +150,23 @@ class settings_fragment : Fragment() {
 
             }
 
+        }
+
+        deleteAccount.setOnClickListener {
+
+            val alertDialog = androidx.appcompat.app.AlertDialog.Builder(requireContext())
+                .setTitle("Delete Account")
+                .setMessage("Are you sure you want to delete your account? This action cannot be undone.")
+                .setPositiveButton("Yes") { dialog, _ ->
+                    dialog.dismiss()
+                    deleteAccount()
+                }
+                .setNegativeButton("No") { dialog, _ ->
+                    dialog.dismiss()
+                }
+                .create()
+
+            alertDialog.show()
         }
 
         fun scheduleDailyNotification(context: Context) {
@@ -399,6 +417,26 @@ class settings_fragment : Fragment() {
                     true
                 }
                 else -> false
+            }
+        }
+    }
+
+    fun deleteAccount() {
+        val currentUser = auth.currentUser
+        val uid = auth.uid
+        val database = Firebase.database.getReference("users/$uid")
+
+        database.removeValue().addOnSuccessListener {
+            currentUser?.delete()?.addOnCompleteListener {
+                if (it.isSuccessful) {
+                    Toast.makeText(requireContext(), "Account Deleted", Toast.LENGTH_SHORT).show()
+
+                    val intent = Intent(requireContext(), BiometricActivity::class.java)
+                    startActivity(intent)
+                    requireActivity().finish()
+                } else {
+                    Toast.makeText(requireContext(), "Error", Toast.LENGTH_SHORT).show()
+                }
             }
         }
     }
