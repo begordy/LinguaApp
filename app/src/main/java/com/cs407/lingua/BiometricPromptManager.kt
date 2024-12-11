@@ -55,7 +55,12 @@ class BiometricPromptManager(
             object : BiometricPrompt.AuthenticationCallback() {
                 override fun onAuthenticationError(errorCode: Int, errString: CharSequence) {
                     super.onAuthenticationError(errorCode, errString)
-                    resultChannel.trySend(BiometricResult.AuthenticationError(errString.toString()))
+                    if (errorCode == BiometricPrompt.ERROR_USER_CANCELED ||
+                        errorCode == BiometricPrompt.ERROR_NEGATIVE_BUTTON) {
+                        resultChannel.trySend(BiometricResult.AuthenticationCanceled)
+                    } else {
+                        resultChannel.trySend(BiometricResult.AuthenticationError(errString.toString()))
+                    }
                 }
 
                 override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult) {
@@ -79,5 +84,6 @@ class BiometricPromptManager(
         data object AuthenticationFailed: BiometricResult
         data object AuthenticationSuccess: BiometricResult
         data object AuthenticationNotSet: BiometricResult
+        data object AuthenticationCanceled: BiometricResult
     }
 }

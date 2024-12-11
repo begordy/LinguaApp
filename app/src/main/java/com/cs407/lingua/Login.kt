@@ -48,8 +48,8 @@ class Login : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         if (!authenticated) {
-            phoneAuth()
             authenticated = true
+            phoneAuth()
         }
 
         auth = FirebaseAuth.getInstance()
@@ -153,36 +153,39 @@ class Login : AppCompatActivity() {
     }
 
     private fun phoneAuth() {
-        val biometricManager = BiometricManager.from(this)
+        val intent = Intent(this, BiometricActivity::class.java)
+        startActivity(intent)
 
-        when (biometricManager.canAuthenticate(BIOMETRIC_STRONG or DEVICE_CREDENTIAL)) {
-            BiometricManager.BIOMETRIC_SUCCESS -> {
-                // Delay prompt slightly to ensure activity transition completes
-                promptManager.showBiometricPrompt(
-                    title = "Biometric Authentication",
-                    description = "Authenticate using biometrics or device credentials"
-                )
-
-            }
-            BiometricManager.BIOMETRIC_ERROR_NO_HARDWARE -> {
-                Toast.makeText(this, "No biometric hardware available", Toast.LENGTH_SHORT).show()
-            }
-            BiometricManager.BIOMETRIC_ERROR_HW_UNAVAILABLE -> {
-                Toast.makeText(this, "Biometric hardware is currently unavailable", Toast.LENGTH_SHORT).show()
-            }
-            BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED -> {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) { // Android 11 or higher
-                    val enrollIntent = Intent(Settings.ACTION_BIOMETRIC_ENROLL).apply {
-                        putExtra(
-                            Settings.EXTRA_BIOMETRIC_AUTHENTICATORS_ALLOWED,
-                            BIOMETRIC_STRONG or DEVICE_CREDENTIAL
-                        )
-                    }
-                    startActivity(enrollIntent)
-                } else {
-                    Toast.makeText(this, "No biometric credentials enrolled", Toast.LENGTH_SHORT).show()
-                }
-            }
-        }
+//        val biometricManager = BiometricManager.from(this)
+//
+//        when (biometricManager.canAuthenticate(BIOMETRIC_STRONG or DEVICE_CREDENTIAL)) {
+//            BiometricManager.BIOMETRIC_SUCCESS -> {
+//                // Delay prompt slightly to ensure activity transition completes
+//                promptManager.showBiometricPrompt(
+//                    title = "Biometric Authentication",
+//                    description = "Authenticate using biometrics or device credentials",
+//                )
+//
+//            }
+//            BiometricManager.BIOMETRIC_ERROR_NO_HARDWARE -> {
+//                Toast.makeText(this, "No biometric hardware available", Toast.LENGTH_SHORT).show()
+//            }
+//            BiometricManager.BIOMETRIC_ERROR_HW_UNAVAILABLE -> {
+//                Toast.makeText(this, "Biometric hardware is currently unavailable", Toast.LENGTH_SHORT).show()
+//            }
+//            BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED -> {
+//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) { // Android 11 or higher
+//                    val enrollIntent = Intent(Settings.ACTION_BIOMETRIC_ENROLL).apply {
+//                        putExtra(
+//                            Settings.EXTRA_BIOMETRIC_AUTHENTICATORS_ALLOWED,
+//                            BIOMETRIC_STRONG or DEVICE_CREDENTIAL
+//                        )
+//                    }
+//                    startActivity(enrollIntent)
+//                } else {
+//                    Toast.makeText(this, "No biometric credentials enrolled", Toast.LENGTH_SHORT).show()
+//                }
+//            }
+//        }
     }
 }
