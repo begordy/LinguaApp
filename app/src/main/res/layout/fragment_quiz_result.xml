@@ -78,11 +78,19 @@
         android:textSize="20sp" />
 
     <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20sp"
+        android:text="Save Quiz" />
+
+    <Button
         android:id="@+id/homeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5sp"
         android:text="Return to Home" />
 
 </LinearLayout>
