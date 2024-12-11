@@ -9,7 +9,7 @@ object DataLoader {
 
     fun simplePhonetics(): QInfo {
 
-        val choice = (1..6).random()
+        val choice = (1..4).random()
         when (choice) {
             1 -> { // hardcoded questions
                 val questions = StoredData.getSimHardcodedQuestions()
@@ -139,17 +139,17 @@ object DataLoader {
 
                         if(consonant) {
                             question = when(feature) {
-                                1 -> "What is the manner of articulation for this symbol? /"
-                                2 -> "What is the place of articulation for this symbol? /"
-                                3 -> "What is the voicing for this symbol? /"
+                                1 -> "What is the manner of articulation for this symbol?\n/"
+                                2 -> "What is the place of articulation for this symbol?\n/"
+                                3 -> "What is the voicing for this symbol?\n/"
                                 else -> "choice 3 consonant error"
                             }
                         }
                         else {
                             question = when(feature) {
-                                1 -> "What is the height of this symbol? /"
-                                2 -> "What is the depth of this symbol? /"
-                                3 -> "What is the roundedness of this symbol? /"
+                                1 -> "What is the height of this symbol?\n/"
+                                2 -> "What is the depth of this symbol?\n/"
+                                3 -> "What is the roundedness of this symbol?\n/"
                                 else -> "choice 3 vowel error"
                             }
                         }
@@ -163,7 +163,17 @@ object DataLoader {
                 return QInfo(fragID, question, answer, options)
             }
 
-            4 -> { // vowel chart
+            4 -> { // ipa transcription (json)
+                val key = glossDict.keys.random()
+                val valueList = glossDict[key] as ArrayList<String>
+                val value = valueList.random()
+                val question = "Transcribe this word into orthography:\n/$value/"
+
+                return QInfo("fillBlank", question, key, emptyArray<String>())
+            }
+
+            /*
+            5 -> { // vowel chart
                 val data = StoredData.getIpaVowels()
                 val q = data.indices.random()
                 return QInfo("vowelChart",
@@ -171,7 +181,7 @@ object DataLoader {
                     data[q][0], emptyArray<String>())
             }
 
-            5 -> { // sagittal diagram
+            6 -> { // sagittal diagram
                 val data = StoredData.getIpaByFeature()
 
                 val q = (5..12).random()
@@ -192,15 +202,8 @@ object DataLoader {
 
                 return QInfo("sagittal", question, answer, emptyArray<String>())
             }
+            */
 
-            6 -> { // ipa transcription (json)
-                val key = glossDict.keys.random()
-                val valueList = glossDict[key] as ArrayList<String>
-                val value = valueList.random()
-                val question = "Transcribe this word into orthography:\n/$value/"
-
-                return QInfo("fillBlank", question, key, emptyArray<String>())
-            }
 
             else -> {
                 return QInfo("", "choice error", "error", emptyArray<String>())
