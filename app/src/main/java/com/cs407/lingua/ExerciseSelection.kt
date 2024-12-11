@@ -77,13 +77,13 @@ class ExerciseSelection : Fragment() {
             }
 
             1 -> {
-                quizTitle.text = "Simple Phonology"
-                questionCount.text = "Questions: 20"
+                quizTitle.text = "Simple Phonetics"
+                questionCount.text = "Questions: 15"
                 difficulty.text = "Easy"
                 val tagsModelArrayList = ArrayList<TagModel>();
-                tagsModelArrayList.add(TagModel("Multiple Choice"))
-                tagsModelArrayList.add(TagModel("IPA"))
-                tagsModelArrayList.add(TagModel("Single"))
+                tagsModelArrayList.add(TagModel("Phone Properties"))
+                tagsModelArrayList.add(TagModel("Basic IPA Chart"))
+                tagsModelArrayList.add(TagModel("IPA Transcription"))
 
                 val adapter = TagAdapter(requireContext(), tagsModelArrayList)
                 tagsGrid.adapter = adapter
@@ -92,13 +92,13 @@ class ExerciseSelection : Fragment() {
                 startQuiz.setOnClickListener {startQuiz(1)}
             }
             2 -> {
-                quizTitle.text = "Advanced Phonology"
-                questionCount.text = "Questions: 15"
+                quizTitle.text = "Advanced Phonetics"
+                questionCount.text = "Questions: 10"
                 difficulty.text = "Hard"
                 val tagsModelArrayList = ArrayList<TagModel>();
                 tagsModelArrayList.add(TagModel("PRAAT"))
-                tagsModelArrayList.add(TagModel("Nightmares"))
-                tagsModelArrayList.add(TagModel("Schwa"))
+                tagsModelArrayList.add(TagModel("Acoustic Phonetics"))
+                tagsModelArrayList.add(TagModel("Formants"))
 
                 val adapter = TagAdapter(requireContext(), tagsModelArrayList)
                 tagsGrid.adapter = adapter
@@ -111,9 +111,9 @@ class ExerciseSelection : Fragment() {
                 questionCount.text = "Questions: 10"
                 difficulty.text = "Medium"
                 val tagsModelArrayList = ArrayList<TagModel>();
-                tagsModelArrayList.add(TagModel("Short Answer"))
-                tagsModelArrayList.add(TagModel("Syntax Tree"))
-                tagsModelArrayList.add(TagModel("Single"))
+                tagsModelArrayList.add(TagModel("Basic Syntax Trees"))
+                tagsModelArrayList.add(TagModel("Phrase Level"))
+                tagsModelArrayList.add(TagModel("Surface Structure"))
 
                 val adapter = TagAdapter(requireContext(), tagsModelArrayList)
                 tagsGrid.adapter = adapter
@@ -126,9 +126,9 @@ class ExerciseSelection : Fragment() {
                 questionCount.text = "Questions: 5"
                 difficulty.text = "Hard"
                 val tagsModelArrayList = ArrayList<TagModel>();
-                tagsModelArrayList.add(TagModel("Creepy"))
-                tagsModelArrayList.add(TagModel("Wet"))
-                tagsModelArrayList.add(TagModel("???????"))
+                tagsModelArrayList.add(TagModel("Complex Syntax Trees"))
+                tagsModelArrayList.add(TagModel("Sentence Level"))
+                tagsModelArrayList.add(TagModel("Surface Structure"))
 
                 val adapter = TagAdapter(requireContext(), tagsModelArrayList)
                 tagsGrid.adapter = adapter
