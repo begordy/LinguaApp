@@ -263,7 +263,10 @@ class settings_fragment : Fragment() {
 
 
         settingsViewModel.primaryColor.value?.let { toolbar.setBackgroundColor(it)  }
-        settingsViewModel.primaryColor.value?.let { logOutButton.setBackgroundColor(it)  }
+        settingsViewModel.primaryColor.value?.let {
+            logOutButton.setBackgroundColor(it)
+            deleteAccount.setBackgroundColor(it)
+        }
         settingsViewModel.secondaryColor.value?.let { view.setBackgroundColor(it) }
 
         // Set the toolbar as the action bar

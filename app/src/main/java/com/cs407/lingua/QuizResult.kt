@@ -98,7 +98,10 @@ class QuizResult : Fragment() {
         }
         settingsViewModel.primaryColor.value?.let { toolbar.setBackgroundColor(it) }
         settingsViewModel.secondaryColor.value?.let{view.setBackgroundColor(it)}
-        settingsViewModel.primaryColor.value?.let { homeButton.setBackgroundColor(it) }
+        settingsViewModel.primaryColor.value?.let {
+            homeButton.setBackgroundColor(it)
+            saveButton.setBackgroundColor(it)
+        }
         val oColor = settingsViewModel.primaryColor.value
         val progressIndicatorRed = oColor?.let { Color.red(it) }
         val progressIndicatorGreen = oColor?.let { Color.green(it) }

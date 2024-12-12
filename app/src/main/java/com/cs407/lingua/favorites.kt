@@ -53,10 +53,10 @@ class favorites : Fragment() {
             val selectedItem = bookmarked.adapter.getItem(position)
 
             val exerciseType = when (selectedItem) {
-                "Simple Phonology" -> 1
-                "Complex Phonology" -> 2
+                "Simple Phonetics" -> 1
+                "Advanced Phonetics" -> 2
                 "Simple Syntax" -> 3
-                "Complex Syntax" -> 4
+                "Advanced Syntax" -> 4
                 else -> 0
             }
 

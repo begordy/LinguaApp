@@ -57,10 +57,10 @@
     <string name="compound">Compound</string>
     <string name="favorites">Favorites</string>
 
-    <string name="simple_phonology_description">[INSERT SIMPLE PHONOLOGY DESCRIPTION HERE]</string>
-    <string name="complex_phonology_description">[INSERT COMPLEX PHONOLOGY DESCRIPTION HERE]</string>
-    <string name="simple_syntax_description">A Simple Syntax quiz that is great for beginner practice. Generally consists of multiple choice and syntax tree problems.</string>
-    <string name="complex_syntax_description">[INSERT COMPLEX SYNTAX DESCRIPTION HERE]</string>
+    <string name="simple_phonology_description">A Simple Phonetics quiz great for beginner practice. Consists of multiple choice and fill in the blank questions.</string>
+    <string name="complex_phonology_description">An advanced phonetics quiz. Includes questions on formant analysis using PRAAT and other advanced phonetics questions.</string>
+    <string name="simple_syntax_description">A Simple Syntax quiz that is great for beginner practice. Consists of syntax tree problems involving phrases.</string>
+    <string name="complex_syntax_description">An advanced syntax quiz. Consists of syntax tree problems involving entire sentences.</string>
 
     <string-array name="primary_options">
         <item>Purple</item>
