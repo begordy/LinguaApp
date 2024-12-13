@@ -23,6 +23,10 @@ import java.util.concurrent.TimeUnit
 
 //ZoomLayout (used in SyntaxAdvancedQuestion.kt) from https://github.com/natario1/ZoomLayout
 //Material Components Android (used in QuizResult.kt and QuestionResult.kt) from https://github.com/material-components/material-components-android
+// Dataloader sources...
+//   Phonetics raw data from WikiPron: https://github.com/CUNY-CL/wikipron/blob/master/data/scrape/tsv/eng_latn_us_broad_filtered.tsv
+//   1000 most common English words from: https://gist.github.com/SivilTaram/9597125e4134cc81648027b1c6f6395f
+//   Syntax raw data from GUM Treebank: https://github.com/amir-zeldes/gum/tree/master/const
 
 class MainActivity : AppCompatActivity() {
 
