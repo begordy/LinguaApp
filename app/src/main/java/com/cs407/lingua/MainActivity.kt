@@ -21,6 +21,9 @@ import androidx.work.PeriodicWorkRequest
 import androidx.work.WorkManager
 import java.util.concurrent.TimeUnit
 
+//ZoomLayout (used in SyntaxAdvancedQuestion.kt) from https://github.com/natario1/ZoomLayout
+//Material Components Android (used in QuizResult.kt and QuestionResult.kt) from https://github.com/material-components/material-components-android
+
 class MainActivity : AppCompatActivity() {
 
     private var windowInsetsController: WindowInsetsControllerCompat? = null
